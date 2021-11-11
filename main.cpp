@@ -9,6 +9,15 @@ int main()
         p6.background({0.5f, 0.3f, 0.8f});
         p6.rect();
         // std::cout << 1.f / p6.delta_time() << '\n';
+        if (p6.shift()) {
+            std::cout << "SHIFT\n";
+        }
+        if (p6.ctrl()) {
+            std::cout << "CTRL\n";
+        }
+        if (p6.alt()) {
+            std::cout << "ALT\n";
+        }
     };
     p6.mouse_moved = [&](p6::MouseMove event) {
         std::cout << "MOVED\n";
@@ -27,6 +36,21 @@ int main()
     };
     p6.mouse_scrolled = [](p6::MouseScroll event) {
         std::cout << event.dy << "\n";
+    };
+    p6.key_pressed = [](p6::KeyEvent event) {
+        std::cout << "KEY PRESSED\n";
+        std::cout << event.logical_key << "\n";
+    };
+    p6.key_released = [](p6::KeyEvent event) {
+        std::cout << "KEY RELEASED\n";
+        std::cout << "'" << event.logical_key << "'"
+                  << "\n";
+        if (event.logical_key == " ") {
+            std::cout << "SPACE\n";
+        }
+    };
+    p6.key_repeated = [](p6::KeyEvent event) {
+        // std::cout << "KEY REPEATED\n";
     };
     p6.run();
     return 0;
