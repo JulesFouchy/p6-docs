@@ -25,6 +25,9 @@ int main()
     p6.mouse_released = [](p6::MouseButton event) {
         std::cout << "RELEASED\n";
     };
+    p6.mouse_scrolled = [](p6::MouseScroll event) {
+        std::cout << event.dy << "\n";
+    };
     p6.run();
     return 0;
 }
