@@ -31,19 +31,19 @@ int main()
                 std::cout << "ALT\n";
             }
         };
-        p6.mouse_moved = [&](p6::MouseMove event) {
+        p6.mouse_moved = [&](p6::MouseMove) {
             std::cout << "MOVED\n";
             // std::cout << event.position.x << " " << event.position.y << '\n';
             // std::cout << event.delta.x << " " << event.delta.y << '\n'
             //           << "*********\n";
         };
-        p6.mouse_dragged = [&](p6::MouseDrag event) {
+        p6.mouse_dragged = [&](p6::MouseDrag) {
             std::cout << "DRAGGED\n";
         };
-        p6.mouse_pressed = [](p6::MouseButton event) {
+        p6.mouse_pressed = [](p6::MouseButton) {
             std::cout << "PRESSED\n";
         };
-        p6.mouse_released = [](p6::MouseButton event) {
+        p6.mouse_released = [](p6::MouseButton) {
             std::cout << "RELEASED\n";
         };
         p6.mouse_scrolled = [&](p6::MouseScroll event) {
@@ -61,7 +61,7 @@ int main()
                 std::cout << "SPACE\n";
             }
         };
-        p6.key_repeated = [](p6::KeyEvent event) {
+        p6.key_repeated = [](p6::KeyEvent) {
             // std::cout << "KEY REPEATED\n";
         };
         p6.run();
