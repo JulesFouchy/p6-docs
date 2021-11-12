@@ -8,6 +8,9 @@ int main()
         auto  p6       = p6::Context{{1280, 720, "p6 example"}};
         float rotation = 0.f;
         // p6.set_time_mode_fixedstep();
+        p6.on_error = [](std::string&& error_message) {
+            throw std::runtime_error{error_message};
+        };
         p6.update = [&]() {
             p6.background({0.5f, 0.3f, 0.8f});
             p6.stroke_weight = 0.5f;
