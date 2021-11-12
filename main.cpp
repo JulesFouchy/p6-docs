@@ -1,4 +1,5 @@
-#include <p6.h>
+#include <p6/p6.h>
+#include <glm/gtc/constants.hpp>
 #include <iostream>
 
 int main()
@@ -9,8 +10,15 @@ int main()
         // p6.set_time_mode_fixedstep();
         p6.update = [&]() {
             p6.background({0.5f, 0.3f, 0.8f});
+            p6.stroke_weight = 0.5f;
+            p6.fill          = p6::Color{1.f, 0.f, 0.f};
+            p6.rectangle({glm::vec2{0.f},
+                          glm::vec2{0.98f},
+                          1.6f});
+            p6.stroke_weight = 0.01f;
+            p6.fill          = p6::Color{1.f, 1.f, 1.f, 0.5f};
             p6.rectangle({p6.mouse(),
-                          {0.1f, 0.1f},
+                          {0.8f, 0.4f},
                           rotation});
             // std::cout << 1.f / p6.delta_time() << '\n';
             if (p6.shift()) {
@@ -39,7 +47,7 @@ int main()
             std::cout << "RELEASED\n";
         };
         p6.mouse_scrolled = [&](p6::MouseScroll event) {
-            rotation += event.dy * 0.2f;
+            rotation += event.dy * 0.25f * 0.1f * glm::pi<float>() * 2.f;
         };
         p6.key_pressed = [](p6::KeyEvent event) {
             std::cout << "KEY PRESSED\n";
