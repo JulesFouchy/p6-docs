@@ -12,18 +12,22 @@ int main()
             throw std::runtime_error{error_message};
         };
         p6.update = [&]() {
-            p6.background({0.5f, 0.3f, 0.8f});
+            // p6.background({0.5f, 0.3f, 0.8f});
             p6.stroke_weight = 0.5f;
             p6.fill          = p6::Color{1.f, 0.f, 0.f};
             p6.rectangle({glm::vec2{0.f},
                           glm::vec2{0.98f},
                           1.6f});
+            // std::cout << 1.f / p6.delta_time() << '\n';
+            // if (p6.mouse_is_in_window()) {
+            //     std::cout << p6.time() << "\n";
+            // }
+
             p6.stroke_weight = 0.01f;
             p6.fill          = p6::Color{1.f, 1.f, 1.f, 0.5f};
             p6.rectangle({p6.mouse(),
                           {0.8f, 0.4f},
                           rotation});
-            // std::cout << 1.f / p6.delta_time() << '\n';
             if (p6.shift()) {
                 std::cout << "SHIFT\n";
             }
@@ -35,9 +39,10 @@ int main()
             }
         };
         p6.mouse_moved = [&](p6::MouseMove) {
-            std::cout << "MOVED\n";
-            // std::cout << event.position.x << " " << event.position.y << '\n';
-            // std::cout << event.delta.x << " " << event.delta.y << '\n'
+            // std::cout << "MOVED\n";
+
+            // std::cout << e.position.x << " " << e.position.y << '\n';
+            // std::cout << e.delta.x << " " << e.delta.y << '\n';
             //           << "*********\n";
         };
         p6.mouse_dragged = [&](p6::MouseDrag) {
