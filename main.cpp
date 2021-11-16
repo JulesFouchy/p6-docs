@@ -5,7 +5,8 @@
 int main()
 {
     try {
-        auto  p6       = p6::Context{{1280, 720, "p6 example"}};
+        auto p6 = p6::Context{{1280, 720, "p6 example"}};
+        p6.maximize_window();
         float rotation = 0.f;
         // p6.set_time_mode_fixedstep();
         p6.on_error = [](std::string&& error_message) {
