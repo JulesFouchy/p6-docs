@@ -6,16 +6,17 @@ int main()
 {
     try {
         auto p6 = p6::Context{{1280, 720, "p6 example"}};
-        p6.maximize_window();
+        // p6.maximize_window();
         float rotation = 0.f;
         // p6.set_time_mode_fixedstep();
         p6.on_error = [](std::string&& error_message) {
             throw std::runtime_error{error_message};
         };
         p6.update = [&]() {
-            // p6.background({0.5f, 0.3f, 0.8f});
+            p6.background({0.5f, 0.3f, 0.8f});
             p6.stroke_weight = 0.5f;
             p6.fill          = p6::Color{1.f, 0.f, 0.f};
+            p6.stroke        = p6::Color{0.f, 0.f, 0.f, 1.f};
             p6.rectangle({glm::vec2{0.f},
                           glm::vec2{0.98f},
                           1.6f});
@@ -24,11 +25,15 @@ int main()
             //     std::cout << p6.time() << "\n";
             // }
 
-            p6.stroke_weight = 0.01f;
+            p6.stroke_weight = 0.02f;
             p6.fill          = p6::Color{1.f, 1.f, 1.f, 0.5f};
-            p6.rectangle({p6.mouse(),
-                          {0.8f, 0.4f},
-                          rotation});
+            p6.stroke        = p6::Color{0.2f, 0.95f, 0.95f, 1.f};
+            p6.ellipse({p6.mouse(),
+                        {0.8f, 0.4f},
+                        rotation});
+            // p6.rectangle({p6.mouse() + glm::vec2(0.f, 0.8f),
+            //               {0.8f, 0.4f},
+            //               rotation});
             if (p6.shift()) {
                 std::cout << "SHIFT\n";
             }
