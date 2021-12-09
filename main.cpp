@@ -5,7 +5,9 @@
 int main()
 {
     try {
-        auto p6 = p6::Context{{1280, 720, "p6 example"}};
+        auto      p6    = p6::Context{{1280, 720, "p6 example"}};
+        p6::Image image = p6::load_image("img/1.png");
+        p6.background({0.5f, 0.3f, 0.8f});
         // p6.maximize_window();
         float rotation = 0.f;
         // p6.set_time_mode_fixedstep();
@@ -13,13 +15,15 @@ int main()
             throw std::runtime_error{error_message};
         };
         p6.update = [&]() {
-            p6.background({0.5f, 0.3f, 0.8f});
+            // p6.background({0.5f, 0.3f, 0.8f});
             p6.stroke_weight = 0.5f;
             p6.fill          = p6::Color{1.f, 0.f, 0.f};
             p6.stroke        = p6::Color{0.f, 0.f, 0.f, 1.f};
             p6.rectangle({glm::vec2{0.f},
                           glm::vec2{0.98f},
                           1.6f});
+            p6.image(image, {glm::vec2{0.f},
+                             0.2f * glm::vec2{image.size().aspect_ratio(), 1.f}});
             // std::cout << 1.f / p6.delta_time() << '\n';
             // if (p6.mouse_is_in_window()) {
             //     std::cout << p6.time() << "\n";
