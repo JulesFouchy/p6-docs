@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.8)
-cmake_policy(SET CMP0112 NEW) # Required by p6_copy_folder
 project(p6-hello-world)
 
 add_executable(${PROJECT_NAME} main.cpp)
