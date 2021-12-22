@@ -5,8 +5,8 @@
 int main()
 {
     try {
-        auto      p6    = p6::Context{{1280, 720, "p6 example"}};
-        p6::Image image = p6::load_image("img/1.png");
+        auto       p6    = p6::Context{{1280, 720, "p6 example"}};
+        const auto image = p6::load_image("img/1.png");
         p6.background({0.5f, 0.3f, 0.8f});
         // p6.maximize_window();
         float rotation = 0.f;
