@@ -71,12 +71,12 @@ int main()
             std::cout << "KEY PRESSED\n";
             std::cout << event.logical_key << "\n";
         };
-        p6.key_released = [](p6::KeyEvent event) {
+        p6.key_released = [&](p6::KeyEvent event) {
             std::cout << "KEY RELEASED\n";
             std::cout << "'" << event.logical_key << "'"
                       << "\n";
             if (event.logical_key == " ") {
-                std::cout << "SPACE\n";
+                p6.exit();
             }
         };
         p6.key_repeated = [](p6::KeyEvent) {
