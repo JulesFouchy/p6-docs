@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkp6_docs=self.webpackChunkp6_docs||[]).push([[53],{9054:function(e){e.exports=JSON.parse('{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"lessons":[{"type":"link","label":"Introduction","href":"/p6-docs/docs/api"}]}}')}}]);
