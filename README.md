@@ -1,4 +1,4 @@
-# p6-examples
+# p6
 
 *p6* is designed to be very easy to use. Here is all the code you need to create a window:
 
