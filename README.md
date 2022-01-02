@@ -8,7 +8,6 @@
 int main()
 {
     auto p6 = p6::Context{{1280, 720, "p6 example"}}; // Creates a context with a window
-    // ... Potentially do more setup here
     p6.run(); // Start the p6 application
     return 0;
 }
