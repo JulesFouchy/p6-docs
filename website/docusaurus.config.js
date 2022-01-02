@@ -33,6 +33,10 @@ module.exports = {
           label: 'API',
         },
         {
+          to: '/about',
+          label: 'About',
+        },
+        {
           href: 'https://github.com/JulesFouchy/p6-docs/issues',
           position: 'right',
           className: 'header-issues-link',
