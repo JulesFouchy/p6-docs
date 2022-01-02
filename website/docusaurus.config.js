@@ -6,12 +6,12 @@ module.exports = {
   title: 'p6',
   tagline: 'Making 🎨 with 👩‍💻',
   url: 'https://julesfouchy.github.io/',
-  baseUrl: '/p6-examples/',
+  baseUrl: '/p6-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'julesfouchy',
-  projectName: 'p6-examples',
+  projectName: 'p6-docs',
   themeConfig: {
     navbar: {
       title: '',
@@ -33,13 +33,13 @@ module.exports = {
           label: 'API',
         },
         {
-          href: 'https://github.com/JulesFouchy/p6-examples/issues',
+          href: 'https://github.com/JulesFouchy/p6-docs/issues',
           position: 'right',
           className: 'header-issues-link',
           'aria-label': 'GitHub issues',
         },
         {
-          href: 'https://github.com/JulesFouchy/p6-examples',
+          href: 'https://github.com/JulesFouchy/p6-docs',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -54,15 +54,15 @@ module.exports = {
           items: [
             {
               label: 'Ask a question',
-              to: 'https://github.com/JulesFouchy/p6-examples/issues',
+              to: 'https://github.com/JulesFouchy/p6-docs/issues',
             },
             {
               label: 'Report a mistake',
-              to: 'https://github.com/JulesFouchy/p6-examples/issues',
+              to: 'https://github.com/JulesFouchy/p6-docs/issues',
             },
             {
               label: 'Give us feedback',
-              to: 'https://github.com/JulesFouchy/p6-examples/issues',
+              to: 'https://github.com/JulesFouchy/p6-docs/issues',
             },
           ],
         },
