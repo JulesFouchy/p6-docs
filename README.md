@@ -31,6 +31,6 @@ int main()
 }
 ```
 
-Check out *examples/basic/CMakeLists.txt* to see how to ingreate p6 into your project.
+Check out *examples/basic/CMakeLists.txt* to see how to integrate p6 into your project.
 
 Check out *examples/basic/main.cpp* for a more complete example of what you can do with *p6*.
