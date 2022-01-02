@@ -1,6 +1,6 @@
 # p6
 
-*p6* is designed to be very easy to use. Here is all the code you need to create a window:
+[*p6*](https://github.com/JulesFouchy/p6) is designed to be very easy to use. Here is all the code you need to create a window:
 
 ```cpp
 #include <p6/p6.h>
