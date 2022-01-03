@@ -3,3 +3,5 @@ build/
 bin/
 
 .vscode/settings.json
+
+docs_generator/Doxygen/
