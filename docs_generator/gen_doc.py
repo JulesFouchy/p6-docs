@@ -17,6 +17,6 @@ def generate_documentation(output_folder):
         os.remove(filename)
 
     # Run doxybook2
-    os.system(f"doxybook2.exe --input Doxygen/xml --output {output_folder} --config doxybook_config.json")
+    os.system(f"doxybook2.exe --input Doxygen/xml --output {output_folder} --config doxybook_config.json --templates doxybook_templates")
 
 generate_documentation(output_folder = "../website/docs/api")
