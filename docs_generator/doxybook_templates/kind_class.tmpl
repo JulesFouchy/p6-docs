@@ -16,6 +16,7 @@
 
 {% endif -%}
 
+{% if true %}## Summary{% endif %}
 {%- include "class_members_tables" -%}
 
 {% if hasAdditionalMembers %}## Additional inherited members
@@ -33,6 +34,7 @@ template <{% for param in templateParams %}{{param.typePlain}} {{param.name}}{% 
 
 {% include "details" %}{% endif -%}
 
+{% if true %}## Details{% endif %}
 {% include "class_members_details" -%}
 
 {% include "footer" %}

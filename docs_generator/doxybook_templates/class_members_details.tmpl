@@ -1,3 +1,21 @@
+{% if exists("publicFunctions") %}
+
+{% for child in publicFunctions %}### {{child.name}}()
+
+{{ render("member_details", child) }}
+{% endfor %}{% endif -%}
+
+{% if exists("publicAttributes") %}
+
+{% for child in publicAttributes %}### {{child.name}}
+
+{{ render("member_details", child) }}
+{% endfor %}{% endif -%}
+
+
+
+
+
 {% if exists("publicTypes") %}## Public Types Documentation
 
 {% for child in publicTypes %}### {{child.name}}
@@ -12,23 +30,9 @@
 {{ render("member_details", child) }}
 {% endfor %}{% endif -%}
 
-{% if exists("publicFunctions") %}## Public Functions Documentation
-
-{% for child in publicFunctions %}### {{child.name}}()
-
-{{ render("member_details", child) }}
-{% endfor %}{% endif -%}
-
 {% if exists("protectedFunctions") %}## Protected Functions Documentation
 
 {% for child in protectedFunctions %}### {{child.name}}()
-
-{{ render("member_details", child) }}
-{% endfor %}{% endif -%}
-
-{% if exists("publicAttributes") %}## Public Attributes Documentation
-
-{% for child in publicAttributes %}### {{child.name}}
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif -%}
