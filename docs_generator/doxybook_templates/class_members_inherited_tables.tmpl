@@ -285,17 +285,5 @@ template <{% for param in child.templateParams -%}
 | **[{{child.name}}]({{child.url}})** {% if existsIn(child, "brief") %}<br/>{{child.brief}}{% endif %} |
 {% endfor %}
 {% endif -%}
-{% if existsIn(base, "friends") %}**Friends inherited from [{{base.name}}]({{base.url}})**
 
-|                | Name           |
-| -------------- | -------------- |
-{% for child in base.friends -%}| {% if existsIn(child, "type") %}{{child.type}} {% endif -%}
-| **[{{child.name}}]({{child.url}})**{% if child.type != "class" and child.type != "struct" -%}
-({% for param in child.params -%}
-{{param.type}} {{param.name}}{% if existsIn(param, "defval") %} ={{param.defval}}{% endif -%}
-{% if not loop.is_last %}, {% endif -%}
-{% endfor %}){% if child.const %} const{% endif -%}
-{% endif %} {% if existsIn(child, "brief") %}<br/>{{child.brief}}{% endif %} |
-{% endfor %}
-{% endif -%}
 {% endfor -%}
