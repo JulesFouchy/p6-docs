@@ -1,30 +1,6 @@
-{% if kind in ["function", "slot", "signal", "event"] -%}
-```{{language}}
-{% if exists("templateParams") -%}
-template <{% for param in templateParams %}{{param.typePlain}} {{param.name}}{% if existsIn(param, "defvalPlain") %} ={{param.defvalPlain}}{% endif -%}
-{% if not loop.is_last %},
-{% endif %}{% endfor %}>
+{% if kind == "function" -%}
+> {% include "function_signature.tmpl" %}
 {% endif -%}
-
-{% if static %}static {% endif -%}
-{% if inline and language != "csharp" %}inline {% endif -%}
-{% if explicit %}explicit {% endif -%}
-{% if virtual %}virtual {% endif -%}
-
-{% if exists("typePlain") %}{{typePlain}} {% endif %}{{name}}{% if length(params) > 0 -%}
-(
-{% for param in params %}    {{param.typePlain}} {{param.name}}{% if existsIn(param, "defvalPlain") %} ={{param.defvalPlain}}{% endif -%}
-{% if not loop.is_last %},{% endif %}
-{% endfor -%}
-){% else -%}
-(){% endif -%}
-
-{% if const %} const{% endif -%}
-{% if override %} override{% endif -%}
-{% if default %} =default{% endif -%}
-{% if deleted %} =delete{% endif -%}
-{% if pureVirtual %} =0{% endif %}
-```{% endif -%}
 
 {% if kind == "enum" -%}
 | Enumerator | Value | Description |
