@@ -27,26 +27,20 @@ title: Drawing
 
 ## Functions Documentation
 
-### function background
+### background()
 
-```
-void background(
-    Color color
-) const
-```
+> **[background](/reference/Modules/group__drawing#background)**(Color color) const;
+
 
 Sets the color and alpha of each pixel of the canvas. 
 
 NB: No blending is applied ; even if you specify an alpha of 0.5 the old canvas is completely erased. This means that setting an alpha here doesn't matter much. It is only meaningful if you export the canvas as a png, or if you try to blend the canvas on top of another image. 
 
 
-### function rectangle
+### rectangle()
 
-```
-void rectangle(
-    RectangleParams params
-) const
-```
+> **[rectangle](/reference/Modules/group__drawing#rectangle)**(RectangleParams params) const;
+
 
 Draws a rectangle. 
 
@@ -63,45 +57,38 @@ p6.rectangle({});
 ```
 
 
-### function ellipse
+### ellipse()
 
-```
-void ellipse(
-    RectangleParams params
-) const
-```
+> **[ellipse](/reference/Modules/group__drawing#ellipse)**(RectangleParams params) const;
+
 
 Draws an ellipse. 
 
-### function image
+### image()
 
-```
-void image(
-    const Image & img,
-    RectangleParams params
-) const
-```
+> **[image](/reference/Modules/group__drawing#image)**(const Image & img, RectangleParams params) const;
+
 
 Draws an image. 
 
 
 ## Attributes Documentation
 
-### variable fill
+### fill
 
 ```
 Color fill {1.f, 1.f, 1.f, 0.5f};
 ```
 
 
-### variable stroke
+### stroke
 
 ```
 Color stroke {0.f, 0.f, 0.f};
 ```
 
 
-### variable stroke_weight
+### stroke_weight
 
 ```
 float stroke_weight = 0.01f;
@@ -113,4 +100,4 @@ float stroke_weight = 0.01f;
 
 -------------------------------
 
-Updated on 2022-01-08 at 01:03:11 +0100
+Updated on 2022 January 08

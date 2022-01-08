@@ -9,7 +9,8 @@ title: p6::Color
 
 
 
-## Public Functions
+## Summary
+
 
 |                | Name           |
 | -------------- | -------------- |
@@ -20,63 +21,51 @@ title: p6::Color
 | float | **[a](/reference/Classes/classp6_1_1_color#a)**() const |
 | glm::vec3 | **[as_vec3](/reference/Classes/classp6_1_1_color#as_vec3)**() const |
 | glm::vec4 | **[as_vec4](/reference/Classes/classp6_1_1_color#as_vec4)**() const |
+## Details
 
-## Public Functions Documentation
 
 ### Color()
 
-```cpp
-inline Color(
-    float r =0.f,
-    float g =0.f,
-    float b =0.f,
-    float a =1.f
-)
-```
+> **[Color](/reference/Classes/classp6_1_1_color#color)**(float r =0.f, float g =0.f, float b =0.f, float a =1.f);
+
 
 
 ### r()
 
-```cpp
-inline float r() const
-```
+> **[r](/reference/Classes/classp6_1_1_color#r)**() const;
+
 
 
 ### g()
 
-```cpp
-inline float g() const
-```
+> **[g](/reference/Classes/classp6_1_1_color#g)**() const;
+
 
 
 ### b()
 
-```cpp
-inline float b() const
-```
+> **[b](/reference/Classes/classp6_1_1_color#b)**() const;
+
 
 
 ### a()
 
-```cpp
-inline float a() const
-```
+> **[a](/reference/Classes/classp6_1_1_color#a)**() const;
+
 
 
 ### as_vec3()
 
-```cpp
-inline glm::vec3 as_vec3() const
-```
+> **[as_vec3](/reference/Classes/classp6_1_1_color#as_vec3)**() const;
+
 
 
 ### as_vec4()
 
-```cpp
-inline glm::vec4 as_vec4() const
-```
+> **[as_vec4](/reference/Classes/classp6_1_1_color#as_vec4)**() const;
+
 
 
 -------------------------------
 
-Updated on 2022-01-08 at 01:03:11 +0100
+Updated on 2022 January 08

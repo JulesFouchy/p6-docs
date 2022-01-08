@@ -46,7 +46,7 @@ title: p6
 
 ## Types Documentation
 
-### enum Button
+### Button
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
@@ -57,14 +57,14 @@ title: p6
 
 
 
-### using ImageSize
+### ImageSize
 
 ```cpp
 using p6::ImageSize = typedef glpp::ImageSize;
 ```
 
 
-### using Texture
+### Texture
 
 ```cpp
 using p6::Texture = typedef glpp::Texture;
@@ -74,110 +74,62 @@ using p6::Texture = typedef glpp::Texture;
 
 ## Functions Documentation
 
-### function get_context
+### get_context()
 
-```cpp
-static Context & get_context(
-    GLFWwindow * window
-)
-```
+> **[get_context](/reference/Namespaces/namespacep6#get_context)**(GLFWwindow * window);
 
 
-### function window_size_callback
 
-```cpp
-void window_size_callback(
-    GLFWwindow * window,
-    int width,
-    int height
-)
-```
+### window_size_callback()
+
+> **[window_size_callback](/reference/Namespaces/namespacep6#window_size_callback)**(GLFWwindow * window, int width, int height);
 
 
-### function mouse_button_callback
 
-```cpp
-void mouse_button_callback(
-    GLFWwindow * window,
-    int button,
-    int action,
-    int mods
-)
-```
+### mouse_button_callback()
+
+> **[mouse_button_callback](/reference/Namespaces/namespacep6#mouse_button_callback)**(GLFWwindow * window, int button, int action, int mods);
 
 
-### function scroll_callback
 
-```cpp
-void scroll_callback(
-    GLFWwindow * window,
-    double x,
-    double y
-)
-```
+### scroll_callback()
+
+> **[scroll_callback](/reference/Namespaces/namespacep6#scroll_callback)**(GLFWwindow * window, double x, double y);
 
 
-### function key_callback
 
-```cpp
-void key_callback(
-    GLFWwindow * window,
-    int key,
-    int scancode,
-    int action,
-    int mods
-)
-```
+### key_callback()
+
+> **[key_callback](/reference/Namespaces/namespacep6#key_callback)**(GLFWwindow * window, int key, int scancode, int action, int mods);
 
 
-### function load_image
 
-```cpp
-Image load_image(
-    const char * file_path
-)
-```
+### load_image()
+
+> **[load_image](/reference/Namespaces/namespacep6#load_image)**(const char * file_path);
 
 
-### function map
 
-```cpp
-template <typename T >
-T map(
-    T x,
-    T from_min,
-    T from_max,
-    T to_min,
-    T to_max
-)
-```
+### map()
+
+> **[map](/reference/Modules/group__math#map)**(T x, T from_min, T from_max, T to_min, T to_max);
+
 
 Maps x, which is in the range [from_mix, from_max], to the range [to_min, to_max]. 
 
 For example if x == from_min, then the function returns to_min if x == (from_min + from_max) / 2 then the function returns (to_min + to_max) / 2 if x is outside of the range [from_min, from_max] the result will be outside of [to_min, to_max], the same linear behaviour still applies 
 
 
-### function link_program
+### link_program()
 
-```cpp
-static void link_program(
-    const glpp::ext::Program & program,
-    const glpp::VertexShader & vertex_shader,
-    const glpp::FragmentShader & fragment_shader
-)
-```
+> **[link_program](/reference/Namespaces/namespacep6#link_program)**(const glpp::ext::Program & program, const glpp::VertexShader & vertex_shader, const glpp::FragmentShader & fragment_shader);
 
 
-### function set_uniform
 
-```cpp
-template <typename T >
-void set_uniform(
-    const glpp::ext::Program & program,
-    const std::string & uniform_name,
-    T && v
-)
-```
+### set_uniform()
+
+> **[set_uniform](/reference/Namespaces/namespacep6#set_uniform)**(const glpp::ext::Program & program, const std::string & uniform_name, T && v);
+
 
 
 
@@ -186,4 +138,4 @@ void set_uniform(
 
 -------------------------------
 
-Updated on 2022-01-08 at 01:03:11 +0100
+Updated on 2022 January 08

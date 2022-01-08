@@ -9,23 +9,25 @@ title: p6::MouseScroll
 
 
 
-## Public Attributes
+## Summary
+
 
 |                | Name           |
 | -------------- | -------------- |
 | float | **[dx](/reference/Classes/structp6_1_1_mouse_scroll#dx)**  |
 | float | **[dy](/reference/Classes/structp6_1_1_mouse_scroll#dy)**  |
 
-## Public Attributes Documentation
+## Details
 
-### variable dx
+
+### dx
 
 ```cpp
 float dx;
 ```
 
 
-### variable dy
+### dy
 
 ```cpp
 float dy;
@@ -34,4 +36,4 @@ float dy;
 
 -------------------------------
 
-Updated on 2022-01-08 at 01:03:11 +0100
+Updated on 2022 January 08

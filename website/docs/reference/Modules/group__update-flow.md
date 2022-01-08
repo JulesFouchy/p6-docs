@@ -20,52 +20,47 @@ title: Update Flow
 
 ## Functions Documentation
 
-### function run
+### run()
 
-```
-void run()
-```
+> **[run](/reference/Modules/group__update-flow#run)**();
+
 
 Starts the [update()](/reference/Classes/classp6_1_1_context#update) loop. 
 
 [update()](/reference/Classes/classp6_1_1_context#update) will be called repeatedly, until you close the window or call [exit()](/reference/Modules/group__update-flow#exit)
 
 
-### function exit
+### exit()
 
-```
-void exit()
-```
+> **[exit](/reference/Modules/group__update-flow#exit)**();
+
 
 Stops the [run()](/reference/Modules/group__update-flow#run) loop. 
 
 This is the programatic equivalent of a user closing the window. 
 
 
-### function pause
+### pause()
 
-```
-void pause()
-```
+> **[pause](/reference/Modules/group__update-flow#pause)**();
+
 
 Pauses the [run()](/reference/Modules/group__update-flow#run) loop. 
 
 No [update()](/reference/Classes/classp6_1_1_context#update) will be called, until you call [resume()](/reference/Modules/group__update-flow#resume). User inputs are still processed. 
 
 
-### function resume
+### resume()
 
-```
-void resume()
-```
+> **[resume](/reference/Modules/group__update-flow#resume)**();
+
 
 Starts the [run()](/reference/Modules/group__update-flow#run) loop again if it was paused with [pause()](/reference/Modules/group__update-flow#pause). 
 
-### function is_paused
+### is_paused()
 
-```
-bool is_paused() const
-```
+> **[is_paused](/reference/Modules/group__update-flow#is_paused)**() const;
+
 
 Returns true iff we are currently paused. See [pause()](/reference/Modules/group__update-flow#pause) and [resume()](/reference/Modules/group__update-flow#resume). 
 
@@ -75,4 +70,4 @@ Returns true iff we are currently paused. See [pause()](/reference/Modules/group
 
 -------------------------------
 
-Updated on 2022-01-08 at 01:03:11 +0100
+Updated on 2022 January 08

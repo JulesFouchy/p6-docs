@@ -9,7 +9,8 @@ title: p6::Context
 
 
 
-## Public Functions
+## Summary
+
 
 |                | Name           |
 | -------------- | -------------- |
@@ -41,11 +42,6 @@ title: p6::Context
 | void | **[pause](/reference/Modules/group__update-flow#pause)**()<br/>Pauses the [run()](/reference/Modules/group__update-flow#run) loop.  |
 | void | **[resume](/reference/Modules/group__update-flow#resume)**()<br/>Starts the [run()](/reference/Modules/group__update-flow#run) loop again if it was paused with [pause()](/reference/Modules/group__update-flow#pause).  |
 | bool | **[is_paused](/reference/Modules/group__update-flow#is_paused)**() const<br/>Returns true iff we are currently paused. See [pause()](/reference/Modules/group__update-flow#pause) and [resume()](/reference/Modules/group__update-flow#resume).  |
-
-## Public Attributes
-
-|                | Name           |
-| -------------- | -------------- |
 | std::function< void()> | **[update](/reference/Classes/classp6_1_1_context#update)** <br/>This function is called repeatedly, once every 1/framerate() seconds (or at least it will try, if your update code is too slow then the next updates will necessarily be delayed).  |
 | std::function< void([MouseMove](/reference/Classes/structp6_1_1_mouse_move))> | **[mouse_moved](/reference/Classes/classp6_1_1_context#mouse_moved)** <br/>This function is called whenever the mouse is moved.  |
 | std::function< void([MouseDrag](/reference/Classes/structp6_1_1_mouse_drag))> | **[mouse_dragged](/reference/Classes/classp6_1_1_context#mouse_dragged)** <br/>This function is called whenever the mouse is dragged.  |
@@ -60,33 +56,19 @@ title: p6::Context
 | [Color](/reference/Classes/classp6_1_1_color) | **[stroke](/reference/Modules/group__drawing#stroke)**  |
 | float | **[stroke_weight](/reference/Modules/group__drawing#stroke_weight)**  |
 
-## Friends
+## Details
 
-|                | Name           |
-| -------------- | -------------- |
-| void | **[window_size_callback](/reference/Classes/classp6_1_1_context#window_size_callback)**(GLFWwindow * window, int width, int height)  |
-| void | **[scroll_callback](/reference/Classes/classp6_1_1_context#scroll_callback)**(GLFWwindow * window, double x, double y)  |
-| void | **[mouse_button_callback](/reference/Classes/classp6_1_1_context#mouse_button_callback)**(GLFWwindow * window, int button, int action, int mods)  |
-| void | **[key_callback](/reference/Classes/classp6_1_1_context#key_callback)**(GLFWwindow * window, int key, int scancode, int action, int mods)  |
-
-## Public Functions Documentation
 
 ### Context()
 
-```cpp
-Context(
-    WindowCreationParams window_creation_params ={}
-)
-```
+> **[Context](/reference/Classes/classp6_1_1_context#context)**(WindowCreationParams window_creation_params ={});
+
 
 
 ### background()
 
-```cpp
-void background(
-    Color color
-) const
-```
+> **[background](/reference/Modules/group__drawing#background)**([Color](/reference/Classes/classp6_1_1_color) color) const;
+
 
 Sets the color and alpha of each pixel of the canvas. 
 
@@ -95,11 +77,8 @@ NB: No blending is applied ; even if you specify an alpha of 0.5 the old canvas 
 
 ### rectangle()
 
-```cpp
-void rectangle(
-    RectangleParams params
-) const
-```
+> **[rectangle](/reference/Modules/group__drawing#rectangle)**([RectangleParams](/reference/Classes/structp6_1_1_rectangle_params) params) const;
+
 
 Draws a rectangle. 
 
@@ -118,160 +97,134 @@ p6.rectangle({});
 
 ### ellipse()
 
-```cpp
-void ellipse(
-    RectangleParams params
-) const
-```
+> **[ellipse](/reference/Modules/group__drawing#ellipse)**([RectangleParams](/reference/Classes/structp6_1_1_rectangle_params) params) const;
+
 
 Draws an ellipse. 
 
 ### image()
 
-```cpp
-void image(
-    const Image & img,
-    RectangleParams params
-) const
-```
+> **[image](/reference/Modules/group__drawing#image)**(const [Image](/reference/Classes/classp6_1_1_image) & img, [RectangleParams](/reference/Classes/structp6_1_1_rectangle_params) params) const;
+
 
 Draws an image. 
 
 ### render_to_image()
 
-```cpp
-void render_to_image(
-    const Image & image
-) const
-```
+> **[render_to_image](/reference/Classes/classp6_1_1_context#render_to_image)**(const [Image](/reference/Classes/classp6_1_1_image) & image) const;
+
 
 Sets the image where all the drawing commands will happen on. 
 
 ### render_to_screen()
 
-```cpp
-void render_to_screen() const
-```
+> **[render_to_screen](/reference/Classes/classp6_1_1_context#render_to_screen)**() const;
+
 
 Reset p6 to render to the screen. 
 
 ### mouse()
 
-```cpp
-glm::vec2 mouse() const
-```
+> **[mouse](/reference/Classes/classp6_1_1_context#mouse)**() const;
+
 
 Returns the current mouse position. 
 
 ### mouse_delta()
 
-```cpp
-glm::vec2 mouse_delta() const
-```
+> **[mouse_delta](/reference/Classes/classp6_1_1_context#mouse_delta)**() const;
+
 
 Returns the movement of the mouse since last [update()](/reference/Classes/classp6_1_1_context#update)
 
 ### mouse_is_in_window()
 
-```cpp
-bool mouse_is_in_window() const
-```
+> **[mouse_is_in_window](/reference/Classes/classp6_1_1_context#mouse_is_in_window)**() const;
+
 
 Returns true iff the coordinates returned by [mouse()](/reference/Classes/classp6_1_1_context#mouse) correspond to a position inside the window, and the window is focused. 
 
 ### ctrl()
 
-```cpp
-bool ctrl() const
-```
+> **[ctrl](/reference/Classes/classp6_1_1_context#ctrl)**() const;
+
 
 Returns true iff the CTRL key is pressed (or CMD on Mac) 
 
 ### shift()
 
-```cpp
-bool shift() const
-```
+> **[shift](/reference/Classes/classp6_1_1_context#shift)**() const;
+
 
 Returns true iff the SHIFT key is pressed. 
 
 ### alt()
 
-```cpp
-bool alt() const
-```
+> **[alt](/reference/Classes/classp6_1_1_context#alt)**() const;
+
 
 Returns true iff the ALT key is pressed. 
 
 ### aspect_ratio()
 
-```cpp
-float aspect_ratio() const
-```
+> **[aspect_ratio](/reference/Classes/classp6_1_1_context#aspect_ratio)**() const;
+
 
 Returns the aspect ratio of the window (a.k.a. width / height) 
 
 ### window_size()
 
-```cpp
-ImageSize window_size() const
-```
+> **[window_size](/reference/Classes/classp6_1_1_context#window_size)**() const;
+
 
 Returns the size of the window. 
 
 ### window_width()
 
-```cpp
-int window_width() const
-```
+> **[window_width](/reference/Classes/classp6_1_1_context#window_width)**() const;
+
 
 Returns the width of the window. 
 
 ### window_height()
 
-```cpp
-int window_height() const
-```
+> **[window_height](/reference/Classes/classp6_1_1_context#window_height)**() const;
+
 
 Returns the height of the window. 
 
 ### window_is_focused()
 
-```cpp
-bool window_is_focused() const
-```
+> **[window_is_focused](/reference/Classes/classp6_1_1_context#window_is_focused)**() const;
+
 
 Returns true iff the window is currently focused. 
 
 ### maximize_window()
 
-```cpp
-void maximize_window()
-```
+> **[maximize_window](/reference/Classes/classp6_1_1_context#maximize_window)**();
+
 
 Maximizes the window. 
 
 ### time()
 
-```cpp
-float time() const
-```
+> **[time](/reference/Classes/classp6_1_1_context#time)**() const;
+
 
 Returns the time in seconds since the creation of the [Context](/reference/Classes/classp6_1_1_context). 
 
 ### delta_time()
 
-```cpp
-float delta_time() const
-```
+> **[delta_time](/reference/Classes/classp6_1_1_context#delta_time)**() const;
+
 
 Returns the time in seconds since the last [update()](/reference/Classes/classp6_1_1_context#update) call (or 0 if this is the first update) 
 
 ### set_time_mode_realtime()
 
-```cpp
-void set_time_mode_realtime()
-```
+> **[set_time_mode_realtime](/reference/Classes/classp6_1_1_context#set_time_mode_realtime)**();
+
 
 Sets the time_mode as realtime. 
 
@@ -280,9 +233,8 @@ This means that what is returned by [time()](/reference/Classes/classp6_1_1_cont
 
 ### set_time_mode_fixedstep()
 
-```cpp
-void set_time_mode_fixedstep()
-```
+> **[set_time_mode_fixedstep](/reference/Classes/classp6_1_1_context#set_time_mode_fixedstep)**();
+
 
 Sets the time_mode as fixedstep. 
 
@@ -291,9 +243,8 @@ This means that what is returned by [time()](/reference/Classes/classp6_1_1_cont
 
 ### run()
 
-```cpp
-void run()
-```
+> **[run](/reference/Modules/group__update-flow#run)**();
+
 
 Starts the [update()](/reference/Classes/classp6_1_1_context#update) loop. 
 
@@ -302,9 +253,8 @@ Starts the [update()](/reference/Classes/classp6_1_1_context#update) loop.
 
 ### exit()
 
-```cpp
-void exit()
-```
+> **[exit](/reference/Modules/group__update-flow#exit)**();
+
 
 Stops the [run()](/reference/Modules/group__update-flow#run) loop. 
 
@@ -313,9 +263,8 @@ This is the programatic equivalent of a user closing the window.
 
 ### pause()
 
-```cpp
-void pause()
-```
+> **[pause](/reference/Modules/group__update-flow#pause)**();
+
 
 Pauses the [run()](/reference/Modules/group__update-flow#run) loop. 
 
@@ -324,23 +273,21 @@ No [update()](/reference/Classes/classp6_1_1_context#update) will be called, unt
 
 ### resume()
 
-```cpp
-void resume()
-```
+> **[resume](/reference/Modules/group__update-flow#resume)**();
+
 
 Starts the [run()](/reference/Modules/group__update-flow#run) loop again if it was paused with [pause()](/reference/Modules/group__update-flow#pause). 
 
 ### is_paused()
 
-```cpp
-bool is_paused() const
-```
+> **[is_paused](/reference/Modules/group__update-flow#is_paused)**() const;
+
 
 Returns true iff we are currently paused. See [pause()](/reference/Modules/group__update-flow#pause) and [resume()](/reference/Modules/group__update-flow#resume). 
 
-## Public Attributes Documentation
 
-### variable update
+
+### update
 
 ```cpp
 std::function< void()> update = []() {};
@@ -348,7 +295,7 @@ std::function< void()> update = []() {};
 
 This function is called repeatedly, once every 1/framerate() seconds (or at least it will try, if your update code is too slow then the next updates will necessarily be delayed). 
 
-### variable mouse_moved
+### mouse_moved
 
 ```cpp
 std::function< void(MouseMove)> mouse_moved = [](MouseMove) {};
@@ -356,7 +303,7 @@ std::function< void(MouseMove)> mouse_moved = [](MouseMove) {};
 
 This function is called whenever the mouse is moved. 
 
-### variable mouse_dragged
+### mouse_dragged
 
 ```cpp
 std::function< void(MouseDrag)> mouse_dragged = [](MouseDrag) {};
@@ -364,7 +311,7 @@ std::function< void(MouseDrag)> mouse_dragged = [](MouseDrag) {};
 
 This function is called whenever the mouse is dragged. 
 
-### variable mouse_pressed
+### mouse_pressed
 
 ```cpp
 std::function< void(MouseButton)> mouse_pressed = [](MouseButton) {};
@@ -372,7 +319,7 @@ std::function< void(MouseButton)> mouse_pressed = [](MouseButton) {};
 
 This function is called whenever a mouse button is pressed. 
 
-### variable mouse_released
+### mouse_released
 
 ```cpp
 std::function< void(MouseButton)> mouse_released = [](MouseButton) {};
@@ -380,7 +327,7 @@ std::function< void(MouseButton)> mouse_released = [](MouseButton) {};
 
 This function is called whenever a mouse button is released. 
 
-### variable mouse_scrolled
+### mouse_scrolled
 
 ```cpp
 std::function< void(MouseScroll)> mouse_scrolled = [](MouseScroll) {};
@@ -388,7 +335,7 @@ std::function< void(MouseScroll)> mouse_scrolled = [](MouseScroll) {};
 
 This function is called whenever the mouse wheel is scrolled. 
 
-### variable key_pressed
+### key_pressed
 
 ```cpp
 std::function< void(KeyEvent)> key_pressed = [](KeyEvent) {};
@@ -396,7 +343,7 @@ std::function< void(KeyEvent)> key_pressed = [](KeyEvent) {};
 
 This function is called whenever a keyboard key is pressed. 
 
-### variable key_released
+### key_released
 
 ```cpp
 std::function< void(KeyEvent)> key_released = [](KeyEvent) {};
@@ -404,7 +351,7 @@ std::function< void(KeyEvent)> key_released = [](KeyEvent) {};
 
 This function is called whenever a keyboard key is released. 
 
-### variable key_repeated
+### key_repeated
 
 ```cpp
 std::function< void(KeyEvent)> key_repeated = [](KeyEvent) {};
@@ -420,7 +367,7 @@ if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and 
 ```
 
 
-### variable on_error
+### on_error
 
 ```cpp
 std::function< void(std::string &&)> on_error = [](std::string&& error_message) {
@@ -430,87 +377,27 @@ std::function< void(std::string &&)> on_error = [](std::string&& error_message) 
 
 This function is called whenever an error occurs. 
 
-### variable fill
+### fill
 
 ```cpp
 Color fill {1.f, 1.f, 1.f, 0.5f};
 ```
 
 
-### variable stroke
+### stroke
 
 ```cpp
 Color stroke {0.f, 0.f, 0.f};
 ```
 
 
-### variable stroke_weight
+### stroke_weight
 
 ```cpp
 float stroke_weight = 0.01f;
 ```
 
 
-## Friends
-
-### friend window_size_callback
-
-```cpp
-friend void window_size_callback(
-    GLFWwindow * window,
-
-    int width,
-
-    int height
-);
-```
-
-
-### friend scroll_callback
-
-```cpp
-friend void scroll_callback(
-    GLFWwindow * window,
-
-    double x,
-
-    double y
-);
-```
-
-
-### friend mouse_button_callback
-
-```cpp
-friend void mouse_button_callback(
-    GLFWwindow * window,
-
-    int button,
-
-    int action,
-
-    int mods
-);
-```
-
-
-### friend key_callback
-
-```cpp
-friend void key_callback(
-    GLFWwindow * window,
-
-    int key,
-
-    int scancode,
-
-    int action,
-
-    int mods
-);
-```
-
-
 -------------------------------
 
-Updated on 2022-01-08 at 01:03:11 +0100
+Updated on 2022 January 08
