@@ -12,6 +12,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'julesfouchy',
   projectName: 'p6-docs',
+  plugins: [[require.resolve('docusaurus-lunr-search'), {excludeRoutes: []}]],
   themeConfig: {
     navbar: {
       title: '',
