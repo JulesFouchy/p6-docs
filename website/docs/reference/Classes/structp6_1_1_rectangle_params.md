@@ -13,9 +13,9 @@ title: p6::RectangleParams
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/api/Classes/structp6_1_1_rectangle_params#variable-position)**  |
-| glm::vec2 | **[size](/api/Classes/structp6_1_1_rectangle_params#variable-size)**  |
-| float | **[rotation](/api/Classes/structp6_1_1_rectangle_params#variable-rotation)**  |
+| glm::vec2 | **[position](/reference/Classes/structp6_1_1_rectangle_params#position)**  |
+| glm::vec2 | **[size](/reference/Classes/structp6_1_1_rectangle_params#size)**  |
+| float | **[rotation](/reference/Classes/structp6_1_1_rectangle_params#rotation)**  |
 
 ## Public Attributes Documentation
 
@@ -42,4 +42,4 @@ float rotation = 0.f;
 
 -------------------------------
 
-Updated on 2022-01-03 at 19:40:53 +0100
+Updated on 2022-01-08 at 01:03:11 +0100

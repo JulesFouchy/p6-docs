@@ -1,5 +1,5 @@
 {
-  "baseUrl": "/api/",
+  "baseUrl": "/reference/",
   "copyImages": true,
   "fileExt": "md",
   "filesFilter": [],

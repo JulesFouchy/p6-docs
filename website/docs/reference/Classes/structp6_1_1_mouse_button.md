@@ -13,8 +13,8 @@ title: p6::MouseButton
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/api/Classes/structp6_1_1_mouse_button#variable-position)**  |
-| Button | **[button](/api/Classes/structp6_1_1_mouse_button#variable-button)**  |
+| glm::vec2 | **[position](/reference/Classes/structp6_1_1_mouse_button#position)**  |
+| Button | **[button](/reference/Classes/structp6_1_1_mouse_button#button)**  |
 
 ## Public Attributes Documentation
 
@@ -34,4 +34,4 @@ Button button;
 
 -------------------------------
 
-Updated on 2022-01-03 at 19:40:53 +0100
+Updated on 2022-01-08 at 01:03:11 +0100

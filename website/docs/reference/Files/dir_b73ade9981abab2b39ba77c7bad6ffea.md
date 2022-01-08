@@ -11,7 +11,7 @@ title: C:/Dev/C++/p6-docs/examples/basic
 
 | Name           |
 | -------------- |
-| **[C:/Dev/C++/p6-docs/examples/basic/p6](/api/Files/dir_cc74774aba980793e12e526e494a19e2#dir-c:/dev/c++/p6-docs/examples/basic/p6)**  |
+| **[C:/Dev/C++/p6-docs/examples/basic/p6](/reference/Files/dir_cc74774aba980793e12e526e494a19e2#c:/dev/c++/p6-docs/examples/basic/p6)**  |
 
 
 
@@ -20,4 +20,4 @@ title: C:/Dev/C++/p6-docs/examples/basic
 
 -------------------------------
 
-Updated on 2022-01-03 at 19:40:53 +0100
+Updated on 2022-01-08 at 01:03:11 +0100

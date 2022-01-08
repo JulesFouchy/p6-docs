@@ -11,7 +11,7 @@ title: math.h
 
 | Name           |
 | -------------- |
-| **[p6](/api/Namespaces/namespacep6)**  |
+| **[p6](/reference/Namespaces/namespacep6)**  |
 
 
 
@@ -22,17 +22,18 @@ title: math.h
 #pragma once
 
 namespace p6 {
+/* ------------------------------- */
+/* ------------------------------- */
 
 template<typename T>
 T map(T x, T from_min, T from_max, T to_min, T to_max)
 {
     return (x - from_min) * (to_max - to_min) / (from_max - from_min) + to_min;
 }
-
 } // namespace p6
 ```
 
 
 -------------------------------
 
-Updated on 2022-01-03 at 19:40:53 +0100
+Updated on 2022-01-08 at 01:03:11 +0100

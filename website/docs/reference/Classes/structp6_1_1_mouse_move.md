@@ -13,8 +13,8 @@ title: p6::MouseMove
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/api/Classes/structp6_1_1_mouse_move#variable-position)**  |
-| glm::vec2 | **[delta](/api/Classes/structp6_1_1_mouse_move#variable-delta)**  |
+| glm::vec2 | **[position](/reference/Classes/structp6_1_1_mouse_move#position)**  |
+| glm::vec2 | **[delta](/reference/Classes/structp6_1_1_mouse_move#delta)**  |
 
 ## Public Attributes Documentation
 
@@ -34,4 +34,4 @@ glm::vec2 delta;
 
 -------------------------------
 
-Updated on 2022-01-03 at 19:40:53 +0100
+Updated on 2022-01-08 at 01:03:11 +0100

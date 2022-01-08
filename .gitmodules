@@ -1,3 +1,6 @@
 [submodule "examples/basic/p6"]
 	path = examples/basic/p6
 	url = https://github.com/JulesFouchy/p6
+[submodule "docs_generator/doxybook2"]
+	path = docs_generator/doxybook2
+	url = https://github.com/JulesFouchy/doxybook2

@@ -56,7 +56,7 @@
 
 {% if exists("publicFunctions") %}## Public Functions Documentation
 
-{% for child in publicFunctions %}### {{child.kind}} {{child.name}}
+{% for child in publicFunctions %}### {{child.name}}()
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif -%}

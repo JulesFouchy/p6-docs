@@ -28,9 +28,9 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'api/introduction',
+          docId: 'reference/introduction',
           position: 'left',
-          label: 'API',
+          label: 'Reference',
         },
         {
           to: '/about',

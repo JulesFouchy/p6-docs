@@ -13,9 +13,9 @@ title: p6::MouseDrag
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/api/Classes/structp6_1_1_mouse_drag#variable-position)**  |
-| glm::vec2 | **[delta](/api/Classes/structp6_1_1_mouse_drag#variable-delta)**  |
-| glm::vec2 | **[start_position](/api/Classes/structp6_1_1_mouse_drag#variable-start-position)**  |
+| glm::vec2 | **[position](/reference/Classes/structp6_1_1_mouse_drag#position)**  |
+| glm::vec2 | **[delta](/reference/Classes/structp6_1_1_mouse_drag#delta)**  |
+| glm::vec2 | **[start_position](/reference/Classes/structp6_1_1_mouse_drag#start_position)**  |
 
 ## Public Attributes Documentation
 
@@ -42,4 +42,4 @@ glm::vec2 start_position;
 
 -------------------------------
 
-Updated on 2022-01-03 at 19:40:53 +0100
+Updated on 2022-01-08 at 01:03:11 +0100

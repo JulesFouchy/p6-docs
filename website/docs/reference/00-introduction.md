@@ -1,4 +1,4 @@
 ---
 title: Introduction
-slug: /api
+slug: /reference
 ---
