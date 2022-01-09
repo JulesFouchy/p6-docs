@@ -76,13 +76,13 @@ int main()
             std::cout << "'" << event.logical_key << "'"
                       << "\n";
             if (event.logical_key == " ") {
-                p6.exit();
+                p6.stop();
             }
         };
         p6.key_repeated = [](p6::KeyEvent) {
             // std::cout << "KEY REPEATED\n";
         };
-        p6.run();
+        p6.start();
     }
     catch (const std::exception& e) {
         std::cerr << e.what() << '\n';

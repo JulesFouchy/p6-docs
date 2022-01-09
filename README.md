@@ -8,7 +8,7 @@
 int main()
 {
     auto p6 = p6::Context{{1280, 720, "p6 example"}}; // Creates a context with a window
-    p6.run(); // Start the p6 application
+    p6.start(); // Start the p6 application
     return 0;
 }
 ```
@@ -25,7 +25,7 @@ int main()
         p6.background({0.5f, 0.3f, 0.8f});        // Clear the background with some color (Try to comment out this line to see what happens)
         p6.rectangle({p6.mouse(), {0.3f, 0.3f}}); // Draw a square of size 0.3 under the mouse cursor
     };
-    p6.run();
+    p6.start();
     return 0;
 }
 ```
