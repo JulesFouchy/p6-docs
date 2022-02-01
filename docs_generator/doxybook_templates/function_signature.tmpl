@@ -1,5 +1,5 @@
-**[{{name}}]({{url}})**({% for param in params -%}
-{{param.type}} {{param.name}}{% if existsIn(param, "defval") %} ={{param.defval}}{% endif -%}
+{% if exists("type") %}`{{type}}` {% endif %}**[{{name}}]({{url}})**({% for param in params -%}
+`{{param.type}}` {{param.name}}{% if existsIn(param, "defval") %} ={{param.defval}}{% endif -%}
 {% if not loop.is_last %}, {% endif -%}
 {% endfor %}){% if const %} const{% endif -%}
 {% if override %} override{% endif -%}
