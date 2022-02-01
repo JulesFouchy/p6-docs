@@ -19,8 +19,7 @@ def generate_documentation(output_folder):
         if os.path.isdir(filename):
             shutil.rmtree(filename)
         else:
-            if "00-summary" not in filename:
-                os.remove(filename)
+            os.remove(filename)
 
     # Run Doxygen
     os.system(f"cmake . -B/dummy") # -B/xxx prevents CMake from generating all the build files
@@ -32,6 +31,21 @@ def generate_documentation(output_folder):
     for filename in glob.glob(f"{output_folder}/*"):
         if os.path.isdir(filename) and os.path.basename(os.path.normpath(filename)) in ["Pages", "Examples", "Files", "Namespaces"]:
             shutil.rmtree(filename)
+
+    # Create the summary file
+    summary_content = """---
+title: Summary 
+slug: /reference 
+---
+
+Welcome to the reference! In here you can find all the details of everything that is available in *p6*.
+"""
+    with open(f"{output_folder}/Modules/index_groups.md", 'r') as f:
+        summary_content += f.read()
+    with open(f"{output_folder}/Types/index_classes.md", 'r') as f:
+        summary_content += f.read()
+    with open(f"{output_folder}/00-summary.md", 'a') as f:
+        f.write(summary_content)
 
     # Remove index files
     for filename in glob.glob(f"{output_folder}/**", recursive=True):
