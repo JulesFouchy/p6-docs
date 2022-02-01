@@ -1,22 +1,22 @@
-{% if exists("publicTypes") %}## Types Documentation
+{% if exists("publicTypes") %}## Types
 
 {% for child in publicTypes %}### {{child.name}}
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif %}
-{% if exists("publicFunctions") %}## Functions Documentation
+{% if exists("publicFunctions") %}## Functions
 
 {% for child in publicFunctions %}### {{child.name}}()
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif %}
-{% if exists("publicAttributes") %}## Attributes Documentation
+{% if exists("publicAttributes") %}## Attributes
 
 {% for child in publicAttributes %}### {{child.name}}
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif %}
-{% if exists("defines") %}## Macros Documentation
+{% if exists("defines") %}## Macros
 
 {% for child in defines %}### {{child.name}}
 

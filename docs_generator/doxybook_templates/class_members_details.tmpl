@@ -16,28 +16,28 @@
 
 
 
-{% if exists("publicTypes") %}## Public Types Documentation
+{% if exists("publicTypes") %}## Public Types
 
 {% for child in publicTypes %}### {{child.name}}
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif -%}
 
-{% if exists("protectedTypes") %}## Protected Types Documentation
+{% if exists("protectedTypes") %}## Protected Types
 
 {% for child in protectedTypes %}### {{child.name}}
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif -%}
 
-{% if exists("protectedFunctions") %}## Protected Functions Documentation
+{% if exists("protectedFunctions") %}## Protected Functions
 
 {% for child in protectedFunctions %}### {{child.name}}()
 
 {{ render("member_details", child) }}
 {% endfor %}{% endif -%}
 
-{% if exists("protectedAttributes") %}## Protected Attributes Documentation
+{% if exists("protectedAttributes") %}## Protected Attributes
 
 {% for child in protectedAttributes %}### {{child.name}}
 
