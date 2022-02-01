@@ -1,6 +1,7 @@
 ---
 title: p6::MouseMove
 
+sidebar_position: 1
 ---
 
 # p6::MouseMove
@@ -9,13 +10,14 @@ title: p6::MouseMove
 
 
 
-## Summary
 
+
+## Summary
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/reference/Classes/structp6_1_1_mouse_move#position)**  |
-| glm::vec2 | **[delta](/reference/Classes/structp6_1_1_mouse_move#delta)**  |
+| glm::vec2 | **[position](/reference/Types/mouse_move#position)**  |
+| glm::vec2 | **[delta](/reference/Types/mouse_move#delta)**  |
 
 ## Details
 
@@ -36,4 +38,4 @@ glm::vec2 delta;
 
 -------------------------------
 
-Updated on 2022 January 08
+Updated on 2022 February 01

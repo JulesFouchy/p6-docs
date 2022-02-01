@@ -1,6 +1,7 @@
 ---
 title: p6::MouseScroll
 
+sidebar_position: 1
 ---
 
 # p6::MouseScroll
@@ -9,13 +10,14 @@ title: p6::MouseScroll
 
 
 
-## Summary
 
+
+## Summary
 
 |                | Name           |
 | -------------- | -------------- |
-| float | **[dx](/reference/Classes/structp6_1_1_mouse_scroll#dx)**  |
-| float | **[dy](/reference/Classes/structp6_1_1_mouse_scroll#dy)**  |
+| float | **[dx](/reference/Types/mouse_scroll#dx)**  |
+| float | **[dy](/reference/Types/mouse_scroll#dy)**  |
 
 ## Details
 
@@ -36,4 +38,4 @@ float dy;
 
 -------------------------------
 
-Updated on 2022 January 08
+Updated on 2022 February 01

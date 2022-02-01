@@ -1,6 +1,7 @@
 ---
 title: p6::MouseDrag
 
+sidebar_position: 1
 ---
 
 # p6::MouseDrag
@@ -9,14 +10,15 @@ title: p6::MouseDrag
 
 
 
-## Summary
 
+
+## Summary
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/reference/Classes/structp6_1_1_mouse_drag#position)**  |
-| glm::vec2 | **[delta](/reference/Classes/structp6_1_1_mouse_drag#delta)**  |
-| glm::vec2 | **[start_position](/reference/Classes/structp6_1_1_mouse_drag#start_position)**  |
+| glm::vec2 | **[position](/reference/Types/mouse_drag#position)**  |
+| glm::vec2 | **[delta](/reference/Types/mouse_drag#delta)**  |
+| glm::vec2 | **[start_position](/reference/Types/mouse_drag#start_position)**  |
 
 ## Details
 
@@ -44,4 +46,4 @@ glm::vec2 start_position;
 
 -------------------------------
 
-Updated on 2022 January 08
+Updated on 2022 February 01

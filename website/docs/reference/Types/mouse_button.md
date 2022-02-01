@@ -1,6 +1,7 @@
 ---
 title: p6::MouseButton
 
+sidebar_position: 1
 ---
 
 # p6::MouseButton
@@ -9,13 +10,14 @@ title: p6::MouseButton
 
 
 
-## Summary
 
+
+## Summary
 
 |                | Name           |
 | -------------- | -------------- |
-| glm::vec2 | **[position](/reference/Classes/structp6_1_1_mouse_button#position)**  |
-| Button | **[button](/reference/Classes/structp6_1_1_mouse_button#button)**  |
+| glm::vec2 | **[position](/reference/Types/mouse_button#position)**  |
+| Button | **[button](/reference/Types/mouse_button#button)**  |
 
 ## Details
 
@@ -36,4 +38,4 @@ Button button;
 
 -------------------------------
 
-Updated on 2022 January 08
+Updated on 2022 February 01
