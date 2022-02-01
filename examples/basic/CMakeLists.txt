@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(p6-basic-example)
 
 add_executable(${PROJECT_NAME} main.cpp)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
 if (MSVC)
     target_compile_options(${PROJECT_NAME} PRIVATE /WX /W4)
