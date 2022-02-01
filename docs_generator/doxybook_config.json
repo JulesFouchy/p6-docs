@@ -3,7 +3,7 @@
   "copyImages": true,
   "fileExt": "md",
   "filesFilter": [],
-  "folderClassesName": "Classes",
+  "folderClassesName": "Types",
   "folderExamplesName": "Examples",
   "folderFilesName": "Files",
   "folderGroupsName": "Modules",
