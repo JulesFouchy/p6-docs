@@ -16,7 +16,7 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Center](/reference/Types/center#center)**(glm::vec2 value) |
+| | **[Center](/reference/Types/center#center)**(`glm::vec2` value) |
 | glm::vec2 | **[value](/reference/Types/center#value)**  |
 
 ## Details

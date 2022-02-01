@@ -18,7 +18,7 @@ Inherits from op::Addable< Radians >, op::Subtractable< Radians >, op::Negatable
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Radians](/reference/Types/radians#radians)**(float value) |
+| | **[Radians](/reference/Types/radians#radians)**(`float` value) |
 | float | **[value](/reference/Types/radians#value)**  |
 
 ## Details

@@ -16,8 +16,8 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Radii](/reference/Types/radii#radii)**(float x, float y) |
-| | **[Radii](/reference/Types/radii#radii)**(glm::vec2 v) |
+| | **[Radii](/reference/Types/radii#radii)**(`float` x, `float` y) |
+| | **[Radii](/reference/Types/radii#radii)**(`glm::vec2` v) |
 | glm::vec2 | **[value](/reference/Types/radii#value)**  |
 
 ## Details

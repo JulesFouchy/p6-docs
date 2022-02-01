@@ -1,12 +1,13 @@
 ---
 title: Update Flow
+summary: Control the update() loop and query information about it. 
 
 sidebar_position: 1
 ---
 
 # Update Flow
 
-
+Control the [update()](/reference/events#update) loop and query information about it. 
 
 ## Summary
 
@@ -14,11 +15,11 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[start](/reference/update-flow#start)**()<br/>Starts the [update()](/reference/Types/context#update) loop.  |
-| void | **[stop](/reference/update-flow#stop)**()<br/>Stops the [update()](/reference/Types/context#update) loop.  |
-| void | **[pause](/reference/update-flow#pause)**()<br/>Pauses the [update()](/reference/Types/context#update) loop.  |
-| void | **[resume](/reference/update-flow#resume)**()<br/>Resumes the [update()](/reference/Types/context#update) loop if it was paused with [pause()](/reference/update-flow#pause).  |
-| bool | **[is_paused](/reference/update-flow#is_paused)**() const<br/>Returns true iff we are currently paused. See [pause()](/reference/update-flow#pause) and [resume()](/reference/update-flow#resume).  |
+| void | **[start](/reference/update-flow#start)**()<br/>Starts the [update()](/reference/events#update) loop.  |
+| void | **[stop](/reference/update-flow#stop)**()<br/>Stops the [update()](/reference/events#update) loop.  |
+| void | **[pause](/reference/update-flow#pause)**()<br/>Pauses the [update()](/reference/events#update) loop.  |
+| void | **[resume](/reference/update-flow#resume)**()<br/>Resumes the [update()](/reference/events#update) loop if it was paused with [pause()](/reference/update-flow#pause).  |
+| bool | **[is_paused](/reference/update-flow#is_paused)**() const<br/>Returns true iff the [update()](/reference/events#update) loop is currently paused.  |
 
 
 ## Functions
@@ -28,9 +29,9 @@ sidebar_position: 1
 > **[start](/reference/update-flow#start)**();
 
 
-Starts the [update()](/reference/Types/context#update) loop. 
+Starts the [update()](/reference/events#update) loop. 
 
-[update()](/reference/Types/context#update) will be called repeatedly, until you close the window or call [stop()](/reference/update-flow#stop)
+[update()](/reference/events#update) will be called repeatedly, until you close the window or call [stop()](/reference/update-flow#stop). 
 
 
 ### stop()
@@ -38,7 +39,7 @@ Starts the [update()](/reference/Types/context#update) loop.
 > **[stop](/reference/update-flow#stop)**();
 
 
-Stops the [update()](/reference/Types/context#update) loop. 
+Stops the [update()](/reference/events#update) loop. 
 
 This is the programatic equivalent of a user closing the window. 
 
@@ -48,9 +49,9 @@ This is the programatic equivalent of a user closing the window.
 > **[pause](/reference/update-flow#pause)**();
 
 
-Pauses the [update()](/reference/Types/context#update) loop. 
+Pauses the [update()](/reference/events#update) loop. 
 
-No [update()](/reference/Types/context#update) will be called, until you call [resume()](/reference/update-flow#resume). User inputs are still processed. 
+No [update()](/reference/events#update) will be called, until you call [resume()](/reference/update-flow#resume). User inputs are still processed. 
 
 
 ### resume()
@@ -58,7 +59,7 @@ No [update()](/reference/Types/context#update) will be called, until you call [r
 > **[resume](/reference/update-flow#resume)**();
 
 
-Resumes the [update()](/reference/Types/context#update) loop if it was paused with [pause()](/reference/update-flow#pause). 
+Resumes the [update()](/reference/events#update) loop if it was paused with [pause()](/reference/update-flow#pause). 
 
 It has no effect if the loop was already playing. 
 
@@ -68,7 +69,7 @@ It has no effect if the loop was already playing.
 > **[is_paused](/reference/update-flow#is_paused)**() const;
 
 
-Returns true iff we are currently paused. See [pause()](/reference/update-flow#pause) and [resume()](/reference/update-flow#resume). 
+Returns true iff the [update()](/reference/events#update) loop is currently paused. 
 
 
 

@@ -1,12 +1,13 @@
 ---
 title: Drawing
+summary: Draw shapes and control the look of them. 
 
 sidebar_position: 1
 ---
 
 # Drawing
 
-
+Draw shapes and control the look of them. 
 
 ## Summary
 
@@ -14,13 +15,13 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[background](/reference/drawing#background)**(Color color) const<br/>Sets the color and alpha of each pixel of the canvas.  |
-| void | **[rectangle](/reference/drawing#rectangle)**(Transform2D transform) const<br/>Draws a rectangle.  |
-| void | **[circle](/reference/drawing#circle)**(Center center, Radius radius) const<br/>Draws a circle.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(Center center, Radii radii, Rotation rotation) const<br/>Draws an ellipse.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(Center center, Radius radius) const |
-| void | **[ellipse](/reference/drawing#ellipse)**(Transform2D transform) const |
-| void | **[image](/reference/drawing#image)**(const Image & img, Transform2D transform) const<br/>Draws an image.  |
+| void | **[background](/reference/drawing#background)**(`Color` color) const<br/>Sets the color and alpha of each pixel of the canvas.  |
+| void | **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform) const<br/>Draws a rectangle.  |
+| void | **[circle](/reference/drawing#circle)**(`Center` center, `Radius` radius) const<br/>Draws a circle.  |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii, `Rotation` rotation) const<br/>Draws an ellipse.  |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radius` radius) const |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) const |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform) const<br/>Draws an image.  |
 
 ### Attributes
 

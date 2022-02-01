@@ -1,0 +1,146 @@
+---
+title: Events
+summary: You can set those functions as you wish to react to various events. 
+
+sidebar_position: 1
+---
+
+# Events
+
+You can set those functions as you wish to react to various events.  [More...](#detailed-description)
+
+## Summary
+
+### Attributes
+
+|                | Name           |
+| -------------- | -------------- |
+| std::function< void()> | **[update](/reference/events#update)** <br/>This function is called repeatedly. The framerate will be capped at your monitors refresh rate (60 frames per second on a typical monitor).  |
+| std::function< void(MouseMove)> | **[mouse_moved](/reference/events#mouse_moved)** <br/>This function is called whenever the mouse is moved.  |
+| std::function< void(MouseDrag)> | **[mouse_dragged](/reference/events#mouse_dragged)** <br/>This function is called whenever the mouse is dragged.  |
+| std::function< void(MouseButton)> | **[mouse_pressed](/reference/events#mouse_pressed)** <br/>This function is called whenever a mouse button is pressed.  |
+| std::function< void(MouseButton)> | **[mouse_released](/reference/events#mouse_released)** <br/>This function is called whenever a mouse button is released.  |
+| std::function< void(MouseScroll)> | **[mouse_scrolled](/reference/events#mouse_scrolled)** <br/>This function is called whenever the mouse wheel is scrolled.  |
+| std::function< void(KeyEvent)> | **[key_pressed](/reference/events#key_pressed)** <br/>This function is called whenever a keyboard key is pressed.  |
+| std::function< void(KeyEvent)> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
+| std::function< void(KeyEvent)> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
+| std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
+
+## Detailed Description
+
+You can set those functions as you wish to react to various events. 
+
+The simplest way is to use a lambda:
+
+```cpp
+
+auto ctx = p6::Context{};
+ctx.mouse_pressed = [](p6::MouseButton) {
+    std::cout << "Hello World\n";
+};
+```
+
+
+
+## Attributes
+
+### update
+
+```
+std::function< void()> update = []() {};
+```
+
+This function is called repeatedly. The framerate will be capped at your monitors refresh rate (60 frames per second on a typical monitor). 
+
+### mouse_moved
+
+```
+std::function< void(MouseMove)> mouse_moved = [](MouseMove) {};
+```
+
+This function is called whenever the mouse is moved. 
+
+### mouse_dragged
+
+```
+std::function< void(MouseDrag)> mouse_dragged = [](MouseDrag) {};
+```
+
+This function is called whenever the mouse is dragged. 
+
+### mouse_pressed
+
+```
+std::function< void(MouseButton)> mouse_pressed = [](MouseButton) {};
+```
+
+This function is called whenever a mouse button is pressed. 
+
+### mouse_released
+
+```
+std::function< void(MouseButton)> mouse_released = [](MouseButton) {};
+```
+
+This function is called whenever a mouse button is released. 
+
+### mouse_scrolled
+
+```
+std::function< void(MouseScroll)> mouse_scrolled = [](MouseScroll) {};
+```
+
+This function is called whenever the mouse wheel is scrolled. 
+
+### key_pressed
+
+```
+std::function< void(KeyEvent)> key_pressed = [](KeyEvent) {};
+```
+
+This function is called whenever a keyboard key is pressed. 
+
+### key_released
+
+```
+std::function< void(KeyEvent)> key_released = [](KeyEvent) {};
+```
+
+This function is called whenever a keyboard key is released. 
+
+### key_repeated
+
+```
+std::function< void(KeyEvent)> key_repeated = [](KeyEvent) {};
+```
+
+This function is called repeatedly whenever a keyboard key is held. 
+
+(NB: this only starts after holding the key for a little while. The axact behaviour is OS-specific)
+
+:warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your update function:
+
+```cpp
+
+if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and LogicalKey
+    character.move_forward(p6.delta_time());
+}
+```
+
+
+### on_error
+
+```
+std::function< void(std::string &&)> on_error = [](std::string&& error_message) {
+        throw std::runtime_error{error_message};
+    };
+```
+
+This function is called whenever an error occurs. 
+
+
+
+
+-------------------------------
+
+Updated on 2022 February 01

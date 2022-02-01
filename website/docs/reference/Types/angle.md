@@ -18,7 +18,7 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Angle](/reference/Types/angle#angle)**([Radians](/reference/Types/radians) value) |
+| | **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value) |
 | float | **[as_turns](/reference/Types/angle#as_turns)**() const |
 | float | **[as_radians](/reference/Types/angle#as_radians)**() const |
 | float | **[as_degrees](/reference/Types/angle#as_degrees)**() const |

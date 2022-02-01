@@ -1,12 +1,13 @@
 ---
 title: Math
+summary: Mathematical functions and numerical constants. 
 
 sidebar_position: 1
 ---
 
 # Math
 
-
+Mathematical functions and numerical constants. 
 
 ## Summary
 
@@ -14,7 +15,7 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| template <typename T \> <br/>T | **[map](/reference/math#map)**(T x, T from_min, T from_max, T to_min, T to_max)<br/>Maps x, which is in the range [from_mix, from_max], to the range [to_min, to_max].  |
+| template <typename T \> <br/>T | **[map](/reference/math#map)**(`T` x, `T` from_min, `T` from_max, `T` to_min, `T` to_max)<br/>Maps x, which is in the range [from_mix, from_max], to the range [to_min, to_max].  |
 
 ### Attributes
 
