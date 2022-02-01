@@ -14,7 +14,7 @@ template <{% for param in child.templateParams -%}
 {% if child.virtual %}virtual {% endif -%}
 {% if existsIn(child, "type") %}{{child.type}} {% endif -%}
 | **[{{child.name}}]({{child.url}})**({% for param in child.params -%}
-{{param.type}} {{param.name}}{% if existsIn(param, "defval") %} ={{param.defval}}{% endif -%}
+`{{param.type}}` {{param.name}}{% if existsIn(param, "defval") %} = {{param.defval}}{% endif -%}
 {% if not loop.is_last %}, {% endif -%}
 {% endfor %}){% if child.const %} const{% endif -%}
 {% if child.override %} override{% endif -%}
