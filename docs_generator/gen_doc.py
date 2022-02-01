@@ -19,4 +19,16 @@ def generate_documentation(output_folder):
     # Run doxybook2
     os.system(f"doxybook2.exe --input Doxygen/xml --output {output_folder} --config doxybook_config.json --templates doxybook_templates")
 
+    # Remove the "group__" in the filenames and the content of the files
+    for filename in glob.glob(f"{output_folder}/**", recursive=True):
+        def with_replacement(text):
+            return text.replace("group__", "")
+        if os.path.isfile(filename):
+            with open(filename, 'r+') as f:
+                text = f.read()
+                f.seek(0)
+                f.write(with_replacement(text))
+                f.truncate()
+        os.rename(filename, with_replacement(filename))
+
 generate_documentation(output_folder = "../website/docs/reference")
