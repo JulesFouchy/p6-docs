@@ -1,4 +1,11 @@
-import os, glob, shutil 
+import os, glob, shutil
+
+def modify_file_content(filename, functor):
+    with open(filename, 'r+') as f:
+        text = f.read()
+        f.seek(0)
+        f.write(functor(text))
+        f.truncate()
 
 def generate_documentation(output_folder):
     # Clean the output folder
@@ -19,16 +26,26 @@ def generate_documentation(output_folder):
     # Run doxybook2
     os.system(f"doxybook2.exe --input Doxygen/xml --output {output_folder} --config doxybook_config.json --templates doxybook_templates")
 
+    # Remove index files
+    for filename in glob.glob(f"{output_folder}/**", recursive=True):
+        if "index_" in filename:
+            os.remove(filename)
+
     # Remove the "group__" in the filenames and the content of the files
     for filename in glob.glob(f"{output_folder}/**", recursive=True):
-        def with_replacement(text):
-            return text.replace("group__", "")
+        with_replacement = lambda text : text.replace("group__", "")
         if os.path.isfile(filename):
-            with open(filename, 'r+') as f:
-                text = f.read()
-                f.seek(0)
-                f.write(with_replacement(text))
-                f.truncate()
-        os.rename(filename, with_replacement(filename))
+            modify_file_content(filename, with_replacement)
+            os.rename(filename, with_replacement(filename))
+
+    # Move the files of Modules at the root
+    for filename in glob.glob(f"{output_folder}/Modules/**", recursive=True):
+        if os.path.isfile(filename):
+            os.rename(filename, filename.replace("Modules", ""))
+    os.rmdir(f"{output_folder}/Modules")
+    # Fix links by removing /Modules
+    for filename in glob.glob(f"{output_folder}/**", recursive=True):
+        if os.path.isfile(filename):
+            modify_file_content(filename, lambda text : text.replace("/Modules", ""))
 
 generate_documentation(output_folder = "../website/docs/reference")
