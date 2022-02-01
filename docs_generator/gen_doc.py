@@ -7,6 +7,12 @@ def modify_file_content(filename, functor):
         f.write(functor(text))
         f.truncate()
 
+def remove_extra_text_in_filepaths(output_folder, extra_text):
+    for filename in glob.glob(f"{output_folder}/**", recursive=True):
+        if os.path.isfile(filename):
+            modify_file_content(filename, lambda text : text.replace(extra_text, ""))
+            os.rename(filename, filename.replace(extra_text, ""))
+
 def generate_documentation(output_folder):
     # Clean the output folder
     for filename in glob.glob(f"{output_folder}/*"):
@@ -32,12 +38,10 @@ def generate_documentation(output_folder):
         if "index_" in filename:
             os.remove(filename)
 
-    # Remove the "group__" in the filenames and the content of the files
-    for filename in glob.glob(f"{output_folder}/**", recursive=True):
-        with_replacement = lambda text : text.replace("group__", "")
-        if os.path.isfile(filename):
-            modify_file_content(filename, with_replacement)
-            os.rename(filename, with_replacement(filename))
+    # Remove ugly extra text in filepaths
+    remove_extra_text_in_filepaths(output_folder, "group__")
+    remove_extra_text_in_filepaths(output_folder, "classp6_1_1_")
+    remove_extra_text_in_filepaths(output_folder, "structp6_1_1_")
 
     # Move the files of Modules at the root
     for filename in glob.glob(f"{output_folder}/Modules/**", recursive=True):
