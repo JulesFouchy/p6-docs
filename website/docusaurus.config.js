@@ -29,7 +29,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'reference/introduction',
+          docId: 'reference/summary',
           position: 'left',
           label: 'Reference',
         },

@@ -19,7 +19,7 @@ def generate_documentation(output_folder):
         if os.path.isdir(filename):
             shutil.rmtree(filename)
         else:
-            if "00-introduction" not in filename:
+            if "00-summary" not in filename:
                 os.remove(filename)
 
     # Run Doxygen
