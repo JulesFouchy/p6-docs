@@ -10,8 +10,12 @@
   "folderNamespacesName": "Namespaces",
   "folderRelatedPagesName": "Pages",
   "foldersToGenerate": [
-    "modules",
-    "classes"
+    "modules", 
+    "classes", 
+    "files", 
+    "pages", 
+    "namespaces", 
+    "examples" 
   ],
   "formulaBlockEnd": "\\]",
   "formulaBlockStart": "\\[",
