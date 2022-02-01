@@ -9,7 +9,7 @@ int main()
         const auto image = p6::load_image("img/1.png");
         p6.background({0.5f, 0.3f, 0.8f});
         // p6.maximize_window();
-        float rotation = 0.f;
+        p6::Angle rotation = 0.0_turns;
         // p6.set_time_mode_fixedstep();
         p6.on_error = [](std::string&& error_message) {
             throw std::runtime_error{error_message};
@@ -21,7 +21,7 @@ int main()
             p6.stroke        = p6::Color{0.f, 0.f, 0.f, 1.f};
             p6.rectangle({glm::vec2{0.f},
                           glm::vec2{0.98f},
-                          1.6f});
+                          1.6_radians});
             p6.image(image, {glm::vec2{0.f},
                              0.2f * glm::vec2{image.size().aspect_ratio(), 1.f}});
             // std::cout << 1.f / p6.delta_time() << '\n';
@@ -32,9 +32,11 @@ int main()
             p6.stroke_weight = 0.02f;
             p6.fill          = p6::Color{1.f, 1.f, 1.f, 0.5f};
             p6.stroke        = p6::Color{0.2f, 0.95f, 0.95f, 1.f};
-            p6.ellipse({p6.mouse(),
-                        {0.8f, 0.4f},
-                        rotation});
+            p6.ellipse(p6::Center{p6.mouse()},
+                       p6::Radii{0.8f, 0.4f},
+                       p6::Rotation{rotation});
+            p6.circle(p6::Center{p6.mouse()},
+                      p6::Radius{0.5f});
             // p6.rectangle({p6.mouse() + glm::vec2(0.f, 0.8f),
             //               {0.8f, 0.4f},
             //               rotation});
@@ -65,7 +67,7 @@ int main()
             std::cout << "RELEASED\n";
         };
         p6.mouse_scrolled = [&](p6::MouseScroll event) {
-            rotation += event.dy * 0.25f * 0.1f * glm::pi<float>() * 2.f;
+            rotation += event.dy * 0.025_turns;
         };
         p6.key_pressed = [](p6::KeyEvent event) {
             std::cout << "KEY PRESSED\n";
