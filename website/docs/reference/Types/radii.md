@@ -25,13 +25,13 @@ sidebar_position: 1
 
 ### Radii()
 
-> **[Radii](/reference/Types/radii#radii)**(float x, float y);
+> **[Radii](/reference/Types/radii#radii)**(`float` x, `float` y);
 
 
 
 ### Radii()
 
-> **[Radii](/reference/Types/radii#radii)**(glm::vec2 v);
+> **[Radii](/reference/Types/radii#radii)**(`glm::vec2` v);
 
 
 

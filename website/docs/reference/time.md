@@ -25,21 +25,21 @@ Query time information and control how the time evolves.
 
 ### time()
 
-> **[time](/reference/time#time)**() const;
+> `float` **[time](/reference/time#time)**() const;
 
 
 Returns the time in seconds since the creation of the [Context](/reference/Types/context). 
 
 ### delta_time()
 
-> **[delta_time](/reference/time#delta_time)**() const;
+> `float` **[delta_time](/reference/time#delta_time)**() const;
 
 
 Returns the time in seconds since the last [update()](/reference/events#update) call (or 0 if this is the first update). 
 
 ### set_time_mode_realtime()
 
-> **[set_time_mode_realtime](/reference/time#set_time_mode_realtime)**();
+> `void` **[set_time_mode_realtime](/reference/time#set_time_mode_realtime)**();
 
 
 Sets the time mode as _realtime_. 
@@ -49,7 +49,7 @@ This means that what is returned by [time()](/reference/time#time) and [delta_ti
 
 ### set_time_mode_fixedstep()
 
-> **[set_time_mode_fixedstep](/reference/time#set_time_mode_fixedstep)**(float framerate);
+> `void` **[set_time_mode_fixedstep](/reference/time#set_time_mode_fixedstep)**(`float` framerate);
 
 
 Sets the time mode as _fixedstep_. 

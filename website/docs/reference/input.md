@@ -27,42 +27,42 @@ Query the state of the mouse and keyboard.
 
 ### mouse()
 
-> **[mouse](/reference/input#mouse)**() const;
+> `glm::vec2` **[mouse](/reference/input#mouse)**() const;
 
 
 Returns the current mouse position. 
 
 ### mouse_delta()
 
-> **[mouse_delta](/reference/input#mouse_delta)**() const;
+> `glm::vec2` **[mouse_delta](/reference/input#mouse_delta)**() const;
 
 
 Returns the movement of the mouse since last [update()](/reference/events#update). 
 
 ### mouse_is_in_window()
 
-> **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const;
+> `bool` **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const;
 
 
 Returns true iff the window is focused and the coordinates returned by [mouse()](/reference/input#mouse) correspond to a position inside the window. 
 
 ### ctrl()
 
-> **[ctrl](/reference/input#ctrl)**() const;
+> `bool` **[ctrl](/reference/input#ctrl)**() const;
 
 
 Returns true iff the CTRL key is pressed (or CMD on Mac) 
 
 ### shift()
 
-> **[shift](/reference/input#shift)**() const;
+> `bool` **[shift](/reference/input#shift)**() const;
 
 
 Returns true iff the SHIFT key is pressed. 
 
 ### alt()
 
-> **[alt](/reference/input#alt)**() const;
+> `bool` **[alt](/reference/input#alt)**() const;
 
 
 Returns true iff the ALT key is pressed. 

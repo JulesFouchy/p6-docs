@@ -36,7 +36,7 @@ Draw shapes and control the look of them.
 
 ### background()
 
-> **[background](/reference/drawing#background)**(Color color) const;
+> `void` **[background](/reference/drawing#background)**(`Color` color) const;
 
 
 Sets the color and alpha of each pixel of the canvas. 
@@ -46,7 +46,7 @@ NB: No blending is applied; even if you specify an alpha of 0.5 the old canvas i
 
 ### rectangle()
 
-> **[rectangle](/reference/drawing#rectangle)**(Transform2D transform) const;
+> `void` **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform) const;
 
 
 Draws a rectangle. 
@@ -66,33 +66,33 @@ p6.rectangle({});
 
 ### circle()
 
-> **[circle](/reference/drawing#circle)**(Center center, Radius radius) const;
+> `void` **[circle](/reference/drawing#circle)**(`Center` center, `Radius` radius) const;
 
 
 Draws a circle. 
 
 ### ellipse()
 
-> **[ellipse](/reference/drawing#ellipse)**(Center center, Radii radii, Rotation rotation) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii, `Rotation` rotation) const;
 
 
 Draws an ellipse. 
 
 ### ellipse()
 
-> **[ellipse](/reference/drawing#ellipse)**(Center center, Radius radius) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radius` radius) const;
 
 
 
 ### ellipse()
 
-> **[ellipse](/reference/drawing#ellipse)**(Transform2D transform) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) const;
 
 
 
 ### image()
 
-> **[image](/reference/drawing#image)**(const Image & img, Transform2D transform) const;
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform) const;
 
 
 Draws an image. 

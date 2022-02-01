@@ -24,7 +24,7 @@ sidebar_position: 1
 
 ### Center()
 
-> **[Center](/reference/Types/center#center)**(glm::vec2 value);
+> **[Center](/reference/Types/center#center)**(`glm::vec2` value);
 
 
 

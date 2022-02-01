@@ -41,14 +41,14 @@ ctx.image(my_image, {}); // Draws my_image onto the screen
 
 ### render_to_image()
 
-> **[render_to_image](/reference/rendering-destination#render_to_image)**(Image & image);
+> `void` **[render_to_image](/reference/rendering-destination#render_to_image)**(`Image &` image);
 
 
 Sets the image where all the drawing commands will happen on. 
 
 ### render_to_screen()
 
-> **[render_to_screen](/reference/rendering-destination#render_to_screen)**();
+> `void` **[render_to_screen](/reference/rendering-destination#render_to_screen)**();
 
 
 Reset the [Context](/reference/Types/context) to render to the screen. 

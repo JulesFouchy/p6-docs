@@ -26,7 +26,7 @@ Control the [update()](/reference/events#update) loop and query information abou
 
 ### start()
 
-> **[start](/reference/update-flow#start)**();
+> `void` **[start](/reference/update-flow#start)**();
 
 
 Starts the [update()](/reference/events#update) loop. 
@@ -36,7 +36,7 @@ Starts the [update()](/reference/events#update) loop.
 
 ### stop()
 
-> **[stop](/reference/update-flow#stop)**();
+> `void` **[stop](/reference/update-flow#stop)**();
 
 
 Stops the [update()](/reference/events#update) loop. 
@@ -46,7 +46,7 @@ This is the programatic equivalent of a user closing the window.
 
 ### pause()
 
-> **[pause](/reference/update-flow#pause)**();
+> `void` **[pause](/reference/update-flow#pause)**();
 
 
 Pauses the [update()](/reference/events#update) loop. 
@@ -56,7 +56,7 @@ No [update()](/reference/events#update) will be called, until you call [resume()
 
 ### resume()
 
-> **[resume](/reference/update-flow#resume)**();
+> `void` **[resume](/reference/update-flow#resume)**();
 
 
 Resumes the [update()](/reference/events#update) loop if it was paused with [pause()](/reference/update-flow#pause). 
@@ -66,7 +66,7 @@ It has no effect if the loop was already playing.
 
 ### is_paused()
 
-> **[is_paused](/reference/update-flow#is_paused)**() const;
+> `bool` **[is_paused](/reference/update-flow#is_paused)**() const;
 
 
 Returns true iff the [update()](/reference/events#update) loop is currently paused. 

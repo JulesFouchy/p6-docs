@@ -27,42 +27,42 @@ Query the state of the window and control it.
 
 ### aspect_ratio()
 
-> **[aspect_ratio](/reference/window#aspect_ratio)**() const;
+> `float` **[aspect_ratio](/reference/window#aspect_ratio)**() const;
 
 
 Returns the aspect ratio of the window (a.k.a. width / height). 
 
 ### window_size()
 
-> **[window_size](/reference/window#window_size)**() const;
+> `ImageSize` **[window_size](/reference/window#window_size)**() const;
 
 
 Returns the size of the window (width and height). 
 
 ### window_width()
 
-> **[window_width](/reference/window#window_width)**() const;
+> `int` **[window_width](/reference/window#window_width)**() const;
 
 
 Returns the width of the window. 
 
 ### window_height()
 
-> **[window_height](/reference/window#window_height)**() const;
+> `int` **[window_height](/reference/window#window_height)**() const;
 
 
 Returns the height of the window. 
 
 ### window_is_focused()
 
-> **[window_is_focused](/reference/window#window_is_focused)**() const;
+> `bool` **[window_is_focused](/reference/window#window_is_focused)**() const;
 
 
 Returns true iff the window is currently focused. 
 
 ### maximize_window()
 
-> **[maximize_window](/reference/window#maximize_window)**();
+> `void` **[maximize_window](/reference/window#maximize_window)**();
 
 
 Maximizes the window. 

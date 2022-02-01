@@ -29,25 +29,25 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 
 ### Angle()
 
-> **[Angle](/reference/Types/angle#angle)**([Radians](/reference/Types/radians) value);
+> **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value);
 
 
 
 ### as_turns()
 
-> **[as_turns](/reference/Types/angle#as_turns)**() const;
+> `float` **[as_turns](/reference/Types/angle#as_turns)**() const;
 
 
 
 ### as_radians()
 
-> **[as_radians](/reference/Types/angle#as_radians)**() const;
+> `float` **[as_radians](/reference/Types/angle#as_radians)**() const;
 
 
 
 ### as_degrees()
 
-> **[as_degrees](/reference/Types/angle#as_degrees)**() const;
+> `float` **[as_degrees](/reference/Types/angle#as_degrees)**() const;
 
 
 

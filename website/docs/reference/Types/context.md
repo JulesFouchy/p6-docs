@@ -66,13 +66,13 @@ sidebar_position: 1
 
 ### Context()
 
-> **[Context](/reference/Types/context#context)**(WindowCreationParams window_creation_params ={});
+> **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params ={});
 
 
 
 ### background()
 
-> **[background](/reference/drawing#background)**([Color](/reference/Types/color) color) const;
+> `void` **[background](/reference/drawing#background)**(`[Color](/reference/Types/color)` color) const;
 
 
 Sets the color and alpha of each pixel of the canvas. 
@@ -82,7 +82,7 @@ NB: No blending is applied; even if you specify an alpha of 0.5 the old canvas i
 
 ### rectangle()
 
-> **[rectangle](/reference/drawing#rectangle)**([Transform2D](/reference/Types/transform2_d) transform) const;
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[Transform2D](/reference/Types/transform2_d)` transform) const;
 
 
 Draws a rectangle. 
@@ -102,152 +102,152 @@ p6.rectangle({});
 
 ### circle()
 
-> **[circle](/reference/drawing#circle)**([Center](/reference/Types/center) center, [Radius](/reference/Types/radius) radius) const;
+> `void` **[circle](/reference/drawing#circle)**(`[Center](/reference/Types/center)` center, `[Radius](/reference/Types/radius)` radius) const;
 
 
 Draws a circle. 
 
 ### ellipse()
 
-> **[ellipse](/reference/drawing#ellipse)**([Center](/reference/Types/center) center, [Radii](/reference/Types/radii) radii, [Rotation](/reference/Types/rotation) rotation) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii, `[Rotation](/reference/Types/rotation)` rotation) const;
 
 
 Draws an ellipse. 
 
 ### ellipse()
 
-> **[ellipse](/reference/drawing#ellipse)**([Center](/reference/Types/center) center, [Radius](/reference/Types/radius) radius) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radius](/reference/Types/radius)` radius) const;
 
 
 
 ### ellipse()
 
-> **[ellipse](/reference/drawing#ellipse)**([Transform2D](/reference/Types/transform2_d) transform) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform) const;
 
 
 
 ### image()
 
-> **[image](/reference/drawing#image)**(const [Image](/reference/Types/image) & img, [Transform2D](/reference/Types/transform2_d) transform) const;
+> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Transform2D](/reference/Types/transform2_d)` transform) const;
 
 
 Draws an image. 
 
 ### render_to_image()
 
-> **[render_to_image](/reference/rendering-destination#render_to_image)**([Image](/reference/Types/image) & image);
+> `void` **[render_to_image](/reference/rendering-destination#render_to_image)**(`[Image](/reference/Types/image) &` image);
 
 
 Sets the image where all the drawing commands will happen on. 
 
 ### render_to_screen()
 
-> **[render_to_screen](/reference/rendering-destination#render_to_screen)**();
+> `void` **[render_to_screen](/reference/rendering-destination#render_to_screen)**();
 
 
 Reset the [Context](/reference/Types/context) to render to the screen. 
 
 ### mouse()
 
-> **[mouse](/reference/input#mouse)**() const;
+> `glm::vec2` **[mouse](/reference/input#mouse)**() const;
 
 
 Returns the current mouse position. 
 
 ### mouse_delta()
 
-> **[mouse_delta](/reference/input#mouse_delta)**() const;
+> `glm::vec2` **[mouse_delta](/reference/input#mouse_delta)**() const;
 
 
 Returns the movement of the mouse since last [update()](/reference/events#update). 
 
 ### mouse_is_in_window()
 
-> **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const;
+> `bool` **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const;
 
 
 Returns true iff the window is focused and the coordinates returned by [mouse()](/reference/input#mouse) correspond to a position inside the window. 
 
 ### ctrl()
 
-> **[ctrl](/reference/input#ctrl)**() const;
+> `bool` **[ctrl](/reference/input#ctrl)**() const;
 
 
 Returns true iff the CTRL key is pressed (or CMD on Mac) 
 
 ### shift()
 
-> **[shift](/reference/input#shift)**() const;
+> `bool` **[shift](/reference/input#shift)**() const;
 
 
 Returns true iff the SHIFT key is pressed. 
 
 ### alt()
 
-> **[alt](/reference/input#alt)**() const;
+> `bool` **[alt](/reference/input#alt)**() const;
 
 
 Returns true iff the ALT key is pressed. 
 
 ### aspect_ratio()
 
-> **[aspect_ratio](/reference/window#aspect_ratio)**() const;
+> `float` **[aspect_ratio](/reference/window#aspect_ratio)**() const;
 
 
 Returns the aspect ratio of the window (a.k.a. width / height). 
 
 ### window_size()
 
-> **[window_size](/reference/window#window_size)**() const;
+> `ImageSize` **[window_size](/reference/window#window_size)**() const;
 
 
 Returns the size of the window (width and height). 
 
 ### window_width()
 
-> **[window_width](/reference/window#window_width)**() const;
+> `int` **[window_width](/reference/window#window_width)**() const;
 
 
 Returns the width of the window. 
 
 ### window_height()
 
-> **[window_height](/reference/window#window_height)**() const;
+> `int` **[window_height](/reference/window#window_height)**() const;
 
 
 Returns the height of the window. 
 
 ### window_is_focused()
 
-> **[window_is_focused](/reference/window#window_is_focused)**() const;
+> `bool` **[window_is_focused](/reference/window#window_is_focused)**() const;
 
 
 Returns true iff the window is currently focused. 
 
 ### maximize_window()
 
-> **[maximize_window](/reference/window#maximize_window)**();
+> `void` **[maximize_window](/reference/window#maximize_window)**();
 
 
 Maximizes the window. 
 
 ### time()
 
-> **[time](/reference/time#time)**() const;
+> `float` **[time](/reference/time#time)**() const;
 
 
 Returns the time in seconds since the creation of the [Context](/reference/Types/context). 
 
 ### delta_time()
 
-> **[delta_time](/reference/time#delta_time)**() const;
+> `float` **[delta_time](/reference/time#delta_time)**() const;
 
 
 Returns the time in seconds since the last [update()](/reference/events#update) call (or 0 if this is the first update). 
 
 ### set_time_mode_realtime()
 
-> **[set_time_mode_realtime](/reference/time#set_time_mode_realtime)**();
+> `void` **[set_time_mode_realtime](/reference/time#set_time_mode_realtime)**();
 
 
 Sets the time mode as _realtime_. 
@@ -257,7 +257,7 @@ This means that what is returned by [time()](/reference/time#time) and [delta_ti
 
 ### set_time_mode_fixedstep()
 
-> **[set_time_mode_fixedstep](/reference/time#set_time_mode_fixedstep)**(float framerate);
+> `void` **[set_time_mode_fixedstep](/reference/time#set_time_mode_fixedstep)**(`float` framerate);
 
 
 Sets the time mode as _fixedstep_. 
@@ -267,7 +267,7 @@ This means that what is returned by [time()](/reference/time#time) and [delta_ti
 
 ### start()
 
-> **[start](/reference/update-flow#start)**();
+> `void` **[start](/reference/update-flow#start)**();
 
 
 Starts the [update()](/reference/events#update) loop. 
@@ -277,7 +277,7 @@ Starts the [update()](/reference/events#update) loop.
 
 ### stop()
 
-> **[stop](/reference/update-flow#stop)**();
+> `void` **[stop](/reference/update-flow#stop)**();
 
 
 Stops the [update()](/reference/events#update) loop. 
@@ -287,7 +287,7 @@ This is the programatic equivalent of a user closing the window.
 
 ### pause()
 
-> **[pause](/reference/update-flow#pause)**();
+> `void` **[pause](/reference/update-flow#pause)**();
 
 
 Pauses the [update()](/reference/events#update) loop. 
@@ -297,7 +297,7 @@ No [update()](/reference/events#update) will be called, until you call [resume()
 
 ### resume()
 
-> **[resume](/reference/update-flow#resume)**();
+> `void` **[resume](/reference/update-flow#resume)**();
 
 
 Resumes the [update()](/reference/events#update) loop if it was paused with [pause()](/reference/update-flow#pause). 
@@ -307,7 +307,7 @@ It has no effect if the loop was already playing.
 
 ### is_paused()
 
-> **[is_paused](/reference/update-flow#is_paused)**() const;
+> `bool` **[is_paused](/reference/update-flow#is_paused)**() const;
 
 
 Returns true iff the [update()](/reference/events#update) loop is currently paused. 

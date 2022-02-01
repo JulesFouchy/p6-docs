@@ -28,7 +28,7 @@ Create, modify and query information about images.
 
 ### load_image()
 
-> **[load_image](/reference/image#load_image)**(const char * file_path);
+> `Image` **[load_image](/reference/image#load_image)**(`const char *` file_path);
 
 
 Loads an image from a file. 

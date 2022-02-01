@@ -39,28 +39,28 @@ If you plan on drawing on the image, you can create it without data (it will cre
 
 ### Image()
 
-> **[Image](/reference/Types/image#image)**(ImageSize size, const uint8_t * data =nullptr);
+> **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data =nullptr);
 
 
 data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row. 
 
 ### size()
 
-> **[size](/reference/Types/image#size)**() const;
+> `ImageSize` **[size](/reference/Types/image#size)**() const;
 
 
 Returns the size in pixels of the image. 
 
 ### texture()
 
-> **[texture](/reference/Types/image#texture)**() const;
+> `const Texture &` **[texture](/reference/Types/image#texture)**() const;
 
 
 Returns the internal texture, that you can use to do advanced stuff with custom shaders. 
 
 ### destructive_resize()
 
-> **[destructive_resize](/reference/Types/image#destructive_resize)**(ImageSize size);
+> `void` **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size);
 
 
 Resizes the image. 
@@ -70,7 +70,7 @@ Resizes the image.
 
 ### resize()
 
-> **[resize](/reference/Types/image#resize)**(ImageSize size);
+> `void` **[resize](/reference/Types/image#resize)**(`ImageSize` size);
 
 
 Resizes the image. 

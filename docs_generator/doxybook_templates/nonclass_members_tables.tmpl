@@ -113,7 +113,7 @@ template <{% for param in child.templateParams -%}
 {% for child in publicFunctions -%}
 | {% if existsIn(child, "templateParams") -%}
 template <{% for param in child.templateParams -%}
-{{param.typePlain}} {{param.name}}{% if existsIn(param, "defvalPlain") %} ={{param.defvalPlain}}{% endif -%}
+{{param.typePlain}} {{param.name}}{% if existsIn(param, "defvalPlain") %} = {{param.defvalPlain}}{% endif -%}
 {% if not loop.is_last %},{% endif -%}
 {% endfor %}\> <br/>{% endif -%}
 {% if child.virtual %}virtual {% endif -%}
