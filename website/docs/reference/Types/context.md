@@ -53,9 +53,9 @@ sidebar_position: 1
 | std::function< void([MouseButton](/reference/Types/mouse_button))> | **[mouse_pressed](/reference/events#mouse_pressed)** <br/>This function is called whenever a mouse button is pressed.  |
 | std::function< void([MouseButton](/reference/Types/mouse_button))> | **[mouse_released](/reference/events#mouse_released)** <br/>This function is called whenever a mouse button is released.  |
 | std::function< void([MouseScroll](/reference/Types/mouse_scroll))> | **[mouse_scrolled](/reference/events#mouse_scrolled)** <br/>This function is called whenever the mouse wheel is scrolled.  |
-| std::function< void([KeyEvent](/reference/Types/key_event))> | **[key_pressed](/reference/events#key_pressed)** <br/>This function is called whenever a keyboard key is pressed.  |
-| std::function< void([KeyEvent](/reference/Types/key_event))> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
-| std::function< void([KeyEvent](/reference/Types/key_event))> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
+| std::function< void([Key](/reference/Types/key))> | **[key_pressed](/reference/events#key_pressed)** <br/>This function is called whenever a keyboard key is pressed.  |
+| std::function< void([Key](/reference/Types/key))> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
+| std::function< void([Key](/reference/Types/key))> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
 | [Color](/reference/Types/color) | **[fill](/reference/drawing#fill)**  |
 | [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)**  |
@@ -365,7 +365,7 @@ This function is called whenever the mouse wheel is scrolled.
 ### key_pressed
 
 ```cpp
-std::function< void(KeyEvent)> key_pressed = [](KeyEvent) {};
+std::function< void(Key)> key_pressed = [](Key) {};
 ```
 
 This function is called whenever a keyboard key is pressed. 
@@ -373,7 +373,7 @@ This function is called whenever a keyboard key is pressed.
 ### key_released
 
 ```cpp
-std::function< void(KeyEvent)> key_released = [](KeyEvent) {};
+std::function< void(Key)> key_released = [](Key) {};
 ```
 
 This function is called whenever a keyboard key is released. 
@@ -381,7 +381,7 @@ This function is called whenever a keyboard key is released.
 ### key_repeated
 
 ```cpp
-std::function< void(KeyEvent)> key_repeated = [](KeyEvent) {};
+std::function< void(Key)> key_repeated = [](Key) {};
 ```
 
 This function is called repeatedly whenever a keyboard key is held. 
@@ -390,8 +390,9 @@ This function is called repeatedly whenever a keyboard key is held.
 
 :warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your update function:
 
-```cpp
 
+
+```cpp
 if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and LogicalKey
     character.move_forward(p6.delta_time());
 }
@@ -431,4 +432,4 @@ float stroke_weight = 0.01f;
 
 -------------------------------
 
-Updated on 2022 February 01
+Updated on 2022 February 02

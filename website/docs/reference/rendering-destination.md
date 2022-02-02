@@ -24,8 +24,9 @@ Controls where the rendering happens.
 
 You can either draw directly to the screen (the default) or onto an image.
 
-```cpp
 
+
+```cpp
 auto ctx = p6::Context{};
 auto my_image = p6::Image{{1000, 1000}}; // Creates an empty image of size 1000x1000
 ctx.render_to_image(my_image);
@@ -59,4 +60,4 @@ Reset the [Context](/reference/Types/context) to render to the screen.
 
 -------------------------------
 
-Updated on 2022 February 01
+Updated on 2022 February 02

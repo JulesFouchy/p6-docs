@@ -21,9 +21,9 @@ You can set those functions as you wish to react to various events.  [More...](#
 | std::function< void(MouseButton)> | **[mouse_pressed](/reference/events#mouse_pressed)** <br/>This function is called whenever a mouse button is pressed.  |
 | std::function< void(MouseButton)> | **[mouse_released](/reference/events#mouse_released)** <br/>This function is called whenever a mouse button is released.  |
 | std::function< void(MouseScroll)> | **[mouse_scrolled](/reference/events#mouse_scrolled)** <br/>This function is called whenever the mouse wheel is scrolled.  |
-| std::function< void(KeyEvent)> | **[key_pressed](/reference/events#key_pressed)** <br/>This function is called whenever a keyboard key is pressed.  |
-| std::function< void(KeyEvent)> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
-| std::function< void(KeyEvent)> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
+| std::function< void(Key)> | **[key_pressed](/reference/events#key_pressed)** <br/>This function is called whenever a keyboard key is pressed.  |
+| std::function< void(Key)> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
+| std::function< void(Key)> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
 
 ## Detailed Description
@@ -32,8 +32,9 @@ You can set those functions as you wish to react to various events.
 
 The simplest way is to use a lambda:
 
-```cpp
 
+
+```cpp
 auto ctx = p6::Context{};
 ctx.mouse_pressed = [](p6::MouseButton) {
     std::cout << "Hello World\n";
@@ -95,7 +96,7 @@ This function is called whenever the mouse wheel is scrolled.
 ### key_pressed
 
 ```
-std::function< void(KeyEvent)> key_pressed = [](KeyEvent) {};
+std::function< void(Key)> key_pressed = [](Key) {};
 ```
 
 This function is called whenever a keyboard key is pressed. 
@@ -103,7 +104,7 @@ This function is called whenever a keyboard key is pressed.
 ### key_released
 
 ```
-std::function< void(KeyEvent)> key_released = [](KeyEvent) {};
+std::function< void(Key)> key_released = [](Key) {};
 ```
 
 This function is called whenever a keyboard key is released. 
@@ -111,7 +112,7 @@ This function is called whenever a keyboard key is released.
 ### key_repeated
 
 ```
-std::function< void(KeyEvent)> key_repeated = [](KeyEvent) {};
+std::function< void(Key)> key_repeated = [](Key) {};
 ```
 
 This function is called repeatedly whenever a keyboard key is held. 
@@ -120,8 +121,9 @@ This function is called repeatedly whenever a keyboard key is held.
 
 :warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your update function:
 
-```cpp
 
+
+```cpp
 if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and LogicalKey
     character.move_forward(p6.delta_time());
 }
@@ -143,4 +145,4 @@ This function is called whenever an error occurs.
 
 -------------------------------
 
-Updated on 2022 February 01
+Updated on 2022 February 02
