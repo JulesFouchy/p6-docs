@@ -3,9 +3,9 @@
 int main()
 {
     auto      ctx      = p6::Context{{1280, 720, "p6 Test Square and Rectangle"}};
-    p6::Angle rotation = 0.011_turns;
+    p6::Angle rotation = 0.011_turn;
     ctx.mouse_scrolled = [&](p6::MouseScroll e) {
-        rotation += e.dy * 0.025_turns;
+        rotation += e.dy * 0.025_turn;
     };
     ctx.update = [&]() {
         ctx.background({});
