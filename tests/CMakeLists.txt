@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.8)
+project(p6-tests)
+
+add_subdirectory(p6)
+
+function(register_test filename)
+    set(TARGET_NAME "p6-test-${filename}")
+    add_executable(${TARGET_NAME} ${filename})
+    target_link_libraries(${TARGET_NAME} p6::p6)
+    target_compile_features(${TARGET_NAME} PRIVATE cxx_std_17)
+    if (MSVC)
+        target_compile_options(${TARGET_NAME} PRIVATE /WX /W4)
+    else()
+        target_compile_options(${TARGET_NAME} PRIVATE -Werror -Wall -Wextra -Wpedantic -pedantic-errors -Wconversion -Wsign-conversion)
+    endif()
+endfunction()
+
+file(GLOB TESTS CONFIGURE_DEPENDS ./*.cpp)
+foreach(TEST ${TESTS})
+    get_filename_component(FILENAME ${TEST} NAME)
+    register_test(${FILENAME})
+endforeach()
