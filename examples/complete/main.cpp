@@ -16,7 +16,7 @@ int main()
         ctx.mouse_scrolled = [&](p6::MouseScroll event) {
             rotation += event.dy * 0.025_turn;
         };
-        // Define the update function. This function will be called repeatedly.
+        // Define the update function. It will be called repeatedly.
         ctx.update = [&]() {
             // Uncomment this if you want to clear the objects that were drawn during the previous update:
             // ctx.background({0.5f, 0.3f, 0.8f});
