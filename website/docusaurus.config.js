@@ -29,6 +29,12 @@ module.exports = {
         },
         {
           type: 'doc',
+          docId: 'examples/introduction',
+          position: 'left',
+          label: 'Examples',
+        },
+        {
+          type: 'doc',
           docId: 'reference/summary',
           position: 'left',
           label: 'Reference',
