@@ -13,6 +13,6 @@ endif()
 # ---Add p6---
 add_subdirectory(p6)
 target_link_libraries(${PROJECT_NAME} p6::p6)
-p6_copy_folder(img) # CMake utility provided by p6 to make sure our resources are always available alongside our executable
-                    # This means that you can use paths as if they were relative to this root directory
-                    # For example "img/1.png" will be a valid file path
+p6_copy_folder(${PROJECT_NAME} img) # CMake utility provided by p6 to make sure our resources are always available alongside our executable
+                                    # This means that you can use paths as if they were relative to this root directory
+                                    # For example "img/1.png" will be a valid file path

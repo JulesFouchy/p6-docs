@@ -4,75 +4,51 @@
 int main()
 {
     try {
-        auto       ctx   = p6::Context{{1280, 720, "p6 Complete Example"}};
-        const auto image = p6::load_image("img/1.png");
+        // Create some objects
+        auto       ctx      = p6::Context{{1280, 720, "p6 Complete Example"}};
+        const auto image    = p6::load_image("img/1.png");
+        p6::Angle  rotation = 0.0_turn;
+        // Draws an initial background.
+        // Since we don't clear the background in our update loop this one will be visible throughout the execution of the program.
+        // And objects that are drawn during the update() will remain there too.
         ctx.background({0.5f, 0.3f, 0.8f});
-        p6::Angle rotation = 0.0_turns;
-        ctx.on_error       = [](std::string&& error_message) {
-            throw std::runtime_error{error_message};
+        // Define the mouse_scrolled function. We will rotate an ellipse when we scroll.
+        ctx.mouse_scrolled = [&](p6::MouseScroll event) {
+            rotation += event.dy * 0.025_turn;
         };
+        // Define the update function. This function will be called repeatedly.
         ctx.update = [&]() {
-            ctx.stroke_weight = 0.5f;
-            ctx.fill          = p6::Color{1.f, 0.f, 0.f};
-            ctx.stroke        = p6::Color{0.f, 0.f, 0.f, 1.f};
-            ctx.rectangle({glm::vec2{0.f},
-                           glm::vec2{0.98f},
-                           1.6_radians});
-            ctx.image(image, {glm::vec2{0.f},
-                              0.2f * glm::vec2{image.size().aspect_ratio(), 1.f}});
+            // Uncomment this if you want to clear the objects that were drawn during the previous update:
+            // ctx.background({0.5f, 0.3f, 0.8f});
 
-            ctx.stroke_weight = 0.02f;
+            // Set the colors and size of the stroke that will be used to draw our objects
+            ctx.fill          = p6::Color{1.f, 0.f, 0.f};      // Red interior
+            ctx.stroke        = p6::Color{0.f, 0.f, 0.f, 1.f}; // Black outline
+            ctx.stroke_weight = 0.1f;                          // Size of the outline
+            // Draw our first square
+            ctx.square(p6::Center{0.f, 0.f},     // Center on the middle of the window
+                       p6::Radius{0.98f},        // A radius of 1 would fit the entire window so this is quite a big square
+                       p6::Rotation{0.01_turn}); // Slightly tilt the square
+            // Draw an image
+            ctx.image(image,
+                      p6::Center{0.f, 0.f}, // Center on the middle of the window
+                      p6::RadiusY{0.2f});   // Give it a height of 0.2 The width will be deduced based on that and the aspect_ratio of the image
+            // Change the colors
             ctx.fill          = p6::Color{1.f, 1.f, 1.f, 0.5f};
             ctx.stroke        = p6::Color{0.2f, 0.95f, 0.95f, 1.f};
-            ctx.ellipse(p6::Center{ctx.mouse()},
-                        p6::Radii{0.8f, 0.4f},
-                        p6::Rotation{rotation});
-            ctx.circle(p6::Center{ctx.mouse()},
-                       p6::Radius{0.5f});
-            if (ctx.shift()) {
-                std::cout << "SHIFT\n";
-            }
-            if (ctx.ctrl()) {
-                std::cout << "CTRL\n";
-            }
-            if (ctx.alt()) {
-                std::cout << "ALT\n";
-            }
+            ctx.stroke_weight = 0.02f;
+            // Draw an ellipse
+            ctx.ellipse(p6::Center{ctx.mouse()}, // Center on the current mouse position
+                        p6::Radii{0.8f, 0.4f},   // An ellipse has two radii: one in the x direction and the second in the y direction
+                        p6::Rotation{rotation}); // An ellipse can be rotated
+            // Draw a circle
+            ctx.circle(p6::Center{ctx.mouse()}, // Center on the current mouse position
+                       p6::Radius{0.5f});       // A circle has one single radius
         };
-        ctx.mouse_moved = [&](p6::MouseMove e) {
-            std::cout << "MOVED\n";
-            std::cout << e.position.x << " " << e.position.y << '\n';
-            std::cout << e.delta.x << " " << e.delta.y << '\n';
-        };
-        ctx.mouse_dragged = [&](p6::MouseDrag) {
-            std::cout << "DRAGGED\n";
-        };
-        ctx.mouse_pressed = [](p6::MouseButton) {
-            std::cout << "PRESSED\n";
-        };
-        ctx.mouse_released = [](p6::MouseButton) {
-            std::cout << "RELEASED\n";
-        };
-        ctx.mouse_scrolled = [&](p6::MouseScroll event) {
-            rotation += event.dy * 0.025_turns;
-        };
-        ctx.key_pressed = [](p6::Key event) {
-            std::cout << "KEY PRESSED\n";
-            std::cout << event.logical << "\n";
-        };
-        ctx.key_released = [&](p6::Key event) {
-            std::cout << "KEY RELEASED\n";
-            std::cout << "'" << event.logical << "'"
-                      << "\n";
-            if (event.logical == " ") {
-                ctx.stop();
-            }
-        };
-        ctx.key_repeated = [](p6::Key) {
-            // std::cout << "KEY REPEATED\n";
-        };
+        // Start the program
         ctx.start();
     }
+    // Log any error that might occur
     catch (const std::exception& e) {
         std::cerr << e.what() << '\n';
     }
