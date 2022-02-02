@@ -16,6 +16,7 @@ Mathematical functions and numerical constants.
 |                | Name           |
 | -------------- | -------------- |
 | template <typename T \> <br/>T | **[map](/reference/math#map)**(`T` x, `T` from_min, `T` from_max, `T` to_min, `T` to_max)<br/>Maps x, which is in the range `[from_mix, from_max]` to the range `[to_min, to_max]`.  |
+| glm::vec2 | **[rotated_by](/reference/math#rotated_by)**(`Angle` angle, `glm::vec2` vector)<br/>Returns a new vector equal to `vector` rotated by `angle` |
 
 ### Attributes
 
@@ -40,6 +41,13 @@ If `x == (from_min + from_max) / 2` then the function returns `(to_min + to_max)
 
 If x is outside of the range `[from_min, from_max]` the result will be outside of `[to_min, to_max]`, the same linear behaviour still applies. 
 
+
+### rotated_by()
+
+> `glm::vec2` **[rotated_by](/reference/math#rotated_by)**(`Angle` angle, `glm::vec2` vector);
+
+
+Returns a new vector equal to `vector` rotated by `angle`
 
 
 ## Attributes

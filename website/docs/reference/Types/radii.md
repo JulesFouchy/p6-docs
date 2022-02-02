@@ -16,11 +16,18 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
+| | **[Radii](/reference/Types/radii#radii)**() =default |
 | | **[Radii](/reference/Types/radii#radii)**(`float` x, `float` y) |
 | | **[Radii](/reference/Types/radii#radii)**(`glm::vec2` v) |
 | glm::vec2 | **[value](/reference/Types/radii#value)**  |
 
 ## Details
+
+
+### Radii()
+
+> **[Radii](/reference/Types/radii#radii)**() =default;
+
 
 
 ### Radii()
@@ -40,7 +47,7 @@ sidebar_position: 1
 ### value
 
 ```cpp
-glm::vec2 value;
+glm::vec2 value {1.f};
 ```
 
 

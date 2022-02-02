@@ -21,6 +21,7 @@ An image can be drawn onto, and can be displayed.  [More...](#detailed-descripti
 | -------------- | -------------- |
 | | **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data = nullptr)<br/>data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row.  |
 | ImageSize | **[size](/reference/Types/image#size)**() const<br/>Returns the size in pixels of the image.  |
+| float | **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const<br/>Returns the aspect ratio of the image (`width / height`)  |
 | const Texture & | **[texture](/reference/Types/image#texture)**() const<br/>Returns the internal texture, that you can use to do advanced stuff with custom shaders.  |
 | void | **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size)<br/>Resizes the image.  |
 | void | **[resize](/reference/Types/image#resize)**(`ImageSize` size)<br/>Resizes the image.  |
@@ -50,6 +51,13 @@ data must be nullptr, or an array of size `size.width() * size.height() * 4`, wi
 
 
 Returns the size in pixels of the image. 
+
+### aspect_ratio()
+
+> `float` **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const;
+
+
+Returns the aspect ratio of the image (`width / height`) 
 
 ### texture()
 

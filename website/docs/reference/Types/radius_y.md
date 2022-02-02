@@ -1,10 +1,10 @@
 ---
-title: p6::Radius
+title: p6::RadiusY
 
 sidebar_position: 1
 ---
 
-# p6::Radius
+# p6::RadiusY
 
 
 
@@ -16,15 +16,15 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Radius](/reference/Types/radius#radius)**() =default |
-| float | **[value](/reference/Types/radius#value)**  |
+| | **[RadiusY](/reference/Types/radius_y#radiusy)**() =default |
+| float | **[value](/reference/Types/radius_y#value)**  |
 
 ## Details
 
 
-### Radius()
+### RadiusY()
 
-> **[Radius](/reference/Types/radius#radius)**() =default;
+> **[RadiusY](/reference/Types/radius_y#radiusy)**() =default;
 
 
 

@@ -19,6 +19,8 @@ Welcome to the reference! In here you can find all the details of everything tha
  
  
 * **Type [Angle](/reference/Types/angle)** 
+* **Type [BottomLeftCorner](/reference/Types/bottom_left_corner)** 
+* **Type [BottomRightCorner](/reference/Types/bottom_right_corner)** 
 * **Type [Center](/reference/Types/center)** 
 * **Type [Color](/reference/Types/color)** 
 * **Type [Context](/reference/Types/context)** 
@@ -31,7 +33,10 @@ Welcome to the reference! In here you can find all the details of everything tha
 * **Type [Radians](/reference/Types/radians)** 
 * **Type [Radii](/reference/Types/radii)** 
 * **Type [Radius](/reference/Types/radius)** 
-* **Type [Rotation](/reference/Types/rotation)** 
+* **Type [RadiusX](/reference/Types/radius_x)** 
+* **Type [RadiusY](/reference/Types/radius_y)** 
 * **Type [Shader](/reference/Types/shader)** 
+* **Type [TopLeftCorner](/reference/Types/top_left_corner)** 
+* **Type [TopRightCorner](/reference/Types/top_right_corner)** 
 * **Type [Transform2D](/reference/Types/transform2_d)** 
 

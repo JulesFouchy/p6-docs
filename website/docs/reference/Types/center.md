@@ -16,10 +16,24 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
+| | **[Center](/reference/Types/center#center)**() =default |
+| | **[Center](/reference/Types/center#center)**(`float` x, `float` y) |
 | | **[Center](/reference/Types/center#center)**(`glm::vec2` value) |
 | glm::vec2 | **[value](/reference/Types/center#value)**  |
 
 ## Details
+
+
+### Center()
+
+> **[Center](/reference/Types/center#center)**() =default;
+
+
+
+### Center()
+
+> **[Center](/reference/Types/center#center)**(`float` x, `float` y);
+
 
 
 ### Center()
@@ -33,7 +47,7 @@ sidebar_position: 1
 ### value
 
 ```cpp
-glm::vec2 value;
+glm::vec2 value {0.f};
 ```
 
 

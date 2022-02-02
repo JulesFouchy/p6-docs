@@ -18,10 +18,17 @@ Inherits from op::Addable< Radians >, op::Subtractable< Radians >, op::Negatable
 
 |                | Name           |
 | -------------- | -------------- |
+| | **[Radians](/reference/Types/radians#radians)**() =default |
 | | **[Radians](/reference/Types/radians#radians)**(`float` value) |
 | float | **[value](/reference/Types/radians#value)**  |
 
 ## Details
+
+
+### Radians()
+
+> **[Radians](/reference/Types/radians#radians)**() =default;
+
 
 
 ### Radians()
@@ -35,7 +42,7 @@ Inherits from op::Addable< Radians >, op::Subtractable< Radians >, op::Negatable
 ### value
 
 ```cpp
-float value;
+float value {0.f};
 ```
 
 

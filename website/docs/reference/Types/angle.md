@@ -18,6 +18,7 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 
 |                | Name           |
 | -------------- | -------------- |
+| | **[Angle](/reference/Types/angle#angle)**() =default |
 | | **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value) |
 | float | **[as_turns](/reference/Types/angle#as_turns)**() const |
 | float | **[as_radians](/reference/Types/angle#as_radians)**() const |
@@ -25,6 +26,12 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 | [Radians](/reference/Types/radians) | **[value](/reference/Types/angle#value)**  |
 
 ## Details
+
+
+### Angle()
+
+> **[Angle](/reference/Types/angle#angle)**() =default;
+
 
 
 ### Angle()
@@ -56,7 +63,7 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 ### value
 
 ```cpp
-Radians value;
+Radians value {};
 ```
 
 

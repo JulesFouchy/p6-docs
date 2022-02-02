@@ -15,13 +15,25 @@ Draw shapes and control the look of them.
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[background](/reference/drawing#background)**(`Color` color) const<br/>Sets the color and alpha of each pixel of the canvas.  |
-| void | **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform) const<br/>Draws a rectangle.  |
-| void | **[circle](/reference/drawing#circle)**(`Center` center, `Radius` radius) const<br/>Draws a circle.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii, `Rotation` rotation) const<br/>Draws an ellipse.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radius` radius) const |
-| void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) const |
-| void | **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform) const<br/>Draws an image.  |
+| void | **[background](/reference/drawing#background)**(`Color` color)<br/>Sets the color and alpha of each pixel of the canvas.  |
+| void | **[square](/reference/drawing#square)**(`Center` center = {}, `Radius` radius = {}, `Rotation` rotation = {})<br/>Draws a square.  |
+| void | **[square](/reference/drawing#square)**(`TopLeftCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`TopRightCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`BottomLeftCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`BottomRightCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws a rectangle.  |
+| void | **[rectangle](/reference/drawing#rectangle)**(`TopLeftCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`TopRightCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`BottomLeftCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`BottomRightCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform = {}) |
+| void | **[circle](/reference/drawing#circle)**(`Center` center = {}, `Radius` radius = {})<br/>Draws a circle.  |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an ellipse.  |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusY` radiusY = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if [Radii](/reference/Types/radii) doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform = {}) |
 
 ### Attributes
 
@@ -36,7 +48,7 @@ Draw shapes and control the look of them.
 
 ### background()
 
-> `void` **[background](/reference/drawing#background)**(`Color` color) const;
+> `void` **[background](/reference/drawing#background)**(`Color` color);
 
 
 Sets the color and alpha of each pixel of the canvas. 
@@ -44,58 +56,120 @@ Sets the color and alpha of each pixel of the canvas.
 NB: No blending is applied; even if you specify an alpha of 0.5 the old canvas is completely erased. This means that setting an alpha here doesn't matter much. It is only meaningful if you export the canvas as a png, or if you later try to blend the canvas on top of another image. 
 
 
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`Center` center ={}, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+Draws a square. 
+
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`TopLeftCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`TopRightCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`BottomLeftCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`BottomRightCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform) const;
+> `void` **[rectangle](/reference/drawing#rectangle)**(`Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 Draws a rectangle. 
 
-**Parameters**: 
+### rectangle()
 
-  * **params** Shape of the rect
-
-
+> `void` **[rectangle](/reference/drawing#rectangle)**(`TopLeftCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
 
 
-```cpp
-p6.fill = {0.f, 0.8f, 0.3f};
-p6.rectangle({});
-```
+
+### rectangle()
+
+> `void` **[rectangle](/reference/drawing#rectangle)**(`TopRightCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle()
+
+> `void` **[rectangle](/reference/drawing#rectangle)**(`BottomLeftCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle()
+
+> `void` **[rectangle](/reference/drawing#rectangle)**(`BottomRightCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle()
+
+> `void` **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform ={});
+
 
 
 ### circle()
 
-> `void` **[circle](/reference/drawing#circle)**(`Center` center, `Radius` radius) const;
+> `void` **[circle](/reference/drawing#circle)**(`Center` center ={}, `Radius` radius ={});
 
 
 Draws a circle. 
 
 ### ellipse()
 
-> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii, `Rotation` rotation) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 Draws an ellipse. 
 
 ### ellipse()
 
-> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radius` radius) const;
-
-
-
-### ellipse()
-
-> `void` **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) const;
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform) const;
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `RadiusX` radiusX ={}, `Rotation` rotation ={});
 
 
-Draws an image. 
+Draws an image. This will respect the aspect ratio of the image. 
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `RadiusY` radiusY ={}, `Rotation` rotation ={});
+
+
+Draws an image. This will respect the aspect ratio of the image. 
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+Draws an image. :warning: This might distort the image if [Radii](/reference/Types/radii) doesn't have the same aspect ratio as the image. 
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform ={});
+
+
 
 
 ## Attributes
