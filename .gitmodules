@@ -7,6 +7,3 @@
 [submodule "examples/complete/p6"]
 	path = examples/complete/p6
 	url = https://github.com/JulesFouchy/p6
-[submodule "examples/tests/p6"]
-	path = examples/tests/p6
-	url = https://github.com/JulesFouchy/p6
