@@ -7,29 +7,26 @@
 
 int main()
 {
-    auto ctx = p6::Context{{1280, 720, "p6 example"}}; // Creates a context with a window
-    ctx.start(); // Start the p6 application
-    return 0;
+    auto ctx = p6::Context{{1280, 720, "p6 example"}}; // Create a context with a window
+    ctx.start();                                       // Start the p6 application
 }
 ```
 
-And with just a little more code you can draw a square:
+And with just a little more code you can draw a circle:
 
 ```cpp
 #include <p6/p6.h>
 
 int main()
 {
-    auto ctx   = p6::Context{{1280, 720, "p6 example"}};
-    ctx.update = [&]() {                            // Define the function that will be called in a loop once you call ctx.start()
-        ctx.background({0.5f, 0.3f, 0.8f});         // Clear the background with some color (Try to comment out this line to see what happens)
-        ctx.rectangle({ctx.mouse(), {0.3f, 0.3f}}); // Draw a square of size 0.3 under the mouse cursor
+    auto ctx   = p6::Context{{1280, 720, "Hello p6"}};
+    ctx.update = [&]() {                    // Define the function that will be called in a loop once you call ctx.start()
+        ctx.background({0.5f, 0.3f, 0.8f}); // Clear the background with some color (Try to comment out this line to see what happens)
+        ctx.circle(p6::Center{ctx.mouse()}, // Draw a circle centered on the mouse cursor
+                   p6::Radius{0.3f});       // with a radius of 0.3
     };
     ctx.start();
-    return 0;
 }
 ```
 
-Check out *examples/basic/CMakeLists.txt* to see how to integrate p6 into your project.
-
-Check out *examples/complete/main.cpp* for a more complete example of what you can do with *p6*.
+Check out [our website](https://julesfouchy.github.io/p6-docs/) to learn everything you need to know about *p6*!
