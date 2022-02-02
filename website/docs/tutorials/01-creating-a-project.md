@@ -56,3 +56,5 @@ You can always compare with [the basic example](https://github.com/JulesFouchy/p
 If everything went well you should be able to run your project and see this window:
 
 ![](./img/first-window.png)
+
+Congrats :tada: You can now start using *p6* to build amazing artworks, interactive experiences and games!
