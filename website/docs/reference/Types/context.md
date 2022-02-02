@@ -34,7 +34,7 @@ sidebar_position: 1
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform = {}) |
 | void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. :warning: This might distort the image if [Radii]() doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
 | void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Transform2D](/reference/Types/transform2_d)` transform = {}) |
 | void | **[render_to_image](/reference/rendering-destination#render_to_image)**(`[Image](/reference/Types/image) &` image)<br/>Sets the image where all the drawing commands will happen on.  |
 | void | **[render_to_screen](/reference/rendering-destination#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
@@ -199,7 +199,7 @@ Draws an image. This will respect the aspect ratio of the image.
 > `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
-Draws an image. :warning: This might distort the image if [Radii]() doesn't have the same aspect ratio as the image. 
+Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image. 
 
 ### image()
 

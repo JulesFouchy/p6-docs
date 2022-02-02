@@ -32,7 +32,7 @@ Draw shapes and control the look of them.
 | void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform = {}) |
 | void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusY` radiusY = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if [Radii](/reference/Types/radii) doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
 | void | **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform = {}) |
 
 ### Attributes
@@ -163,7 +163,7 @@ Draws an image. This will respect the aspect ratio of the image.
 > `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
 
 
-Draws an image. :warning: This might distort the image if [Radii](/reference/Types/radii) doesn't have the same aspect ratio as the image. 
+Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image. 
 
 ### image()
 
