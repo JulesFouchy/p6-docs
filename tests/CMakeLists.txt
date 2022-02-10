@@ -4,7 +4,7 @@ project(p6-tests)
 add_subdirectory(p6)
 
 function(register_test filename)
-    set(TARGET_NAME "p6-test-${filename}")
+    set(TARGET_NAME "${filename}")
     add_executable(${TARGET_NAME} ${filename})
     target_link_libraries(${TARGET_NAME} p6::p6)
     target_compile_features(${TARGET_NAME} PRIVATE cxx_std_17)
