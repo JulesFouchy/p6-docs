@@ -50,6 +50,9 @@ sidebar_position: 1
 | int | **[window_height](/reference/window#window_height)**() const<br/>Returns the height of the window.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
+| void | **[minimize_window](/reference/window#minimize_window)**()<br/>Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen.  |
+| void | **[restore_window](/reference/window#restore_window)**()<br/>Restores the window if it is currently maximized. Does nothing otherwise.  |
+| bool | **[window_is_maximized](/reference/window#window_is_maximized)**() const<br/>Returns true iff the window is currently maximized.  |
 | float | **[time](/reference/time#time)**() const<br/>Returns the time in seconds since the creation of the [Context](/reference/Types/context).  |
 | float | **[delta_time](/reference/time#delta_time)**() const<br/>Returns the time in seconds since the last [update()](/reference/events#update) call (or 0 if this is the first update).  |
 | void | **[set_time_mode_realtime](/reference/time#set_time_mode_realtime)**()<br/>Sets the time mode as _realtime_.  |
@@ -69,9 +72,11 @@ sidebar_position: 1
 | std::function< void([Key](/reference/Types/key))> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
 | std::function< void([Key](/reference/Types/key))> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
-| [Color](/reference/Types/color) | **[fill](/reference/drawing#fill)**  |
-| [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)**  |
-| float | **[stroke_weight](/reference/drawing#stroke_weight)**  |
+| [Color](/reference/Types/color) | **[fill](/reference/drawing#fill)** <br/>The color that is used for the interior of the shapes.  |
+| bool | **[use_fill](/reference/drawing#use_fill)** <br/>Whether the shapes will have an interior.  |
+| [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)** <br/>The color that is used for the boundary of the shapes.  |
+| float | **[stroke_weight](/reference/drawing#stroke_weight)** <br/>The size of the boundary of the shapes.  |
+| bool | **[use_stroke](/reference/drawing#use_stroke)** <br/>Whether there will be a boundary on the shape.  |
 
 ## Details
 
@@ -305,6 +310,27 @@ Returns true iff the window is currently focused.
 
 Maximizes the window. 
 
+### minimize_window()
+
+> `void` **[minimize_window](/reference/window#minimize_window)**();
+
+
+Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen. 
+
+### restore_window()
+
+> `void` **[restore_window](/reference/window#restore_window)**();
+
+
+Restores the window if it is currently maximized. Does nothing otherwise. 
+
+### window_is_maximized()
+
+> `bool` **[window_is_maximized](/reference/window#window_is_maximized)**() const;
+
+
+Returns true iff the window is currently maximized. 
+
 ### time()
 
 > `float` **[time](/reference/time#time)**() const;
@@ -489,6 +515,15 @@ This function is called whenever an error occurs.
 Color fill {1.f, 1.f, 1.f, 0.5f};
 ```
 
+The color that is used for the interior of the shapes. 
+
+### use_fill
+
+```cpp
+bool use_fill = true;
+```
+
+Whether the shapes will have an interior. 
 
 ### stroke
 
@@ -496,6 +531,7 @@ Color fill {1.f, 1.f, 1.f, 0.5f};
 Color stroke {0.f, 0.f, 0.f};
 ```
 
+The color that is used for the boundary of the shapes. 
 
 ### stroke_weight
 
@@ -503,7 +539,16 @@ Color stroke {0.f, 0.f, 0.f};
 float stroke_weight = 0.01f;
 ```
 
+The size of the boundary of the shapes. 
+
+### use_stroke
+
+```cpp
+bool use_stroke = true;
+```
+
+Whether there will be a boundary on the shape. 
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10

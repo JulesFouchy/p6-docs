@@ -21,6 +21,9 @@ Query the state of the window and control it.
 | int | **[window_height](/reference/window#window_height)**() const<br/>Returns the height of the window.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
+| void | **[minimize_window](/reference/window#minimize_window)**()<br/>Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen.  |
+| void | **[restore_window](/reference/window#restore_window)**()<br/>Restores the window if it is currently maximized. Does nothing otherwise.  |
+| bool | **[window_is_maximized](/reference/window#window_is_maximized)**() const<br/>Returns true iff the window is currently maximized.  |
 
 
 ## Functions
@@ -67,10 +70,31 @@ Returns true iff the window is currently focused.
 
 Maximizes the window. 
 
+### minimize_window()
+
+> `void` **[minimize_window](/reference/window#minimize_window)**();
+
+
+Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen. 
+
+### restore_window()
+
+> `void` **[restore_window](/reference/window#restore_window)**();
+
+
+Restores the window if it is currently maximized. Does nothing otherwise. 
+
+### window_is_maximized()
+
+> `bool` **[window_is_maximized](/reference/window#window_is_maximized)**() const;
+
+
+Returns true iff the window is currently maximized. 
+
 
 
 
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10

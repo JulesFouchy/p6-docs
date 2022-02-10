@@ -39,9 +39,11 @@ Draw shapes and control the look of them.
 
 |                | Name           |
 | -------------- | -------------- |
-| Color | **[fill](/reference/drawing#fill)**  |
-| Color | **[stroke](/reference/drawing#stroke)**  |
-| float | **[stroke_weight](/reference/drawing#stroke_weight)**  |
+| Color | **[fill](/reference/drawing#fill)** <br/>The color that is used for the interior of the shapes.  |
+| bool | **[use_fill](/reference/drawing#use_fill)** <br/>Whether the shapes will have an interior.  |
+| Color | **[stroke](/reference/drawing#stroke)** <br/>The color that is used for the boundary of the shapes.  |
+| float | **[stroke_weight](/reference/drawing#stroke_weight)** <br/>The size of the boundary of the shapes.  |
+| bool | **[use_stroke](/reference/drawing#use_stroke)** <br/>Whether there will be a boundary on the shape.  |
 
 
 ## Functions
@@ -180,6 +182,15 @@ Draws an image. :warning: This might distort the image if radii doesn't have the
 Color fill {1.f, 1.f, 1.f, 0.5f};
 ```
 
+The color that is used for the interior of the shapes. 
+
+### use_fill
+
+```
+bool use_fill = true;
+```
+
+Whether the shapes will have an interior. 
 
 ### stroke
 
@@ -187,6 +198,7 @@ Color fill {1.f, 1.f, 1.f, 0.5f};
 Color stroke {0.f, 0.f, 0.f};
 ```
 
+The color that is used for the boundary of the shapes. 
 
 ### stroke_weight
 
@@ -194,10 +206,19 @@ Color stroke {0.f, 0.f, 0.f};
 float stroke_weight = 0.01f;
 ```
 
+The size of the boundary of the shapes. 
+
+### use_stroke
+
+```
+bool use_stroke = true;
+```
+
+Whether there will be a boundary on the shape. 
 
 
 
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10

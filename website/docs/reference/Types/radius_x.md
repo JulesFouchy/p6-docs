@@ -17,6 +17,7 @@ sidebar_position: 1
 |                | Name           |
 | -------------- | -------------- |
 | | **[RadiusX](/reference/Types/radius_x#radiusx)**() =default |
+| | **[RadiusX](/reference/Types/radius_x#radiusx)**(`float` value) |
 | float | **[value](/reference/Types/radius_x#value)**  |
 
 ## Details
@@ -25,6 +26,12 @@ sidebar_position: 1
 ### RadiusX()
 
 > **[RadiusX](/reference/Types/radius_x#radiusx)**() =default;
+
+
+
+### RadiusX()
+
+> **[RadiusX](/reference/Types/radius_x#radiusx)**(`float` value);
 
 
 
@@ -39,4 +46,4 @@ float value {1.f};
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10

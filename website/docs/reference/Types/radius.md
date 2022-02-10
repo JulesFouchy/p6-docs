@@ -17,6 +17,7 @@ sidebar_position: 1
 |                | Name           |
 | -------------- | -------------- |
 | | **[Radius](/reference/Types/radius#radius)**() =default |
+| | **[Radius](/reference/Types/radius#radius)**(`float` value) |
 | float | **[value](/reference/Types/radius#value)**  |
 
 ## Details
@@ -25,6 +26,12 @@ sidebar_position: 1
 ### Radius()
 
 > **[Radius](/reference/Types/radius#radius)**() =default;
+
+
+
+### Radius()
+
+> **[Radius](/reference/Types/radius#radius)**(`float` value);
 
 
 
@@ -39,4 +46,4 @@ float value {1.f};
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10

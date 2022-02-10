@@ -18,8 +18,8 @@ Inherits from op::Addable< Radians >, op::Subtractable< Radians >, op::Negatable
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Radians](/reference/Types/radians#radians)**() =default |
-| | **[Radians](/reference/Types/radians#radians)**(`float` value) |
+| constexpr | **[Radians](/reference/Types/radians#radians)**() =default |
+| constexpr | **[Radians](/reference/Types/radians#radians)**(`float` value) |
 | float | **[value](/reference/Types/radians#value)**  |
 
 ## Details
@@ -27,13 +27,13 @@ Inherits from op::Addable< Radians >, op::Subtractable< Radians >, op::Negatable
 
 ### Radians()
 
-> **[Radians](/reference/Types/radians#radians)**() =default;
+> `constexpr` **[Radians](/reference/Types/radians#radians)**() =default;
 
 
 
 ### Radians()
 
-> **[Radians](/reference/Types/radians#radians)**(`float` value);
+> `constexpr` **[Radians](/reference/Types/radians#radians)**(`float` value);
 
 
 
@@ -48,4 +48,4 @@ float value {0.f};
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10

@@ -18,8 +18,8 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Angle](/reference/Types/angle#angle)**() =default |
-| | **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value) |
+| constexpr | **[Angle](/reference/Types/angle#angle)**() =default |
+| constexpr | **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value) |
 | float | **[as_turns](/reference/Types/angle#as_turns)**() const |
 | float | **[as_radians](/reference/Types/angle#as_radians)**() const |
 | float | **[as_degrees](/reference/Types/angle#as_degrees)**() const |
@@ -30,13 +30,13 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 
 ### Angle()
 
-> **[Angle](/reference/Types/angle#angle)**() =default;
+> `constexpr` **[Angle](/reference/Types/angle#angle)**() =default;
 
 
 
 ### Angle()
 
-> **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value);
+> `constexpr` **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value);
 
 
 
@@ -69,4 +69,4 @@ Radians value {};
 
 -------------------------------
 
-Updated on 2022 February 02
+Updated on 2022 February 10
