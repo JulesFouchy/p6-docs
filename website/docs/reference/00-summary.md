@@ -24,6 +24,7 @@ Welcome to the reference! In here you can find all the details of everything tha
 * **Type [Center](/reference/Types/center)** 
 * **Type [Color](/reference/Types/color)** 
 * **Type [Context](/reference/Types/context)** 
+* **Type [FullScreen](/reference/Types/full_screen)** 
 * **Type [Image](/reference/Types/image)** <br/>An image can be drawn onto, and can be displayed. 
 * **Type [Key](/reference/Types/key)** 
 * **Type [MouseButton](/reference/Types/mouse_button)** 

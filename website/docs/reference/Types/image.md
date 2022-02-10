@@ -19,7 +19,7 @@ An image can be drawn onto, and can be displayed.  [More...](#detailed-descripti
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data = nullptr)<br/>data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row.  |
+| | **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data = nullptr, `glpp::TextureLayout` texture_layout = {glpp::InternalFormat::RGBA16, glpp::Channels::RGBA, glpp::TexelDataType::UnsignedByte})<br/>data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row.  |
 | ImageSize | **[size](/reference/Types/image#size)**() const<br/>Returns the size in pixels of the image.  |
 | float | **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const<br/>Returns the aspect ratio of the image (`width / height`)  |
 | const Texture & | **[texture](/reference/Types/image#texture)**() const<br/>Returns the internal texture, that you can use to do advanced stuff with custom shaders.  |
@@ -40,10 +40,13 @@ If you plan on drawing on the image, you can create it without data (it will cre
 
 ### Image()
 
-> **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data =nullptr);
+> **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data =nullptr, `glpp::TextureLayout` texture_layout ={glpp::InternalFormat::RGBA16, glpp::Channels::RGBA, glpp::TexelDataType::UnsignedByte});
 
 
 data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row. 
+
+texture_layout is an advanced setting; it controls how the pixels are gonna be stored on the GPU. 
+
 
 ### size()
 

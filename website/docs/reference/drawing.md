@@ -16,20 +16,24 @@ Draw shapes and control the look of them.
 |                | Name           |
 | -------------- | -------------- |
 | void | **[background](/reference/drawing#background)**(`Color` color)<br/>Sets the color and alpha of each pixel of the canvas.  |
-| void | **[square](/reference/drawing#square)**(`Center` center = {}, `Radius` radius = {}, `Rotation` rotation = {})<br/>Draws a square.  |
-| void | **[square](/reference/drawing#square)**(`TopLeftCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
-| void | **[square](/reference/drawing#square)**(`TopRightCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
-| void | **[square](/reference/drawing#square)**(`BottomLeftCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
-| void | **[square](/reference/drawing#square)**(`BottomRightCorner` corner = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws a rectangle.  |
-| void | **[rectangle](/reference/drawing#rectangle)**(`TopLeftCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`TopRightCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`BottomLeftCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`BottomRightCorner` corner = {}, `Radii` radii = {}, `Rotation` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform = {}) |
-| void | **[circle](/reference/drawing#circle)**(`Center` center = {}, `Radius` radius = {})<br/>Draws a circle.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an ellipse.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform = {}) |
+| void | **[square](/reference/drawing#square)**(`FullScreen` )<br/>Draws a square.  |
+| void | **[square](/reference/drawing#square)**(`Center` center = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`TopLeftCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`TopRightCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`BottomLeftCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`BottomRightCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`FullScreen`  = {})<br/>Draws a rectangle.  |
+| void | **[rectangle](/reference/drawing#rectangle)**(`Center` center, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`TopLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`TopRightCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`BottomLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`BottomRightCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform) |
+| void | **[circle](/reference/drawing#circle)**(`FullScreen` )<br/>Draws a circle.  |
+| void | **[circle](/reference/drawing#circle)**(`Center` center = {}, `Radius` radius = {}) |
+| void | **[ellipse](/reference/drawing#ellipse)**(`FullScreen`  = {})<br/>Draws an ellipse.  |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) |
 | void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusY` radiusY = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
@@ -60,89 +64,113 @@ NB: No blending is applied; even if you specify an alpha of 0.5 the old canvas i
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`Center` center ={}, `Radius` radius ={}, `Rotation` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`FullScreen` );
 
 
 Draws a square. 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`TopLeftCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`Center` center ={}, `Radius` radius ={}, `Rotation` rotation ={});
 
 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`TopRightCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`TopLeftCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
 
 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`BottomLeftCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`TopRightCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
 
 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`BottomRightCorner` corner ={}, `Radius` radius ={}, `Rotation` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`BottomLeftCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`BottomRightCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`FullScreen`  ={});
 
 
 Draws a rectangle. 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`TopLeftCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`Center` center, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`TopRightCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`TopLeftCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`BottomLeftCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`TopRightCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`BottomRightCorner` corner ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`BottomLeftCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`BottomRightCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
 
 
+
+### rectangle()
+
+> `void` **[rectangle](/reference/drawing#rectangle)**(`Transform2D` transform);
+
+
+
+### circle()
+
+> `void` **[circle](/reference/drawing#circle)**(`FullScreen` );
+
+
+Draws a circle. 
 
 ### circle()
 
 > `void` **[circle](/reference/drawing#circle)**(`Center` center ={}, `Radius` radius ={});
 
 
-Draws a circle. 
 
 ### ellipse()
 
-> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[ellipse](/reference/drawing#ellipse)**(`FullScreen`  ={});
 
 
 Draws an ellipse. 
 
 ### ellipse()
 
-> `void` **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform ={});
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### ellipse()
+
+> `void` **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform);
 
 
 

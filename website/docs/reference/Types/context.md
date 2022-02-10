@@ -18,20 +18,24 @@ sidebar_position: 1
 | -------------- | -------------- |
 | | **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params = {}) |
 | void | **[background](/reference/drawing#background)**(`[Color](/reference/Types/color)` color)<br/>Sets the color and alpha of each pixel of the canvas.  |
-| void | **[square](/reference/drawing#square)**(`[Center](/reference/Types/center)` center = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws a square.  |
-| void | **[square](/reference/drawing#square)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[square](/reference/drawing#square)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[square](/reference/drawing#square)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[square](/reference/drawing#square)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`[Center](/reference/Types/center)` center = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws a rectangle.  |
-| void | **[rectangle](/reference/drawing#rectangle)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[rectangle](/reference/drawing#rectangle)**(`[Transform2D](/reference/Types/transform2_d)` transform = {}) |
-| void | **[circle](/reference/drawing#circle)**(`[Center](/reference/Types/center)` center = {}, `[Radius](/reference/Types/radius)` radius = {})<br/>Draws a circle.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an ellipse.  |
-| void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform = {}) |
+| void | **[square](/reference/drawing#square)**(`[FullScreen](/reference/Types/full_screen)` )<br/>Draws a square.  |
+| void | **[square](/reference/drawing#square)**(`[Center](/reference/Types/center)` center = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[square](/reference/drawing#square)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws a rectangle.  |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[rectangle](/reference/drawing#rectangle)**(`[Transform2D](/reference/Types/transform2_d)` transform) |
+| void | **[circle](/reference/drawing#circle)**(`[FullScreen](/reference/Types/full_screen)` )<br/>Draws a circle.  |
+| void | **[circle](/reference/drawing#circle)**(`[Center](/reference/Types/center)` center = {}, `[Radius](/reference/Types/radius)` radius = {}) |
+| void | **[ellipse](/reference/drawing#ellipse)**(`[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws an ellipse.  |
+| void | **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform) |
 | void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center = {}, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
@@ -72,6 +76,7 @@ sidebar_position: 1
 | std::function< void([Key](/reference/Types/key))> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
 | std::function< void([Key](/reference/Types/key))> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
+| std::function< void()> | **[window_resized](/reference/events#window_resized)** <br/>This function is called whenever the window is resized.  |
 | [Color](/reference/Types/color) | **[fill](/reference/drawing#fill)** <br/>The color that is used for the interior of the shapes.  |
 | bool | **[use_fill](/reference/drawing#use_fill)** <br/>Whether the shapes will have an interior.  |
 | [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)** <br/>The color that is used for the boundary of the shapes.  |
@@ -99,89 +104,113 @@ NB: No blending is applied; even if you specify an alpha of 0.5 the old canvas i
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`[Center](/reference/Types/center)` center ={}, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`[FullScreen](/reference/Types/full_screen)` );
 
 
 Draws a square. 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner ={}, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`[Center](/reference/Types/center)` center ={}, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner ={}, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner ={}, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### square()
 
-> `void` **[square](/reference/drawing#square)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner ={}, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[square](/reference/drawing#square)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+
+### square()
+
+> `void` **[square](/reference/drawing#square)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`[Center](/reference/Types/center)` center ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[FullScreen](/reference/Types/full_screen)`  ={});
 
 
 Draws a rectangle. 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### rectangle()
 
-> `void` **[rectangle](/reference/drawing#rectangle)**(`[Transform2D](/reference/Types/transform2_d)` transform ={});
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
+
+### rectangle()
+
+> `void` **[rectangle](/reference/drawing#rectangle)**(`[Transform2D](/reference/Types/transform2_d)` transform);
+
+
+
+### circle()
+
+> `void` **[circle](/reference/drawing#circle)**(`[FullScreen](/reference/Types/full_screen)` );
+
+
+Draws a circle. 
 
 ### circle()
 
 > `void` **[circle](/reference/drawing#circle)**(`[Center](/reference/Types/center)` center ={}, `[Radius](/reference/Types/radius)` radius ={});
 
 
-Draws a circle. 
 
 ### ellipse()
 
-> `void` **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center ={}, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[ellipse](/reference/drawing#ellipse)**(`[FullScreen](/reference/Types/full_screen)`  ={});
 
 
 Draws an ellipse. 
 
 ### ellipse()
 
-> `void` **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform ={});
+> `void` **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+
+### ellipse()
+
+> `void` **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform);
 
 
 
@@ -508,6 +537,17 @@ std::function< void(std::string &&)> on_error = [](std::string&& error_message) 
 ```
 
 This function is called whenever an error occurs. 
+
+### window_resized
+
+```cpp
+std::function< void()> window_resized = []() {};
+```
+
+This function is called whenever the window is resized. 
+
+If you call [window_size()](/reference/window#window_size), [window_width()](/reference/window#window_width), [window_height()](/reference/window#window_height) or [aspect_ratio()](/reference/window#aspect_ratio) inside [window_resized()](/reference/events#window_resized) they will already be referring to the new size. 
+
 
 ### fill
 
