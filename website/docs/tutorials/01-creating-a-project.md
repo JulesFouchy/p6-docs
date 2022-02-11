@@ -40,7 +40,7 @@ To get the p6 folder, open a terminal at the root of your project and run:
 git clone --recursive https://github.com/JulesFouchy/p6
 ```
 
-Or even better, add p6 as a submodule with:
+Or, if you have already setup a *git* repository for your project, you can add p6 as a submodule instead:
 ```
 git submodule add https://github.com/JulesFouchy/p6
 git submodule update --init --recursive
