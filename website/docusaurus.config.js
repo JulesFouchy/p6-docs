@@ -50,7 +50,7 @@ module.exports = {
           'aria-label': 'GitHub issues',
         },
         {
-          href: 'https://github.com/JulesFouchy/p6-docs',
+          href: 'https://github.com/JulesFouchy/p6',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
