@@ -2,6 +2,8 @@
 title: Drawing
 ---
 
+You can use these functions on the `Context` at any time, even outside of the `update` function.
+
 ## `background()`
 
 `background()` clears the whole canvas with one solid color. This is very useful if you want to do animations and don't want the drawings of the previous frames to remain on your canvas.<br/>
