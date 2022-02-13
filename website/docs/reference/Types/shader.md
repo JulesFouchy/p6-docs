@@ -16,91 +16,84 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Shader](/reference/Types/shader#shader)**(`const std::string &` fragment_source_code)<br/>Throws std::runtime_error if there is an error while compiling the shader source code.  |
-| void | **[bind](/reference/Types/shader#bind)**() const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `int` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `unsigned int` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `bool` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `float` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::vec2 &` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::vec3 &` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::vec4 &` v) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::mat2 &` mat) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::mat3 &` mat) const |
-| void | **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::mat4 &` mat) const |
+| | **[Shader](/reference/Types/shader#shader)**(`std::string_view` fragment_source_code)<br/>Throws std::runtime_error if there is an error while compiling the shader source code.  |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `int` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `unsigned int` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `bool` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `float` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::vec2 &` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::vec3 &` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::vec4 &` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::mat2 &` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::mat3 &` value) const |
+| void | **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::mat4 &` value) const |
 ## Details
 
 
 ### Shader()
 
-> **[Shader](/reference/Types/shader#shader)**(`const std::string &` fragment_source_code);
+> **[Shader](/reference/Types/shader#shader)**(`std::string_view` fragment_source_code);
 
 
 Throws std::runtime_error if there is an error while compiling the shader source code. 
 
-### bind()
+### set()
 
-> `void` **[bind](/reference/Types/shader#bind)**() const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `int` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `int` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `unsigned int` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `unsigned int` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `bool` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `bool` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `float` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `float` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::vec2 &` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::vec2 &` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::vec3 &` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::vec3 &` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::vec4 &` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::vec4 &` v) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::mat2 &` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::mat2 &` mat) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::mat3 &` value) const;
 
 
 
 ### set()
 
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::mat3 &` mat) const;
-
-
-
-### set()
-
-> `void` **[set](/reference/Types/shader#set)**(`const std::string &` uniform_name, `const glm::mat4 &` mat) const;
+> `void` **[set](/reference/Types/shader#set)**(`std::string_view` uniform_name, `const glm::mat4 &` value) const;
 
 
 
