@@ -1,10 +1,10 @@
 ---
-title: p6::FullScreen
+title: p6::FitY
 
 sidebar_position: 1
 ---
 
-# p6::FullScreen
+# p6::FitY
 
 
 

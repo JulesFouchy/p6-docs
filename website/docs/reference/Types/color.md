@@ -21,8 +21,10 @@ sidebar_position: 1
 | float | **[g](/reference/Types/color#g)**() const |
 | float | **[b](/reference/Types/color#b)**() const |
 | float | **[a](/reference/Types/color#a)**() const |
-| glm::vec3 | **[as_vec3](/reference/Types/color#as_vec3)**() const |
-| glm::vec4 | **[as_vec4](/reference/Types/color#as_vec4)**() const |
+| glm::vec3 | **[as_premultiplied_vec3](/reference/Types/color#as_premultiplied_vec3)**() const |
+| glm::vec3 | **[as_straight_vec3](/reference/Types/color#as_straight_vec3)**() const |
+| glm::vec4 | **[as_premultiplied_vec4](/reference/Types/color#as_premultiplied_vec4)**() const |
+| glm::vec4 | **[as_straight_vec4](/reference/Types/color#as_straight_vec4)**() const |
 ## Details
 
 
@@ -56,18 +58,30 @@ sidebar_position: 1
 
 
 
-### as_vec3()
+### as_premultiplied_vec3()
 
-> `glm::vec3` **[as_vec3](/reference/Types/color#as_vec3)**() const;
+> `glm::vec3` **[as_premultiplied_vec3](/reference/Types/color#as_premultiplied_vec3)**() const;
 
 
 
-### as_vec4()
+### as_straight_vec3()
 
-> `glm::vec4` **[as_vec4](/reference/Types/color#as_vec4)**() const;
+> `glm::vec3` **[as_straight_vec3](/reference/Types/color#as_straight_vec3)**() const;
+
+
+
+### as_premultiplied_vec4()
+
+> `glm::vec4` **[as_premultiplied_vec4](/reference/Types/color#as_premultiplied_vec4)**() const;
+
+
+
+### as_straight_vec4()
+
+> `glm::vec4` **[as_straight_vec4](/reference/Types/color#as_straight_vec4)**() const;
 
 
 
 -------------------------------
 
-Updated on 2022 February 10
+Updated on 2022 February 13

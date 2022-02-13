@@ -34,10 +34,37 @@ Draw shapes and control the look of them.
 | void | **[ellipse](/reference/drawing#ellipse)**(`FullScreen`  = {})<br/>Draws an ellipse.  |
 | void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii = {}, `Rotation` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) |
-| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `RadiusY` radiusY = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center = {}, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
-| void | **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `TopLeftCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `TopRightCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `BottomLeftCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `BottomRightCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center, `RadiusY` radiusY = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `TopLeftCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `TopRightCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `BottomLeftCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `BottomRightCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `FitX` )<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `FitY`  = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `FullScreen` )<br/>Draws an image that takes the entire window. :warning: This might distort the image if the window doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Center` center, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `TopLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `TopRightCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `BottomLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `BottomRightCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform) |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `FullScreen`  = {})<br/>Draws a rectangle using a custom fragment shader.  |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `Center` center, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `TopLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `TopRightCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `BottomLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `BottomRightCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
+| void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `Center` center = {}, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `TopLeftCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `TopRightCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `BottomLeftCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `BottomRightCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
+| void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `Transform2D` transform) |
 
 ### Attributes
 
@@ -176,28 +203,193 @@ Draws an ellipse.
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `RadiusX` radiusX ={}, `Rotation` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center, `RadiusX` radiusX ={}, `Rotation` rotation ={});
 
 
 Draws an image. This will respect the aspect ratio of the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `RadiusY` radiusY ={}, `Rotation` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `TopLeftCorner` corner, `RadiusX` radiusX ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `TopRightCorner` corner, `RadiusX` radiusX ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `BottomLeftCorner` corner, `RadiusX` radiusX ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `BottomRightCorner` corner, `RadiusX` radiusX ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center, `RadiusY` radiusY ={}, `Rotation` rotation ={});
 
 
 Draws an image. This will respect the aspect ratio of the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center ={}, `Radii` radii ={}, `Rotation` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `TopLeftCorner` corner, `RadiusY` radiusY ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `TopRightCorner` corner, `RadiusY` radiusY ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `BottomLeftCorner` corner, `RadiusY` radiusY ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `BottomRightCorner` corner, `RadiusY` radiusY ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `FitX` );
+
+
+Draws an image as big as possible on the screen. This will respect the aspect ratio of the image. 
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `FitY`  ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `FullScreen` );
+
+
+Draws an image that takes the entire window. :warning: This might distort the image if the window doesn't have the same aspect ratio as the image. 
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Center` center, `Radii` radii ={}, `Rotation` rotation ={});
 
 
 Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform ={});
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `TopLeftCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `TopRightCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `BottomLeftCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `BottomRightCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const Image &` img, `Transform2D` transform);
+
+
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `FullScreen`  ={});
+
+
+Draws a rectangle using a custom fragment shader. 
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `Center` center, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `TopLeftCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `TopRightCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `BottomLeftCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `BottomRightCorner` corner, `Radii` radii ={}, `Rotation` rotation ={});
+
+
+
+### square_with_shader()
+
+> `void` **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `Center` center ={}, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square_with_shader()
+
+> `void` **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `TopLeftCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square_with_shader()
+
+> `void` **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `TopRightCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square_with_shader()
+
+> `void` **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `BottomLeftCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### square_with_shader()
+
+> `void` **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `BottomRightCorner` corner, `Radius` radius ={}, `Rotation` rotation ={});
+
+
+
+### rectangle_with_shader()
+
+> `void` **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `Transform2D` transform);
 
 
 
@@ -249,4 +441,4 @@ Whether there will be a boundary on the shape.
 
 -------------------------------
 
-Updated on 2022 February 10
+Updated on 2022 February 13
