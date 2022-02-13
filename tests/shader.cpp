@@ -22,6 +22,7 @@ int main()
             return ctx.shift() ? shader_raw_uv : ctx.alt() ? shader_canvas_uv
                                                            : shader_uniform_uv;
         };
+        choose_shader().set("_blue", 0.5f);
         if (ctx.ctrl()) {
             ctx.square_with_shader(choose_shader(),
                                    p6::Center{},
