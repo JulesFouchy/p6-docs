@@ -16,9 +16,9 @@ int main()
         ctx.circle(p6::Center{ctx.mouse()}, p6::Radius{0.3f});
     };
     ctx.update = [&]() {
-        ctx.background({1, ctx.shift() ? 1.f : 0.f, 0});
+        ctx.background({1, ctx.ctrl() ? 1.f : 0.f, 0});
         ctx.image(image);
-        if (ctx.ctrl()) {
+        if (ctx.shift()) {
             ctx.render_to_image(image);
             brush(); // We can do some permanent drawings on our image
             ctx.render_to_screen();
