@@ -32,7 +32,7 @@ int main()
             // Draw an image
             ctx.image(image,
                       p6::Center{0.f, 0.f}, // Center on the middle of the window
-                      p6::RadiusY{0.2f});   // Give it a height of 0.2 The width will be deduced based on that and the aspect_ratio of the image
+                      p6::RadiusY{0.2f});   // Give it a height of 0.4 The width will be deduced based on that and the aspect_ratio of the image
             // Change the colors
             ctx.fill          = p6::Color{1.f, 1.f, 1.f, 0.5f};
             ctx.stroke        = p6::Color{0.2f, 0.95f, 0.95f, 1.f};
