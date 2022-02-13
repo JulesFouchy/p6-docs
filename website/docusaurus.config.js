@@ -104,7 +104,7 @@ module.exports = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-      additionalLanguages: ['cmake'],
+      additionalLanguages: ['cmake', 'glsl'],
     },
   },
   presets: [
