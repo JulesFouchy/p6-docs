@@ -13,6 +13,7 @@ function(register_test filename)
     else()
         target_compile_options(${TARGET_NAME} PRIVATE -Werror -Wall -Wextra -Wpedantic -pedantic-errors -Wconversion -Wsign-conversion)
     endif()
+    p6_copy_folder(${TARGET_NAME} res)
 endfunction()
 
 file(GLOB TESTS CONFIGURE_DEPENDS ./*.cpp)
