@@ -8,7 +8,7 @@ out vec4 _frag_color;
 
 void main()
 {
-    vec2 uv = _uniform_uv;
+    vec2 uv = _canvas_uv;
     // Grid
     _frag_color = vec4(vec3(ceil(uv * 5.) / 5., 0.), 1);
     // Disk around the origin
