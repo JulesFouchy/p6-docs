@@ -3,7 +3,7 @@ title: Summary
 slug: /reference 
 ---
 
-Welcome to the reference! In here you can find all the details of everything that is available in *p6*.
+Welcome to the reference! In here you can find all the details about everything that is available in *p6*.
 
 * **Section [Drawing](/reference/drawing)** <br/>Draw shapes and control the look of them. 
 * **Section [Events](/reference/events)** <br/>You can set those functions as you wish to react to various events. 

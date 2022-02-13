@@ -23,8 +23,8 @@ An image can be drawn onto, and can be displayed.  [More...](#detailed-descripti
 | ImageSize | **[size](/reference/Types/image#size)**() const<br/>Returns the size in pixels of the image.  |
 | float | **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const<br/>Returns the aspect ratio of the image (`width / height`)  |
 | const Texture & | **[texture](/reference/Types/image#texture)**() const<br/>Returns the internal texture, that you can use to do advanced stuff with custom shaders.  |
-| void | **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size)<br/>Resizes the image.  |
 | void | **[resize](/reference/Types/image#resize)**(`ImageSize` size)<br/>Resizes the image.  |
+| void | **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size)<br/>Resizes the image.  |
 ## Detailed Description
 
 ```cpp
@@ -69,6 +69,13 @@ Returns the aspect ratio of the image (`width / height`)
 
 Returns the internal texture, that you can use to do advanced stuff with custom shaders. 
 
+### resize()
+
+> `void` **[resize](/reference/Types/image#resize)**(`ImageSize` size);
+
+
+Resizes the image. 
+
 ### destructive_resize()
 
 > `void` **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size);
@@ -78,13 +85,6 @@ Resizes the image.
 
 :warning: All of its content is lost. If you don't want that you can use [resize()](/reference/Types/image#resize) instead. 
 
-
-### resize()
-
-> `void` **[resize](/reference/Types/image#resize)**(`ImageSize` size);
-
-
-Resizes the image. 
 
 -------------------------------
 

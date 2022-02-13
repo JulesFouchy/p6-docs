@@ -38,7 +38,7 @@ title: Summary
 slug: /reference 
 ---
 
-Welcome to the reference! In here you can find all the details of everything that is available in *p6*.
+Welcome to the reference! In here you can find all the details about everything that is available in *p6*.
 """
     with open(f"{output_folder}/Modules/index_groups.md", 'r') as f:
         summary_content += f.read()
