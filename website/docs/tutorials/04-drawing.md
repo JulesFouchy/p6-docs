@@ -6,7 +6,7 @@ You can use these functions on the `Context` at any time, even outside of the `u
 
 ## `background()`
 
-`background()` clears the whole canvas with one solid color. This is very useful if you want to do animations and don't want the drawings of the previous frames to remain on your canvas.<br/>
+`background()` clears the whole canvas with one solid color. It is very useful if you want to do animations and don't want the drawings of the previous frames to remain on your canvas.<br/>
 On the other hand not using `background()` can give you very cool effects.
 
 ```cpp
