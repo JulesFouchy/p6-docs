@@ -42,4 +42,4 @@ Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image f
 
 -------------------------------
 
-Updated on 2022 February 13
+Updated on 2022 February 23

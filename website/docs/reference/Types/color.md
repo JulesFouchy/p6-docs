@@ -16,7 +16,7 @@ sidebar_position: 1
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Color](/reference/Types/color#color)**(`float` r = 0.f, `float` g = 0.f, `float` b = 0.f, `float` a = 1.f) |
+| constexpr | **[Color](/reference/Types/color#color)**(`float` r = 0.f, `float` g = 0.f, `float` b = 0.f, `float` a = 1.f) |
 | float | **[r](/reference/Types/color#r)**() const |
 | float | **[g](/reference/Types/color#g)**() const |
 | float | **[b](/reference/Types/color#b)**() const |
@@ -30,7 +30,7 @@ sidebar_position: 1
 
 ### Color()
 
-> **[Color](/reference/Types/color#color)**(`float` r =0.f, `float` g =0.f, `float` b =0.f, `float` a =1.f);
+> `constexpr` **[Color](/reference/Types/color#color)**(`float` r =0.f, `float` g =0.f, `float` b =0.f, `float` a =1.f);
 
 
 
@@ -84,4 +84,4 @@ sidebar_position: 1
 
 -------------------------------
 
-Updated on 2022 February 13
+Updated on 2022 February 23

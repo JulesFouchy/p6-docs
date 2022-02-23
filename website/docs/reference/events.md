@@ -157,4 +157,4 @@ If you call [window_size()](/reference/window#window_size), [window_width()](/re
 
 -------------------------------
 
-Updated on 2022 February 13
+Updated on 2022 February 23

@@ -67,6 +67,7 @@ sidebar_position: 1
 | void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[Transform2D](/reference/Types/transform2_d)` transform) |
+| void | **[line](/reference/drawing#line)**(`glm::vec2` start, `glm::vec2` end)<br/>Draws a line between two points.  |
 | void | **[render_to_image](/reference/rendering-destination#render_to_image)**(`[Image](/reference/Types/image) &` image)<br/>Sets the image where all the drawing commands will happen on.  |
 | void | **[render_to_screen](/reference/rendering-destination#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
@@ -76,10 +77,12 @@ sidebar_position: 1
 | bool | **[shift](/reference/input#shift)**() const<br/>Returns true iff the SHIFT key is pressed.  |
 | bool | **[alt](/reference/input#alt)**() const<br/>Returns true iff the ALT key is pressed.  |
 | float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio of the window (a.k.a. width / height).  |
+| float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio of the window (a.k.a. height / width).  |
 | ImageSize | **[window_size](/reference/window#window_size)**() const<br/>Returns the size of the window (width and height).  |
 | int | **[window_width](/reference/window#window_width)**() const<br/>Returns the width of the window.  |
 | int | **[window_height](/reference/window#window_height)**() const<br/>Returns the height of the window.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
+| void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
 | void | **[minimize_window](/reference/window#minimize_window)**()<br/>Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen.  |
 | void | **[restore_window](/reference/window#restore_window)**()<br/>Restores the window if it is currently maximized. Does nothing otherwise.  |
@@ -433,6 +436,16 @@ Draws a rectangle using a custom fragment shader.
 
 
 
+### line()
+
+> `void` **[line](/reference/drawing#line)**(`glm::vec2` start, `glm::vec2` end);
+
+
+Draws a line between two points. 
+
+It uses the `stroke` color, and `stroke_weight` as its thickness. 
+
+
 ### render_to_image()
 
 > `void` **[render_to_image](/reference/rendering-destination#render_to_image)**(`[Image](/reference/Types/image) &` image);
@@ -496,6 +509,13 @@ Returns true iff the ALT key is pressed.
 
 Returns the aspect ratio of the window (a.k.a. width / height). 
 
+### inverse_aspect_ratio()
+
+> `float` **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const;
+
+
+Returns the inverse aspect ratio of the window (a.k.a. height / width). 
+
 ### window_size()
 
 > `ImageSize` **[window_size](/reference/window#window_size)**() const;
@@ -523,6 +543,13 @@ Returns the height of the window.
 
 
 Returns true iff the window is currently focused. 
+
+### focus_window()
+
+> `void` **[focus_window](/reference/window#focus_window)**() const;
+
+
+Focuses the window, making it pop to the foreground. 
 
 ### maximize_window()
 
@@ -783,4 +810,4 @@ Whether there will be a boundary on the shape.
 
 -------------------------------
 
-Updated on 2022 February 13
+Updated on 2022 February 23

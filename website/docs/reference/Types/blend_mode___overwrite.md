@@ -1,10 +1,10 @@
 ---
-title: p6::FitY
+title: p6::BlendMode_Overwrite
 
 sidebar_position: 1
 ---
 
-# p6::FitY
+# p6::BlendMode_Overwrite
 
 
 

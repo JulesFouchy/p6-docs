@@ -16,10 +16,12 @@ Query the state of the window and control it.
 |                | Name           |
 | -------------- | -------------- |
 | float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio of the window (a.k.a. width / height).  |
+| float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio of the window (a.k.a. height / width).  |
 | ImageSize | **[window_size](/reference/window#window_size)**() const<br/>Returns the size of the window (width and height).  |
 | int | **[window_width](/reference/window#window_width)**() const<br/>Returns the width of the window.  |
 | int | **[window_height](/reference/window#window_height)**() const<br/>Returns the height of the window.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
+| void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
 | void | **[minimize_window](/reference/window#minimize_window)**()<br/>Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen.  |
 | void | **[restore_window](/reference/window#restore_window)**()<br/>Restores the window if it is currently maximized. Does nothing otherwise.  |
@@ -34,6 +36,13 @@ Query the state of the window and control it.
 
 
 Returns the aspect ratio of the window (a.k.a. width / height). 
+
+### inverse_aspect_ratio()
+
+> `float` **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const;
+
+
+Returns the inverse aspect ratio of the window (a.k.a. height / width). 
 
 ### window_size()
 
@@ -62,6 +71,13 @@ Returns the height of the window.
 
 
 Returns true iff the window is currently focused. 
+
+### focus_window()
+
+> `void` **[focus_window](/reference/window#focus_window)**() const;
+
+
+Focuses the window, making it pop to the foreground. 
 
 ### maximize_window()
 
@@ -97,4 +113,4 @@ Returns true iff the window is currently maximized.
 
 -------------------------------
 
-Updated on 2022 February 13
+Updated on 2022 February 23

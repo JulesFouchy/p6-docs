@@ -65,6 +65,7 @@ Draw shapes and control the look of them.
 | void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `BottomLeftCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
 | void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const Shader &` shader, `BottomRightCorner` corner, `Radius` radius = {}, `Rotation` rotation = {}) |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const Shader &` shader, `Transform2D` transform) |
+| void | **[line](/reference/drawing#line)**(`glm::vec2` start, `glm::vec2` end)<br/>Draws a line between two points.  |
 
 ### Attributes
 
@@ -393,6 +394,16 @@ Draws a rectangle using a custom fragment shader.
 
 
 
+### line()
+
+> `void` **[line](/reference/drawing#line)**(`glm::vec2` start, `glm::vec2` end);
+
+
+Draws a line between two points. 
+
+It uses the `stroke` color, and `stroke_weight` as its thickness. 
+
+
 
 ## Attributes
 
@@ -441,4 +452,4 @@ Whether there will be a boundary on the shape.
 
 -------------------------------
 
-Updated on 2022 February 13
+Updated on 2022 February 23

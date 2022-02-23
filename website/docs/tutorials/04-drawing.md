@@ -115,3 +115,23 @@ int main()
     ctx.start();
 }
 ```
+
+## Line
+
+`ctx.line()` is a bit of a special shape: it has only one color which is the `stroke` color, and its thickness is controlled by `stroke_weight`:
+
+```cpp
+#include <p6/p6.h>
+
+int main()
+{
+    auto ctx   = p6::Context{};
+    ctx.update = [&]() {
+        ctx.background({});
+        ctx.stroke        = p6::Color{1.f, 1.f, 1.f, 0.75f};
+        ctx.stroke_weight = 0.1f;
+        ctx.line(glm::vec2{0.f}, ctx.mouse());
+    };
+    ctx.start();
+}
+```
