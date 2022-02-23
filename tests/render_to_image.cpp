@@ -3,12 +3,12 @@
 int main()
 {
     auto ctx   = p6::Context{{1280, 720, "Render to Image"}};
-    auto image = p6::Image{ctx.window_size()}; // Create an empty image with the same size as the window
+    auto image = p6::Image{ctx.framebuffer_size()}; // Create an empty image with the same size as the window's framebuffer
     ctx.render_to_image(image);
     ctx.background({0.3f, 0.5f, 0.9f, 0.5f});
     ctx.render_to_screen();
-    ctx.window_resized = [&]() {
-        image.resize(ctx.window_size()); // Make sure that the image still has the same size as the window even after it resizes
+    ctx.framebuffer_resized = [&]() {
+        image.resize(ctx.framebuffer_size()); // Make sure that the image still has the same size as the framebuffer even after it resizes
     };
     const auto brush = [&]() {
         ctx.use_stroke = false;

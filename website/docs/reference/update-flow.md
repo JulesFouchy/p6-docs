@@ -77,4 +77,4 @@ Returns true iff the [update()](/reference/events#update) loop is currently paus
 
 -------------------------------
 
-Updated on 2022 February 23
+Updated on 2022 February 24

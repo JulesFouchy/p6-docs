@@ -78,9 +78,9 @@ sidebar_position: 1
 | bool | **[alt](/reference/input#alt)**() const<br/>Returns true iff the ALT key is pressed.  |
 | float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio of the window (a.k.a. width / height).  |
 | float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio of the window (a.k.a. height / width).  |
-| ImageSize | **[window_size](/reference/window#window_size)**() const<br/>Returns the size of the window (width and height).  |
-| int | **[window_width](/reference/window#window_width)**() const<br/>Returns the width of the window.  |
-| int | **[window_height](/reference/window#window_height)**() const<br/>Returns the height of the window.  |
+| ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
+| int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
+| int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
@@ -106,7 +106,7 @@ sidebar_position: 1
 | std::function< void([Key](/reference/Types/key))> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
 | std::function< void([Key](/reference/Types/key))> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
-| std::function< void()> | **[window_resized](/reference/events#window_resized)** <br/>This function is called whenever the window is resized.  |
+| std::function< void()> | **[framebuffer_resized](/reference/events#framebuffer_resized)** <br/>This function is called whenever the framebuffer is resized.  |
 | [Color](/reference/Types/color) | **[fill](/reference/drawing#fill)** <br/>The color that is used for the interior of the shapes.  |
 | bool | **[use_fill](/reference/drawing#use_fill)** <br/>Whether the shapes will have an interior.  |
 | [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)** <br/>The color that is used for the boundary of the shapes.  |
@@ -516,26 +516,26 @@ Returns the aspect ratio of the window (a.k.a. width / height).
 
 Returns the inverse aspect ratio of the window (a.k.a. height / width). 
 
-### window_size()
+### framebuffer_size()
 
-> `ImageSize` **[window_size](/reference/window#window_size)**() const;
-
-
-Returns the size of the window (width and height). 
-
-### window_width()
-
-> `int` **[window_width](/reference/window#window_width)**() const;
+> `ImageSize` **[framebuffer_size](/reference/window#framebuffer_size)**() const;
 
 
-Returns the width of the window. 
+Returns the size of the framebuffer (width and height). 
 
-### window_height()
+### framebuffer_width()
 
-> `int` **[window_height](/reference/window#window_height)**() const;
+> `int` **[framebuffer_width](/reference/window#framebuffer_width)**() const;
 
 
-Returns the height of the window. 
+Returns the width of the framebuffer. 
+
+### framebuffer_height()
+
+> `int` **[framebuffer_height](/reference/window#framebuffer_height)**() const;
+
+
+Returns the height of the framebuffer. 
 
 ### window_is_focused()
 
@@ -757,15 +757,15 @@ std::function< void(std::string &&)> on_error = [](std::string&& error_message) 
 
 This function is called whenever an error occurs. 
 
-### window_resized
+### framebuffer_resized
 
 ```cpp
-std::function< void()> window_resized = []() {};
+std::function< void()> framebuffer_resized = []() {};
 ```
 
-This function is called whenever the window is resized. 
+This function is called whenever the framebuffer is resized. 
 
-If you call [window_size()](/reference/window#window_size), [window_width()](/reference/window#window_width), [window_height()](/reference/window#window_height) or [aspect_ratio()](/reference/window#aspect_ratio) inside [window_resized()](/reference/events#window_resized) they will already be referring to the new size. 
+If you call [framebuffer_size()](/reference/window#framebuffer_size), [framebuffer_width()](/reference/window#framebuffer_width), [framebuffer_height()](/reference/window#framebuffer_height) or [aspect_ratio()](/reference/window#aspect_ratio) inside [framebuffer_resized()](/reference/events#framebuffer_resized) they will already be referring to the new size. 
 
 
 ### fill
@@ -810,4 +810,4 @@ Whether there will be a boundary on the shape.
 
 -------------------------------
 
-Updated on 2022 February 23
+Updated on 2022 February 24

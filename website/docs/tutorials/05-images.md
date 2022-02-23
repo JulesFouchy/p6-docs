@@ -36,13 +36,13 @@ You can use images as canvases that you draw onto just as you would with the scr
 int main()
 {
     auto ctx   = p6::Context{};
-    auto image = p6::Image{ctx.window_size()}; // Create an empty image with the same size as the window
+    auto image = p6::Image{ctx.framebuffer_size()}; // Create an empty image with the same size as the window's framebuffer
     ctx.render_to_image(image);
         ctx.background({0.3f, 0.5f, 0.9f, 0.5f}); // background() applies to image, not to the screen
         ctx.circle();                             // circle() applies to image, not to the screen
     ctx.render_to_screen();
     ctx.window_resized = [&]() {
-        image.resize(ctx.window_size()); // Make sure that the image still has the same size as the window even after it resizes
+        image.resize(ctx.framebuffer_size()); // Make sure that the image still has the same size as the window's framebuffer even after it resizes
     };
     ctx.update = [&]() {
         ctx.background({});

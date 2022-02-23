@@ -17,9 +17,9 @@ Query the state of the window and control it.
 | -------------- | -------------- |
 | float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio of the window (a.k.a. width / height).  |
 | float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio of the window (a.k.a. height / width).  |
-| ImageSize | **[window_size](/reference/window#window_size)**() const<br/>Returns the size of the window (width and height).  |
-| int | **[window_width](/reference/window#window_width)**() const<br/>Returns the width of the window.  |
-| int | **[window_height](/reference/window#window_height)**() const<br/>Returns the height of the window.  |
+| ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
+| int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
+| int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
@@ -44,26 +44,26 @@ Returns the aspect ratio of the window (a.k.a. width / height).
 
 Returns the inverse aspect ratio of the window (a.k.a. height / width). 
 
-### window_size()
+### framebuffer_size()
 
-> `ImageSize` **[window_size](/reference/window#window_size)**() const;
-
-
-Returns the size of the window (width and height). 
-
-### window_width()
-
-> `int` **[window_width](/reference/window#window_width)**() const;
+> `ImageSize` **[framebuffer_size](/reference/window#framebuffer_size)**() const;
 
 
-Returns the width of the window. 
+Returns the size of the framebuffer (width and height). 
 
-### window_height()
+### framebuffer_width()
 
-> `int` **[window_height](/reference/window#window_height)**() const;
+> `int` **[framebuffer_width](/reference/window#framebuffer_width)**() const;
 
 
-Returns the height of the window. 
+Returns the width of the framebuffer. 
+
+### framebuffer_height()
+
+> `int` **[framebuffer_height](/reference/window#framebuffer_height)**() const;
+
+
+Returns the height of the framebuffer. 
 
 ### window_is_focused()
 
@@ -113,4 +113,4 @@ Returns true iff the window is currently maximized.
 
 -------------------------------
 
-Updated on 2022 February 23
+Updated on 2022 February 24
