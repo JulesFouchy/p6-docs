@@ -42,8 +42,8 @@ Welcome to the reference! In here you can find all the details about everything 
 """
     with open(f"{output_folder}/Modules/index_groups.md", 'r') as f:
         summary_content += f.read()
-    with open(f"{output_folder}/Types/index_classes.md", 'r') as f:
-        summary_content += f.read()
+    # with open(f"{output_folder}/Types/index_classes.md", 'r') as f:
+    #     summary_content += f.read()
     with open(f"{output_folder}/00-summary.md", 'a') as f:
         f.write(summary_content)
 
