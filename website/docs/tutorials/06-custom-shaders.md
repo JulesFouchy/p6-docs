@@ -29,6 +29,12 @@ in vec2 _uniform_uv;
 in vec2 _raw_uv;
 in vec2 _canvas_uv;
 
+uniform float _aspect_ratio;
+uniform float _inverse_aspect_ratio;
+uniform vec2  _size;
+uniform float _window_aspect_ratio;
+uniform float _window_inverse_aspect_ratio;
+
 void main()
 {
     vec2 uv = _uniform_uv;
@@ -38,12 +44,25 @@ void main()
 
 **NB:** For this example to work you must ask p6 to copy your *res* folder. To do so, add this line in your CMakeLists.txt: `p6_copy_folder(${PROJECT_NAME} res)`.
 
-## UV
+## Available information
+
+### UV
 
 You have different coordinate systems available to you:
-- `_uniform_uv` is what you should use most of the time. It is centered around (0, 0) and the y-axis goes from -1 to 1. The x-axis will adapt to the aspect ratio of the rectangle.
+- `_uniform_uv` is what you should use most of the time. It is centered around (0, 0) and the y-axis goes from -1 to 1. The x-axis will adapt to the aspect ratio of the rectangle (goes from *-_aspect_ratio* to *+_aspect_ratio*).
 - `_raw_uv` goes from 0 to 1 on both axes, no matter the aspect ratio of the rectangle. (0, 0) is in the bottom-left corner.
 - `_canvas_uv` is like *_uniform_uv* but the axes go from *-rectangle_radii* to *+rectangle_radii*. You will probably never have a use case for this one. It is used internally to draw strokes with an absolute size instead of them beeing proportional to the size of the rectangle.
+
+### Shape of the rectangle
+
+- `_aspect_ratio`: Aspect ratio of the rectangle (width / height).
+- `_inverse_aspect_ratio`: Inverse aspect ratio of the rectangle (height / width).
+- `_size`: Size of the rectangle.
+
+### Window
+
+- `_window_aspect_ratio`: Aspect ratio of the window (width / height).
+- `_window_inverse_aspect_ratio`: Inverse aspect ratio of the window (height / width).
 
 ## Sending parameters to shaders
 
