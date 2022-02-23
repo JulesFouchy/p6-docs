@@ -118,7 +118,7 @@ int main()
 
 ## Line
 
-`ctx.line()` is a bit of a special shape: it has only one color which is the `stroke` color, and its thickness is controlled by `stroke_weight`:
+[`ctx.line()`](../reference/drawing#line) is a bit of a special shape: it has only one color which is the `stroke` color, and its thickness is controlled by `stroke_weight`:
 
 ```cpp
 #include <p6/p6.h>
