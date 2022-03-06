@@ -36,25 +36,25 @@ sidebar_position: 1
 | void | **[ellipse](/reference/drawing#ellipse)**(`[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws an ellipse.  |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[FitX](/reference/Types/fit_x)` )<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[FitY](/reference/Types/fit_y)`  = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[FullScreen](/reference/Types/full_screen)` )<br/>Draws an image that takes the entire window. :warning: This might distort the image if the window doesn't have the same aspect ratio as the image.  |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Transform2D](/reference/Types/transform2_d)` transform) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitX](/reference/Types/fit_x)` )<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitY](/reference/Types/fit_y)`  = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FullScreen](/reference/Types/full_screen)` )<br/>Draws an image that takes the entire window. :warning: This might distort the image if the window doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Transform2D](/reference/Types/transform2_d)` transform) |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws a rectangle using a custom fragment shader.  |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
@@ -68,8 +68,8 @@ sidebar_position: 1
 | void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[Transform2D](/reference/Types/transform2_d)` transform) |
 | void | **[line](/reference/drawing#line)**(`glm::vec2` start, `glm::vec2` end)<br/>Draws a line between two points.  |
-| void | **[render_to_image](/reference/rendering-destination#render_to_image)**(`[Image](/reference/Types/image) &` image)<br/>Sets the image where all the drawing commands will happen on.  |
-| void | **[render_to_screen](/reference/rendering-destination#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
+| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets the canvas where all the drawing commands will happen on.  |
+| void | **[render_to_screen](/reference/canvas#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
 | glm::vec2 | **[mouse_delta](/reference/input#mouse_delta)**() const<br/>Returns the movement of the mouse since last [update()](/reference/events#update).  |
 | bool | **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const<br/>Returns true iff the window is focused and the coordinates returned by [mouse()](/reference/input#mouse) correspond to a position inside the window.  |
@@ -246,120 +246,120 @@ Draws an ellipse.
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 Draws an image. This will respect the aspect ratio of the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 Draws an image. This will respect the aspect ratio of the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[RadiusY](/reference/Types/radius_y)` radiusY ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[FitX](/reference/Types/fit_x)` );
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitX](/reference/Types/fit_x)` );
 
 
 Draws an image as big as possible on the screen. This will respect the aspect ratio of the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[FitY](/reference/Types/fit_y)`  ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitY](/reference/Types/fit_y)`  ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[FullScreen](/reference/Types/full_screen)` );
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FullScreen](/reference/Types/full_screen)` );
 
 
 Draws an image that takes the entire window. :warning: This might distort the image if the window doesn't have the same aspect ratio as the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image. 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radii](/reference/Types/radii)` radii ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
 
 ### image()
 
-> `void` **[image](/reference/drawing#image)**(`const [Image](/reference/Types/image) &` img, `[Transform2D](/reference/Types/transform2_d)` transform);
+> `void` **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Transform2D](/reference/Types/transform2_d)` transform);
 
 
 
@@ -446,16 +446,16 @@ Draws a line between two points.
 It uses the `stroke` color, and `stroke_weight` as its thickness. 
 
 
-### render_to_image()
+### render_to_canvas()
 
-> `void` **[render_to_image](/reference/rendering-destination#render_to_image)**(`[Image](/reference/Types/image) &` image);
+> `void` **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas);
 
 
-Sets the image where all the drawing commands will happen on. 
+Sets the canvas where all the drawing commands will happen on. 
 
 ### render_to_screen()
 
-> `void` **[render_to_screen](/reference/rendering-destination#render_to_screen)**();
+> `void` **[render_to_screen](/reference/canvas#render_to_screen)**();
 
 
 Reset the [Context](/reference/Types/context) to render to the screen. 
@@ -810,4 +810,4 @@ Whether there will be a boundary on the shape.
 
 -------------------------------
 
-Updated on 2022 February 24
+Updated on 2022 March 06

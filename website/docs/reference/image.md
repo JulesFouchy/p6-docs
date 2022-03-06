@@ -1,13 +1,13 @@
 ---
 title: Image
-summary: Create, modify and query information about images. 
+summary: Load and query information about images. 
 
 sidebar_position: 1
 ---
 
 # Image
 
-Create, modify and query information about images. 
+Load and query information about images. 
 
 ## Summary
 
@@ -15,7 +15,7 @@ Create, modify and query information about images.
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[p6::Image](/reference/Types/image)** <br/>An image can be drawn onto, and can be displayed.  |
+| class | **[p6::Image](/reference/Types/image)**  |
 
 ### Functions
 
@@ -42,4 +42,4 @@ Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image f
 
 -------------------------------
 
-Updated on 2022 February 24
+Updated on 2022 March 06

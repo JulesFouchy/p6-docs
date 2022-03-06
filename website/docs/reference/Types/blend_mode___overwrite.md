@@ -13,4 +13,4 @@ sidebar_position: 1
 ## Details
 -------------------------------
 
-Updated on 2022 February 24
+Updated on 2022 March 06

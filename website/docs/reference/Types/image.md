@@ -1,6 +1,5 @@
 ---
 title: p6::Image
-summary: An image can be drawn onto, and can be displayed. 
 
 sidebar_position: 1
 ---
@@ -11,7 +10,9 @@ sidebar_position: 1
 
 
 
-An image can be drawn onto, and can be displayed.  [More...](#detailed-description)
+
+
+Inherits from [p6::ImageOrCanvas](/reference/Types/image_or_canvas)
 
 
 
@@ -19,33 +20,22 @@ An image can be drawn onto, and can be displayed.  [More...](#detailed-descripti
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data = nullptr, `glpp::TextureLayout` texture_layout = {glpp::InternalFormat::RGBA16, glpp::Channels::RGBA, glpp::TexelDataType::UnsignedByte})<br/>data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row.  |
-| ImageSize | **[size](/reference/Types/image#size)**() const<br/>Returns the size in pixels of the image.  |
-| float | **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const<br/>Returns the aspect ratio of the image (`width / height`)  |
-| const Texture & | **[texture](/reference/Types/image#texture)**() const<br/>Returns the internal texture, that you can use to do advanced stuff with custom shaders.  |
-| void | **[resize](/reference/Types/image#resize)**(`ImageSize` size)<br/>Resizes the image.  |
-| void | **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size)<br/>Resizes the image.  |
-## Detailed Description
-
-```cpp
-class p6::Image;
-```
-
-An image can be drawn onto, and can be displayed. 
-
-If you plan on drawing on the image, you can create it without data (it will create a black and transparent image). If you want to load an image, you can use [load_image()](/reference/image#load_image) instead of the constructor. 
-
+| | **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data, `glpp::TextureLayout` texture_layout = {glpp::InternalFormat::RGBA8, glpp::Channels::RGBA, glpp::TexelDataType::UnsignedByte})<br/>Creates an [Image](/reference/Types/image) filled with data.  |
+| ImageSize | **[size](/reference/Types/image#size)**() const<br/>Returns the size in pixels.  |
+| virtual float | **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const override<br/>Returns the aspect ratio (`width / height`)  |
+| float | **[inverse_aspect_ratio](/reference/Types/image#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio (`height / width`)  |
+| virtual const glpp::Texture2D & | **[texture](/reference/Types/image#texture)**() const override |
 ## Details
 
 
 ### Image()
 
-> **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data =nullptr, `glpp::TextureLayout` texture_layout ={glpp::InternalFormat::RGBA16, glpp::Channels::RGBA, glpp::TexelDataType::UnsignedByte});
+> **[Image](/reference/Types/image#image)**(`ImageSize` size, `const uint8_t *` data, `glpp::TextureLayout` texture_layout ={glpp::InternalFormat::RGBA8, glpp::Channels::RGBA, glpp::TexelDataType::UnsignedByte});
 
 
-data must be nullptr, or an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row. 
+Creates an [Image](/reference/Types/image) filled with data. 
 
-texture_layout is an advanced setting; it controls how the pixels are gonna be stored on the GPU. 
+This is for advanded uses; prefer using [p6::load_image()](/reference/image#load_image). data must be an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row. texture_layout is an advanced setting; it controls how the pixels are gonna be stored on the GPU. 
 
 
 ### size()
@@ -53,39 +43,34 @@ texture_layout is an advanced setting; it controls how the pixels are gonna be s
 > `ImageSize` **[size](/reference/Types/image#size)**() const;
 
 
-Returns the size in pixels of the image. 
+Returns the size in pixels. 
 
 ### aspect_ratio()
 
-> `float` **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const;
+> `float` **[aspect_ratio](/reference/Types/image#aspect_ratio)**() const override;
 
 
-Returns the aspect ratio of the image (`width / height`) 
+Returns the aspect ratio (`width / height`) 
+
+**Reimplements**: [p6::ImageOrCanvas::aspect_ratio](/reference/Types/image_or_canvas#aspect_ratio)
+
+
+### inverse_aspect_ratio()
+
+> `float` **[inverse_aspect_ratio](/reference/Types/image#inverse_aspect_ratio)**() const;
+
+
+Returns the inverse aspect ratio (`height / width`) 
 
 ### texture()
 
-> `const Texture &` **[texture](/reference/Types/image#texture)**() const;
+> `const glpp::Texture2D &` **[texture](/reference/Types/image#texture)**() const override;
 
 
-Returns the internal texture, that you can use to do advanced stuff with custom shaders. 
 
-### resize()
-
-> `void` **[resize](/reference/Types/image#resize)**(`ImageSize` size);
-
-
-Resizes the image. 
-
-### destructive_resize()
-
-> `void` **[destructive_resize](/reference/Types/image#destructive_resize)**(`ImageSize` size);
-
-
-Resizes the image. 
-
-:warning: All of its content is lost. If you don't want that you can use [resize()](/reference/Types/image#resize) instead. 
+**Reimplements**: [p6::ImageOrCanvas::texture](/reference/Types/image_or_canvas#texture)
 
 
 -------------------------------
 
-Updated on 2022 February 24
+Updated on 2022 March 06
