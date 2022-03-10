@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(p6-tests)
 
+set(p6_ENABLE_WARNINGS_AS_ERRORS true)
 add_subdirectory(p6)
 
 function(register_test filename)
