@@ -39,7 +39,7 @@ int main()
 
 ## Learning *Dear ImGui*
 
-[Here is *Dear ImGui*'s GitHub](https://github.com/ocornut/imgui).
+[Here is *Dear ImGui*'s GitHub](https://github.com/ocornut/imgui)
 
 :::tip
 *Dear ImGui* doesn't have an official documentation, but you can look at their demo window to see all the available widgets. To open it simply call `ImGui::ShowDemoWindow();` inside `ctx.imgui`.<br/>
