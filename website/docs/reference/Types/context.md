@@ -102,6 +102,7 @@ sidebar_position: 1
 | void | **[resume](/reference/update-flow#resume)**()<br/>Resumes the [update()](/reference/events#update) loop if it was paused with [pause()](/reference/update-flow#pause).  |
 | bool | **[is_paused](/reference/update-flow#is_paused)**() const<br/>Returns true iff the [update()](/reference/events#update) loop is currently paused.  |
 | std::function< void()> | **[update](/reference/events#update)** <br/>This function is called repeatedly. The framerate will be capped at your monitors refresh rate (60 frames per second on a typical monitor).  |
+| std::function< void()> | **[imgui](/reference/events#imgui)** <br/>In this function you can render all the ImGui windows you want.  |
 | std::function< void([MouseMove](/reference/Types/mouse_move))> | **[mouse_moved](/reference/events#mouse_moved)** <br/>This function is called whenever the mouse is moved.  |
 | std::function< void([MouseDrag](/reference/Types/mouse_drag))> | **[mouse_dragged](/reference/events#mouse_dragged)** <br/>This function is called whenever the mouse is dragged.  |
 | std::function< void([MouseButton](/reference/Types/mouse_button))> | **[mouse_pressed](/reference/events#mouse_pressed)** <br/>This function is called whenever a mouse button is pressed.  |
@@ -706,6 +707,14 @@ std::function< void()> update = []() {};
 ```
 
 This function is called repeatedly. The framerate will be capped at your monitors refresh rate (60 frames per second on a typical monitor). 
+
+### imgui
+
+```cpp
+std::function< void()> imgui = []() {};
+```
+
+In this function you can render all the ImGui windows you want. 
 
 ### mouse_moved
 
