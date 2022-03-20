@@ -68,6 +68,11 @@ sidebar_position: 1
 | void | **[square_with_shader](/reference/drawing#square_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[rectangle_with_shader](/reference/drawing#rectangle_with_shader)**(`const [Shader](/reference/Types/shader) &` shader, `[Transform2D](/reference/Types/transform2_d)` transform) |
 | void | **[line](/reference/drawing#line)**(`glm::vec2` start, `glm::vec2` end)<br/>Draws a line between two points.  |
+| void | **[text](/reference/text#text)**(`const std::u16string &` str, `[Center](/reference/Types/center)` center, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[text](/reference/text#text)**(`const std::u16string &` str, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[text](/reference/text#text)**(`const std::u16string &` str, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
+| void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets the canvas where all the drawing commands will happen on.  |
 | void | **[render_to_screen](/reference/canvas#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
@@ -112,6 +117,8 @@ sidebar_position: 1
 | [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)** <br/>The color that is used for the boundary of the shapes.  |
 | float | **[stroke_weight](/reference/drawing#stroke_weight)** <br/>The size of the boundary of the shapes.  |
 | bool | **[use_stroke](/reference/drawing#use_stroke)** <br/>Whether there will be a boundary on the shape.  |
+| float | **[text_size](/reference/text#text_size)** <br/>Height of the text.  |
+| float | **[text_inflating](/reference/text#text_inflating)** <br/>Gives some "boldness" to the text.  |
 
 ## Details
 
@@ -444,6 +451,36 @@ Draws a rectangle using a custom fragment shader.
 Draws a line between two points. 
 
 It uses the `stroke` color, and `stroke_weight` as its thickness. 
+
+
+### text()
+
+> `void` **[text](/reference/text#text)**(`const std::u16string &` str, `[Center](/reference/Types/center)` center, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+
+### text()
+
+> `void` **[text](/reference/text#text)**(`const std::u16string &` str, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+
+### text()
+
+> `void` **[text](/reference/text#text)**(`const std::u16string &` str, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+
+### text()
+
+> `void` **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+
+### text()
+
+> `void` **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation ={});
+
 
 
 ### render_to_canvas()
@@ -808,6 +845,22 @@ bool use_stroke = true;
 
 Whether there will be a boundary on the shape. 
 
+### text_size
+
+```cpp
+float text_size = 0.03f;
+```
+
+Height of the text. 
+
+### text_inflating
+
+```cpp
+float text_inflating = 0.01f;
+```
+
+Gives some "boldness" to the text. 
+
 -------------------------------
 
-Updated on 2022 March 06
+Updated on 2022 March 20
