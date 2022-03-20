@@ -16,7 +16,11 @@ int main()
         ImGui::ShowDemoWindow();
     };
     ctx.update = [&]() {
-        ctx.background({1, 1, 0, 1});
+        ctx.use_stroke = false;
+        ctx.fill       = {1, 1, 0, 0.1f};
+        ctx.rectangle(p6::FullScreen{});
+        ctx.use_stroke = true;
+        ctx.fill       = p6::NamedColor::BlueGreen;
         ctx.square(p6::Center{}, p6::Radius{square_radius});
         ctx.circle(p6::Center{ctx.mouse()}, p6::Radius{0.3f});
     };
