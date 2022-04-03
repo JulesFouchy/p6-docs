@@ -17,7 +17,7 @@ int main()
         ctx.background({0.3f, 0.5f, 0.9f, 0.5f}); // background() applies to canvas, not to the screen
         ctx.circle();                             // circle() applies to canvas, not to the screen
     ctx.render_to_screen();
-    ctx.window_resized = [&]() {
+    ctx.framebuffer_resized = [&]() {
         canvas.resize(ctx.framebuffer_size()); // Make sure that the canvas still has the same size as the window's framebuffer even after it resizes
     };
     ctx.update = [&]() {
