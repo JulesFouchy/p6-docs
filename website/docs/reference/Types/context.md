@@ -86,6 +86,7 @@ sidebar_position: 1
 | ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
 | int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
 | int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
+| [Color](/reference/Types/color) | **[read_pixel](/reference/window#read_pixel)**(`glm::vec2` position) const<br/>Returns the color of the pixel at the given position.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
@@ -575,6 +576,16 @@ Returns the width of the framebuffer.
 
 Returns the height of the framebuffer. 
 
+### read_pixel()
+
+> `[Color](/reference/Types/color)` **[read_pixel](/reference/window#read_pixel)**(`glm::vec2` position) const;
+
+
+Returns the color of the pixel at the given position. 
+
+The coordinates are expressed in the usual p6 coordinate system. The pixel is read from the current render target (which will be the screen in most cases, unless you used [render_to_canvas()](/reference/canvas#render_to_canvas)) 
+
+
 ### window_is_focused()
 
 > `bool` **[window_is_focused](/reference/window#window_is_focused)**() const;
@@ -872,4 +883,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2022 March 20
+Updated on 2022 April 03
