@@ -10,7 +10,7 @@ Here is the minimal project structure that you need to have:<br/>
 ## CMakeLists.txt
 
 ```cmake title="CMakeLists.txt"
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.20)
 project(my-p6-project)
 
 add_executable(${PROJECT_NAME} main.cpp)
