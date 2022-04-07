@@ -8,6 +8,7 @@ int main()
     ctx.imgui                 = [&]() {
         // Show a simple window
         ImGui::Begin("Test");
+        ImGui::Text("Measured framerate: %.1f fps", ImGui::GetIO().Framerate);
         ImGui::SliderFloat("Square size", &square_radius, 0.f, 1.f);
         ImGui::InputText("Text", &text);
         ImGui::End();
