@@ -1,4 +1,5 @@
 #include <p6/p6.h>
+#include <cstdint>
 #include <functional>
 
 enum class FramerateMode {
@@ -46,6 +47,36 @@ struct Ball {
     }
 };
 
+struct Frame {
+    uint64_t count;
+    float    duration;
+};
+
+class RecentFrames {
+public:
+    void imgui() const
+    {
+        std::vector<float> durations{};
+        for (size_t i = 0; i < frames.size(); ++i) {
+            const auto& frame = frames[(i + next_idx) % frames.size()];
+            if (frame) {
+                durations.push_back(frame->duration);
+            }
+        }
+        ImGui::PlotLines("Delta Time", durations.data(), durations.size(), 0, nullptr, 0.f, 20.f, {0, 100.f});
+    }
+
+    void push(Frame frame)
+    {
+        frames[next_idx] = frame;
+        next_idx         = (next_idx + 1) % frames.size();
+    }
+
+private:
+    size_t                            next_idx{0};
+    std::vector<std::optional<Frame>> frames{150, std::nullopt};
+};
+
 int main()
 {
     auto  ctx                  = p6::Context{{1280, 720, "p6 Framerate"}};
@@ -55,7 +86,6 @@ int main()
     ctx.framerate_synced_with_monitor();
     auto time_mode = TimeMode::Realtime;
     ctx.set_time_mode_realtime();
-    auto play_pause         = Play::Play;
     auto should_reset_balls = true;
 
     Ball ball_framerate_based{p6::NamedColor::Red, 0.f};
@@ -83,11 +113,13 @@ int main()
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(50.f);
+        ImGui::PushID(30);
         if (ImGui::SliderFloat("fps", &framerate, 0.001f, 150.f)) {
             ctx.framerate_capped_at(framerate);
             framerate_mode = FramerateMode::Capped;
             reset_balls();
         };
+        ImGui::PopID();
     };
 
     const auto choose_time_mode = [&]() {
@@ -109,13 +141,18 @@ int main()
     };
 
     const auto imgui_play_pause = [&]() {
-        if (ImGui::RadioButton("play", (int*)&play_pause, (int)Play::Play)) {
-            ctx.resume();
-        }
-        if (ImGui::RadioButton("pause", (int*)&play_pause, (int)Play::Pause)) {
-            ctx.pause();
+        if (ImGui::Button(ctx.is_paused() ? "play" : "pause", {50.f, 0.f})) {
+            ctx.is_paused() ? ctx.resume() : ctx.pause();
         }
     };
+
+    ctx.key_pressed = [&](auto e) {
+        if (e.logical == " ") {
+            ctx.is_paused() ? ctx.resume() : ctx.pause();
+        }
+    };
+
+    RecentFrames recent_frames{};
 
     ctx.imgui = [&]() {
         ImGui::Begin("Framerate");
@@ -133,12 +170,17 @@ int main()
         ImGui::BeginGroup();
         imgui_play_pause();
         ImGui::EndGroup();
+        ImGui::SameLine();
+        recent_frames.imgui();
         ImGui::NewLine();
         ImGui::Checkbox("Reset Balls When Changing Mode", &should_reset_balls);
         ImGui::End();
     };
 
+    uint64_t frame_count{0};
+
     ctx.update = [&]() {
+        recent_frames.push({frame_count++, 1000.f * ctx.delta_time()});
         ctx.background(p6::NamedColor::DeepSkyBlue);
         ball_framerate_based.draw(ctx);
         ball_dt_based.draw(ctx);
