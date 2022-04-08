@@ -2,6 +2,13 @@
 #include <cstdint>
 #include <functional>
 
+/**
+ * Things to check:
+ * - After a pause there is no weird delta_time() value: neither 0 nor a huge peak
+ * - After changing framerate mode from capped to synced there is no drop in delta_time() value
+ * - framerate_capped_at() works
+ */
+
 enum class FramerateMode {
     Synced,
     AsFastAsPossible,
@@ -63,7 +70,7 @@ public:
                 durations.push_back(frame->duration);
             }
         }
-        ImGui::PlotLines("Delta Time", durations.data(), durations.size(), 0, nullptr, 0.f, 20.f, {0, 100.f});
+        ImGui::PlotLines("Delta Time", durations.data(), (int)durations.size(), 0, nullptr, 0.f, 20.f, {0, 100.f});
     }
 
     void push(Frame frame)
@@ -79,8 +86,9 @@ private:
 
 int main()
 {
-    auto  ctx                  = p6::Context{{1280, 720, "p6 Framerate"}};
-    float framerate            = 80.f;
+    auto ctx = p6::Context{{1280, 720, "p6 Framerate"}};
+    ctx.maximize_window();
+    float capped_framerate     = 60.f;
     float fixedsteps_framerate = 60.f;
     auto  framerate_mode       = FramerateMode::Synced;
     ctx.framerate_synced_with_monitor();
@@ -108,14 +116,14 @@ int main()
             reset_balls();
         }
         if (ImGui::RadioButton("framerate_capped_at()", (int*)&framerate_mode, (int)FramerateMode::Capped)) {
-            ctx.framerate_capped_at(framerate);
+            ctx.framerate_capped_at(capped_framerate);
             reset_balls();
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(50.f);
         ImGui::PushID(30);
-        if (ImGui::SliderFloat("fps", &framerate, 0.001f, 150.f)) {
-            ctx.framerate_capped_at(framerate);
+        if (ImGui::SliderFloat("fps", &capped_framerate, 1.f, 150.f)) {
+            ctx.framerate_capped_at(capped_framerate);
             framerate_mode = FramerateMode::Capped;
             reset_balls();
         };
@@ -133,7 +141,7 @@ int main()
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(50.f);
-        if (ImGui::SliderFloat("fps", &fixedsteps_framerate, 0.001f, 150.f)) {
+        if (ImGui::SliderFloat("fps", &fixedsteps_framerate, 1.f, 150.f)) {
             ctx.set_time_mode_fixedstep(fixedsteps_framerate);
             time_mode = TimeMode::FixedTimesteps;
             reset_balls();
@@ -156,24 +164,36 @@ int main()
 
     ctx.imgui = [&]() {
         ImGui::Begin("Framerate");
-        ImGui::Text("Time: %.1f s", ctx.time());
-        ImGui::Text("Delta Time: %.1f ms", 1000.f * ctx.delta_time());
-        ImGui::Text("Framerate: %.1f fps", 1.f / ctx.delta_time());
-        ImGui::BeginGroup();
-        choose_framerate_mode();
-        ImGui::EndGroup();
+        {
+            ImGui::Text("Time: %.1f s", ctx.time());
+            ImGui::Text("Delta Time: %.1f ms", 1000.f * ctx.delta_time());
+            ImGui::Text("Framerate: %.1f fps", 1.f / ctx.delta_time());
+        }
+        {
+            ImGui::BeginGroup();
+            choose_framerate_mode();
+            ImGui::EndGroup();
+        }
         ImGui::SameLine();
-        ImGui::BeginGroup();
-        choose_time_mode();
-        ImGui::EndGroup();
+        {
+            ImGui::BeginGroup();
+            choose_time_mode();
+            ImGui::EndGroup();
+        }
         ImGui::SameLine();
-        ImGui::BeginGroup();
-        imgui_play_pause();
-        ImGui::EndGroup();
+        {
+            ImGui::BeginGroup();
+            imgui_play_pause();
+            ImGui::EndGroup();
+        }
         ImGui::SameLine();
-        recent_frames.imgui();
+        {
+            recent_frames.imgui();
+        }
         ImGui::NewLine();
-        ImGui::Checkbox("Reset Balls When Changing Mode", &should_reset_balls);
+        {
+            ImGui::Checkbox("Reset Balls When Changing Mode", &should_reset_balls);
+        }
         ImGui::End();
     };
 
