@@ -15,7 +15,9 @@ ctx.circle(p6::Center{sin(ctx.time(),0.f)});
 
 `ctx.delta_time()` returns the time in seconds that elapsed since the last `update()` call. It is useful for example if you want to do incremental movements frame by frame: taking `delta_time()` into account will make sure that your animation is independent of the framerate and will be perceived the same even if your computer starts lagging a little bit, or if you change the framerate mode.
 
-You really want to try and not depend of the framerate, because the framerate is an implementation detail and you would rather want to work at a conceptual level, with an animation that is continuous and only depends on the actual amount of time that elapses. This will also simplify your life when you will try to export your animation as a video.
+You really want to try and not depend of the framerate, for the framerate is an implementation detail and you would rather want to work at a conceptual level, with an animation that is continuous and only depends on the actual amount of time that elapses. This will also simplify your life when you will try to export your animation as a video.
+
+For more details, see this article: [Understanding Time.deltaTime](https://medium.com/star-gazers/understanding-time-deltatime-6528a8c2b5c8).
 
 ```cpp
 float x = 0.f;
@@ -29,7 +31,7 @@ ctx.update = [&]() {
 
 The framerate mode controls the speed at which `update()` will be called, a.k.a. the amount of physical time that elapses between two updates.
 
-**NB:** all of these modes will *try* to satisfy your request, but if your `update()` function takes too long to run we might not be able to call it as often as you would like.
+**NB:** all of these modes will *try* to satisfy your request but if your `update()` function takes too long to run we might not be able to call it as often as you would like.
 
 ### Synced with monitor
 
@@ -37,7 +39,7 @@ The framerate mode controls the speed at which `update()` will be called, a.k.a.
 ctx.framerate_synced_with_monitor();
 ```
 
-This is the default mode. It makes sure that the framerate will be adapted to your monitor (which is 60 Hertz for most monitors). This will ask less unnecessary work to your computer because it is pointless to render more frames than your monitor can display anyways. It also prevents visual artifacts like vertical tearing.
+This is the default mode. It makes sure that the framerate will be adapted to your monitor (which is 60 Hertz in most cases). This is known as *vsync* or *vertical synchronization*. This will ask less unnecessary work to your computer because it is pointless to render more frames than your monitor can display anyways. It also prevents visual artifacts like screen tearing.
 
 ### As high as possible
 
@@ -91,4 +93,4 @@ ctx.time_perceived_as_constant_delta_time(30.f); // I want to export a 30 fps vi
 
 ## Pause and resume
 
-Note that using `pause()` will not only prevent `update()` from beeing called, but also freeze the time (even if you use realtime mode). For example if `time()` was 10.f when you called `pause()`, and if you wait 5 seconds before calling `resume()`, time will still be 10.f after that and `delta_time()` will not be 5 seconds, it will be approximately 1/60 (if you set your framerate to 60 fps).
+Note that using `pause()` will not only prevent `update()` from beeing called, but also freeze the time (even if you use realtime mode). For example if `time()` was 10.f when you called `pause()`, and if you wait 5 seconds before calling `resume()`, time will still be 10.f after that and `delta_time()` will not be 5 seconds, it will be approximately 1/60 (if your framerate is set to 60 fps).
