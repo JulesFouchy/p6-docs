@@ -18,7 +18,7 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
 # ---Add p6---
 add_subdirectory(p6)
-target_link_p6_library(${PROJECT_NAME}) # We don't use the usual target_link_libraries() because p6 needs some additional setup
+target_link_libraries(${PROJECT_NAME} p6::p6)
 ```
 
 ## main.cpp
