@@ -92,7 +92,7 @@ int main()
     auto  framerate_mode       = FramerateMode::Synced;
     ctx.framerate_synced_with_monitor();
     auto time_mode = TimeMode::Realtime;
-    ctx.set_time_mode_realtime();
+    ctx.time_perceived_as_realtime();
     auto should_reset_balls = true;
 
     Ball ball_framerate_based{p6::NamedColor::Red, 0.f};
@@ -110,8 +110,8 @@ int main()
             ctx.framerate_synced_with_monitor();
             reset_balls();
         }
-        if (ImGui::RadioButton("framerate_as_fast_as_possible()", (int*)&framerate_mode, (int)FramerateMode::AsFastAsPossible)) {
-            ctx.framerate_as_fast_as_possible();
+        if (ImGui::RadioButton("framerate_as_high_as_possible()", (int*)&framerate_mode, (int)FramerateMode::AsFastAsPossible)) {
+            ctx.framerate_as_high_as_possible();
             reset_balls();
         }
         if (ImGui::RadioButton("framerate_capped_at()", (int*)&framerate_mode, (int)FramerateMode::Capped)) {
@@ -131,17 +131,17 @@ int main()
 
     const auto choose_time_mode = [&]() {
         if (ImGui::RadioButton("time_realtime()", (int*)&time_mode, (int)TimeMode::Realtime)) {
-            ctx.set_time_mode_realtime();
+            ctx.time_perceived_as_realtime();
             reset_balls();
         }
         if (ImGui::RadioButton("time_fixedsteps()", (int*)&time_mode, (int)TimeMode::FixedTimesteps)) {
-            ctx.set_time_mode_fixedstep(fixedsteps_framerate);
+            ctx.time_perceived_as_constant_delta_time(fixedsteps_framerate);
             reset_balls();
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(50.f);
         if (ImGui::SliderFloat("fps", &fixedsteps_framerate, 1.f, 150.f)) {
-            ctx.set_time_mode_fixedstep(fixedsteps_framerate);
+            ctx.time_perceived_as_constant_delta_time(fixedsteps_framerate);
             time_mode = TimeMode::FixedTimesteps;
             reset_balls();
         };

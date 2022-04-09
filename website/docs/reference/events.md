@@ -50,7 +50,8 @@ ctx.mouse_pressed = [](p6::MouseButton) {
 ### update
 
 ```
-std::function< void()> update = []() {};
+std::function< void()> update = []() {
+    };
 ```
 
 This function is called repeatedly. The framerate will be capped at your monitors refresh rate (60 frames per second on a typical monitor). 
@@ -58,7 +59,8 @@ This function is called repeatedly. The framerate will be capped at your monitor
 ### imgui
 
 ```
-std::function< void()> imgui = []() {};
+std::function< void()> imgui = []() {
+    };
 ```
 
 In this function you can render all the ImGui windows you want. 
@@ -66,7 +68,8 @@ In this function you can render all the ImGui windows you want.
 ### mouse_moved
 
 ```
-std::function< void(MouseMove)> mouse_moved = [](MouseMove) {};
+std::function< void(MouseMove)> mouse_moved = [](MouseMove) {
+    };
 ```
 
 This function is called whenever the mouse is moved. 
@@ -74,7 +77,8 @@ This function is called whenever the mouse is moved.
 ### mouse_dragged
 
 ```
-std::function< void(MouseDrag)> mouse_dragged = [](MouseDrag) {};
+std::function< void(MouseDrag)> mouse_dragged = [](MouseDrag) {
+    };
 ```
 
 This function is called whenever the mouse is dragged. 
@@ -82,7 +86,8 @@ This function is called whenever the mouse is dragged.
 ### mouse_pressed
 
 ```
-std::function< void(MouseButton)> mouse_pressed = [](MouseButton) {};
+std::function< void(MouseButton)> mouse_pressed = [](MouseButton) {
+    };
 ```
 
 This function is called whenever a mouse button is pressed. 
@@ -90,7 +95,8 @@ This function is called whenever a mouse button is pressed.
 ### mouse_released
 
 ```
-std::function< void(MouseButton)> mouse_released = [](MouseButton) {};
+std::function< void(MouseButton)> mouse_released = [](MouseButton) {
+    };
 ```
 
 This function is called whenever a mouse button is released. 
@@ -98,7 +104,8 @@ This function is called whenever a mouse button is released.
 ### mouse_scrolled
 
 ```
-std::function< void(MouseScroll)> mouse_scrolled = [](MouseScroll) {};
+std::function< void(MouseScroll)> mouse_scrolled = [](MouseScroll) {
+    };
 ```
 
 This function is called whenever the mouse wheel is scrolled. 
@@ -106,7 +113,8 @@ This function is called whenever the mouse wheel is scrolled.
 ### key_pressed
 
 ```
-std::function< void(Key)> key_pressed = [](Key) {};
+std::function< void(Key)> key_pressed = [](Key) {
+    };
 ```
 
 This function is called whenever a keyboard key is pressed. 
@@ -114,7 +122,8 @@ This function is called whenever a keyboard key is pressed.
 ### key_released
 
 ```
-std::function< void(Key)> key_released = [](Key) {};
+std::function< void(Key)> key_released = [](Key) {
+    };
 ```
 
 This function is called whenever a keyboard key is released. 
@@ -122,7 +131,8 @@ This function is called whenever a keyboard key is released.
 ### key_repeated
 
 ```
-std::function< void(Key)> key_repeated = [](Key) {};
+std::function< void(Key)> key_repeated = [](Key) {
+    };
 ```
 
 This function is called repeatedly whenever a keyboard key is held. 
@@ -143,7 +153,8 @@ if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and 
 ### on_error
 
 ```
-std::function< void(std::string &&)> on_error = [](std::string&& error_message) {
+std::function< void(std::string &&)> on_error = [](std::string&& error_message)
+    {
         throw std::runtime_error{error_message};
     };
 ```
@@ -153,7 +164,8 @@ This function is called whenever an error occurs.
 ### framebuffer_resized
 
 ```
-std::function< void()> framebuffer_resized = []() {};
+std::function< void()> framebuffer_resized = []() {
+    };
 ```
 
 This function is called whenever the framebuffer is resized. 
@@ -166,4 +178,4 @@ If you call [framebuffer_size()](/reference/window#framebuffer_size), [framebuff
 
 -------------------------------
 
-Updated on 2022 April 03
+Updated on 2022 April 09

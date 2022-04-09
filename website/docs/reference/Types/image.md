@@ -73,4 +73,4 @@ Returns the inverse aspect ratio (`height / width`)
 
 -------------------------------
 
-Updated on 2022 April 03
+Updated on 2022 April 09
