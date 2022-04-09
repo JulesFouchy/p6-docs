@@ -55,8 +55,7 @@ struct Ball {
 };
 
 struct Frame {
-    uint64_t count;
-    float    duration;
+    float duration;
 };
 
 class RecentFrames {
@@ -197,10 +196,8 @@ int main()
         ImGui::End();
     };
 
-    uint64_t frame_count{0};
-
     ctx.update = [&]() {
-        recent_frames.push({frame_count++, 1000.f * ctx.delta_time()});
+        recent_frames.push({1000.f * ctx.delta_time()});
         ctx.background(p6::NamedColor::DeepSkyBlue);
         ball_framerate_based.draw(ctx);
         ball_dt_based.draw(ctx);
