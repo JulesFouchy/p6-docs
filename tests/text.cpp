@@ -3,8 +3,6 @@
 #include <filesystem>
 #include <iostream>
 
-using namespace std;
-using namespace filesystem;
 int main()
 {
     auto ctx   = p6::Context{{1280, 720, "Text"}};
