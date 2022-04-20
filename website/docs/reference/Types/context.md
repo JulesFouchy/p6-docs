@@ -17,6 +17,7 @@ sidebar_position: 1
 |                | Name           |
 | -------------- | -------------- |
 | | **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params = {}) |
+| | **[~Context](/reference/Types/context#~context)**() |
 | void | **[background](/reference/drawing#background)**(`[Color](/reference/Types/color)` color)<br/>Sets the color and alpha of each pixel of the canvas.  |
 | void | **[square](/reference/drawing#square)**(`[FullScreen](/reference/Types/full_screen)` )<br/>Draws a square.  |
 | void | **[square](/reference/drawing#square)**(`[Center](/reference/Types/center)` center = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
@@ -36,6 +37,7 @@ sidebar_position: 1
 | void | **[ellipse](/reference/drawing#ellipse)**(`[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws an ellipse.  |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform) |
+| void | **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3)<br/>Draws a triangle.  |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Center](/reference/Types/center)` center, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopLeftCorner](/reference/Types/top_left_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[RadiusX](/reference/Types/radius_x)` radiusX = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
@@ -131,6 +133,12 @@ sidebar_position: 1
 ### Context()
 
 > **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params ={});
+
+
+
+### ~Context()
+
+> **[~Context](/reference/Types/context#~context)**();
 
 
 
@@ -255,6 +263,13 @@ Draws an ellipse.
 > `void` **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform);
 
 
+
+### triangle()
+
+> `void` **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3);
+
+
+Draws a triangle. 
 
 ### image()
 
@@ -922,4 +937,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2022 April 09
+Updated on 2022 April 20

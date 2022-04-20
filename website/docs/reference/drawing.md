@@ -34,6 +34,7 @@ Draw shapes and control the look of them.
 | void | **[ellipse](/reference/drawing#ellipse)**(`FullScreen`  = {})<br/>Draws an ellipse.  |
 | void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii = {}, `Rotation` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) |
+| void | **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3)<br/>Draws a triangle.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Center` center, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `TopLeftCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `TopRightCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
@@ -201,6 +202,13 @@ Draws an ellipse.
 > `void` **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform);
 
 
+
+### triangle()
+
+> `void` **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3);
+
+
+Draws a triangle. 
 
 ### image()
 
@@ -452,4 +460,4 @@ Whether there will be a boundary on the shape.
 
 -------------------------------
 
-Updated on 2022 April 09
+Updated on 2022 April 20

@@ -32,7 +32,7 @@ ctx.update = [&]() {
 
 ## Shapes
 
-`circle()`, `ellipse()`, `square()` and `rectangle()` have many overloads. Go to [the reference](../reference/drawing) to learn all about them.
+`circle()`, `ellipse()`, `square()`, `rectangle()` and `triangle()` have many overloads. Go to [the reference](../reference/drawing) to learn all about them.
 
 ```cpp
 #include <p6/p6.h>
