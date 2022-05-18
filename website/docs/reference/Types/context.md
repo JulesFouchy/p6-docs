@@ -17,7 +17,10 @@ sidebar_position: 1
 |                | Name           |
 | -------------- | -------------- |
 | | **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params = {}) |
-| | **[~Context](/reference/Types/context#~context)**() |
+| | **[Context](/reference/Types/context#context)**(`[Context](/reference/Types/context) &&` ) =default |
+| [Context](/reference/Types/context) & | **[operator=](/reference/Types/context#operator=)**(`[Context](/reference/Types/context) &&` ) =default |
+| | **[Context](/reference/Types/context#context)**(`const [Context](/reference/Types/context) &` ) =delete |
+| [Context](/reference/Types/context) & | **[operator=](/reference/Types/context#operator=)**(`const [Context](/reference/Types/context) &` ) =delete |
 | void | **[background](/reference/drawing#background)**(`[Color](/reference/Types/color)` color)<br/>Sets the color and alpha of each pixel of the canvas.  |
 | void | **[square](/reference/drawing#square)**(`[FullScreen](/reference/Types/full_screen)` )<br/>Draws a square.  |
 | void | **[square](/reference/drawing#square)**(`[Center](/reference/Types/center)` center = {}, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
@@ -136,9 +139,27 @@ sidebar_position: 1
 
 
 
-### ~Context()
+### Context()
 
-> **[~Context](/reference/Types/context#~context)**();
+> **[Context](/reference/Types/context#context)**(`[Context](/reference/Types/context) &&` ) =default;
+
+
+
+### operator=()
+
+> `[Context](/reference/Types/context) &` **[operator=](/reference/Types/context#operator=)**(`[Context](/reference/Types/context) &&` ) =default;
+
+
+
+### Context()
+
+> **[Context](/reference/Types/context#context)**(`const [Context](/reference/Types/context) &` ) =delete;
+
+
+
+### operator=()
+
+> `[Context](/reference/Types/context) &` **[operator=](/reference/Types/context#operator=)**(`const [Context](/reference/Types/context) &` ) =delete;
 
 
 
@@ -859,8 +880,7 @@ if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and 
 ### on_error
 
 ```cpp
-std::function< void(std::string &&)> on_error = [](std::string&& error_message)
-    {
+std::function< void(std::string &&)> on_error = [](std::string&& error_message) {
         throw std::runtime_error{error_message};
     };
 ```
@@ -937,4 +957,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2022 May 01
+Updated on 2022 May 18

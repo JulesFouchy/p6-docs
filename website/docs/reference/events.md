@@ -153,8 +153,7 @@ if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and 
 ### on_error
 
 ```
-std::function< void(std::string &&)> on_error = [](std::string&& error_message)
-    {
+std::function< void(std::string &&)> on_error = [](std::string&& error_message) {
         throw std::runtime_error{error_message};
     };
 ```
@@ -178,4 +177,4 @@ If you call [framebuffer_size()](/reference/window#framebuffer_size), [framebuff
 
 -------------------------------
 
-Updated on 2022 May 01
+Updated on 2022 May 18

@@ -21,19 +21,19 @@ Load and query information about images.
 
 |                | Name           |
 | -------------- | -------------- |
-| Image | **[load_image](/reference/image#load_image)**(`const char *` file_path)<br/>Loads an image from a file.  |
+| Image | **[load_image](/reference/image#load_image)**(`std::filesystem::path` file_path)<br/>Loads an image from a file.  |
 
 
 ## Functions
 
 ### load_image()
 
-> `Image` **[load_image](/reference/image#load_image)**(`const char *` file_path);
+> `Image` **[load_image](/reference/image#load_image)**(`std::filesystem::path` file_path);
 
 
 Loads an image from a file. 
 
-Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image file. 
+If the path is relative, it will be relative to the directory containing your executable. Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image file. 
 
 
 
@@ -42,4 +42,4 @@ Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image f
 
 -------------------------------
 
-Updated on 2022 May 01
+Updated on 2022 May 18

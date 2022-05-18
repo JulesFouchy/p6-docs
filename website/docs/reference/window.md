@@ -124,4 +124,4 @@ Returns true iff the window is currently maximized.
 
 -------------------------------
 
-Updated on 2022 May 01
+Updated on 2022 May 18
