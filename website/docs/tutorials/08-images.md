@@ -10,7 +10,9 @@ You can load any image (*png*, *jpeg*, *etc.*) with `load_image()`:
 const p6::Image image = p6::load_image("img/my_file.png");
 ```
 
-In order for this to work you must have an *img* folder at the root of your project, with a *my_file.png* file in it. **AND** you must declare your images folder in CMake: `p6_copy_folder(${PROJECT_NAME} img)`.
+:::info Important
+In order for this to work you must have an *img* folder at the root of your project, with a *my_file.png* in it. **AND you must declare your images folder in CMake: `p6_copy_folder(${PROJECT_NAME} img)`**.
+:::
 
 For a complete example of this, check out [this example](https://github.com/JulesFouchy/p6-docs/tree/main/examples/complete).
 
