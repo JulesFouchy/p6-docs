@@ -6,6 +6,12 @@ You can easily apply custom shaders in p6. A shader is a program that runs on th
 
 ## Load and Draw a shader
 
+:::info Important
+For this example to work you must have a *res* folder **at the root of your project**.<br/>
+**And you must declare your *res* folder in CMake: `p6_copy_folder(${PROJECT_NAME} res)`**
+:::
+[**Here is an example of a _CMakeLists.txt_**](https://github.com/JulesFouchy/p6-docs/blob/main/examples/complete/CMakeLists.txt).
+
 ```cpp
 #include <p6/p6.h>
 
@@ -41,8 +47,6 @@ void main()
     _frag_color = vec4(vec3(smoothstep(0.301, 0.3, length(uv))), 1.); // Draw a white disk
 }
 ```
-
-**NB:** For this example to work you must ask p6 to copy your *res* folder. To do so, add this line in your CMakeLists.txt: `p6_copy_folder(${PROJECT_NAME} res)`.
 
 ## Available information
 
