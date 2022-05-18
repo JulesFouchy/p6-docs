@@ -20,7 +20,8 @@ int main()
             ctx.stroke        = p6::Color{1.f, 1.f, 1.f};
             glm::vec2 start{0.f};
             glm::vec2 end{0.f};
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10; i++)
+            {
                 start = end;
                 end   = glm::vec2(0.1f * static_cast<float>(i));
                 ctx.line(start, end);

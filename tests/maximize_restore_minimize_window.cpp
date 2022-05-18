@@ -9,15 +9,19 @@ int main()
         ctx.background(ctx.window_is_maximized() ? p6::Color{1, 0, 0} : p6::Color{0, 0, 1});
     };
     ctx.key_pressed = [&](p6::Key key) {
-        if (key.physical == GLFW_KEY_SPACE) {
-            if (ctx.window_is_maximized()) {
+        if (key.physical == GLFW_KEY_SPACE)
+        {
+            if (ctx.window_is_maximized())
+            {
                 ctx.restore_window();
             }
-            else {
+            else
+            {
                 ctx.maximize_window();
             }
         }
-        if (key.physical == GLFW_KEY_ENTER) {
+        if (key.physical == GLFW_KEY_ENTER)
+        {
             ctx.minimize_window();
         }
     };

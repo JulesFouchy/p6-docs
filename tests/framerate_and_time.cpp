@@ -41,7 +41,8 @@ struct Ball {
     void update(std::function<float(float, float)> fun)
     {
         x = fun(x, dir);
-        if (std::abs(x) > 0.95f) {
+        if (std::abs(x) > 0.95f)
+        {
             dir *= -1.f;
             x = 0.94f * x / std::abs(x);
         }
@@ -63,9 +64,11 @@ public:
     void imgui() const
     {
         std::vector<float> durations{};
-        for (size_t i = 0; i < frames.size(); ++i) {
+        for (size_t i = 0; i < frames.size(); ++i)
+        {
             const auto& frame = frames[(i + next_idx) % frames.size()];
-            if (frame) {
+            if (frame)
+            {
                 durations.push_back(frame->duration);
             }
         }
@@ -99,29 +102,34 @@ int main()
     Ball ball_dt_based{p6::NamedColor::GreenYellow, -0.2f};
 
     const auto reset_balls = [&]() {
-        if (should_reset_balls) {
+        if (should_reset_balls)
+        {
             ball_framerate_based.reset();
             ball_dt_based.reset();
         }
     };
 
     const auto choose_framerate_mode = [&]() {
-        if (ImGui::RadioButton("framerate_synced_with_monitor()", (int*)&framerate_mode, (int)FramerateMode::Synced)) {
+        if (ImGui::RadioButton("framerate_synced_with_monitor()", (int*)&framerate_mode, (int)FramerateMode::Synced))
+        {
             ctx.framerate_synced_with_monitor();
             reset_balls();
         }
-        if (ImGui::RadioButton("framerate_as_high_as_possible()", (int*)&framerate_mode, (int)FramerateMode::AsFastAsPossible)) {
+        if (ImGui::RadioButton("framerate_as_high_as_possible()", (int*)&framerate_mode, (int)FramerateMode::AsFastAsPossible))
+        {
             ctx.framerate_as_high_as_possible();
             reset_balls();
         }
-        if (ImGui::RadioButton("framerate_capped_at()", (int*)&framerate_mode, (int)FramerateMode::Capped)) {
+        if (ImGui::RadioButton("framerate_capped_at()", (int*)&framerate_mode, (int)FramerateMode::Capped))
+        {
             ctx.framerate_capped_at(capped_framerate);
             reset_balls();
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(50.f);
         ImGui::PushID(30);
-        if (ImGui::SliderFloat("fps", &capped_framerate, 1.f, 150.f)) {
+        if (ImGui::SliderFloat("fps", &capped_framerate, 1.f, 150.f))
+        {
             ctx.framerate_capped_at(capped_framerate);
             framerate_mode = FramerateMode::Capped;
             reset_balls();
@@ -130,17 +138,20 @@ int main()
     };
 
     const auto choose_time_mode = [&]() {
-        if (ImGui::RadioButton("time_realtime()", (int*)&time_mode, (int)TimeMode::Realtime)) {
+        if (ImGui::RadioButton("time_realtime()", (int*)&time_mode, (int)TimeMode::Realtime))
+        {
             ctx.time_perceived_as_realtime();
             reset_balls();
         }
-        if (ImGui::RadioButton("time_fixedsteps()", (int*)&time_mode, (int)TimeMode::FixedTimesteps)) {
+        if (ImGui::RadioButton("time_fixedsteps()", (int*)&time_mode, (int)TimeMode::FixedTimesteps))
+        {
             ctx.time_perceived_as_constant_delta_time(fixedsteps_framerate);
             reset_balls();
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(50.f);
-        if (ImGui::SliderFloat("fps", &fixedsteps_framerate, 1.f, 150.f)) {
+        if (ImGui::SliderFloat("fps", &fixedsteps_framerate, 1.f, 150.f))
+        {
             ctx.time_perceived_as_constant_delta_time(fixedsteps_framerate);
             time_mode = TimeMode::FixedTimesteps;
             reset_balls();
@@ -148,13 +159,15 @@ int main()
     };
 
     const auto imgui_play_pause = [&]() {
-        if (ImGui::Button(ctx.is_paused() ? "play" : "pause", {50.f, 0.f})) {
+        if (ImGui::Button(ctx.is_paused() ? "play" : "pause", {50.f, 0.f}))
+        {
             ctx.is_paused() ? ctx.resume() : ctx.pause();
         }
     };
 
     ctx.key_pressed = [&](auto e) {
-        if (e.logical == " ") {
+        if (e.logical == " ")
+        {
             ctx.is_paused() ? ctx.resume() : ctx.pause();
         }
     };

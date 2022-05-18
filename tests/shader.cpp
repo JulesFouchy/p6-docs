@@ -9,10 +9,12 @@ int main()
     auto       radius            = 1.f;
     auto       rotation          = 0_turn;
     ctx.mouse_scrolled           = [&](auto e) {
-        if (ctx.alt()) {
+        if (ctx.alt())
+        {
             rotation += e.dy * 0.05_turn;
         }
-        else {
+        else
+        {
             radius += e.dy * 0.1f;
         }
     };
@@ -23,13 +25,15 @@ int main()
                                                            : shader_uniform_uv;
         };
         choose_shader().set("_blue", 0.5f);
-        if (ctx.ctrl()) {
+        if (ctx.ctrl())
+        {
             ctx.square_with_shader(choose_shader(),
                                    p6::Center{},
                                    p6::Radius{radius},
                                    rotation);
         }
-        else {
+        else
+        {
             ctx.rectangle_with_shader(choose_shader(),
                                       p6::Center{},
                                       p6::Radii{ctx.aspect_ratio() * radius, radius},
