@@ -1,5 +1,6 @@
 ---
 title: Creating a project
+slug: /tutorials
 ---
 
 ## Structure
