@@ -1,11 +1,26 @@
 #include <p6/p6.h>
+#include <iostream>
 
 int main()
 {
     auto       ctx      = p6::Context{{1280, 720, "Load Image"}};
     const auto image    = p6::load_image("res/p5.png");
     auto       rotation = 0.011_turn;
-    ctx.mouse_scrolled  = [&](p6::MouseScroll e) {
+    ctx.imgui           = []() {
+        static std::string error_message{};
+        ImGui::Begin("Window");
+        if (ImGui::Button("Try to load from a file that doesn't exist")) {
+            try {
+                (void)p6::load_image("this_file_doesnt_exist.png");
+            }
+            catch (std::exception& e) {
+                error_message = e.what();
+            }
+        }
+        ImGui::Text("%s", error_message.c_str());
+        ImGui::End();
+    };
+    ctx.mouse_scrolled = [&](p6::MouseScroll e) {
         rotation += e.dy * 0.025_turn;
     };
     ctx.update = [&]() {
