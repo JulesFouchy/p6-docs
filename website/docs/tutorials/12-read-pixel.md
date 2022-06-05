@@ -27,4 +27,4 @@ int main()
 
 ## Nota Bene
 
-This function is meant to be used to read one single pixel from time to time, for example in `mouse_pressed()` or `mouse_moved()`. If you want to loop and read the color of all the pixels, using `read_pixel()` will be pretty slow. A much better alternative (but arguably more complex to setup) would be to use a [shader](./11-custom-shaders.md).
+This function is meant to be used to read one single pixel from time to time, for example in `mouse_pressed()` or `mouse_moved()`. If you want to loop and read the color of all the pixels in the window, using `read_pixel()` will be pretty slow. A much better alternative (but arguably more complex to setup) would be to use a [shader](./11-custom-shaders.md).
