@@ -6,12 +6,14 @@ int main()
     ctx.update = [&]() {
         ctx.background({0.7f, 0.3f, 0.5f, 0.f});
         ctx.circle(p6::Center{ctx.mouse()}, p6::Radius{0.3f});
+        ctx.circle(p6::Center{1.f, 1.f}, p6::Radius{0.3f});
+        ctx.circle(p6::Center{ctx.aspect_ratio(), -1.f}, p6::Radius{0.3f});
     };
 
     int   fixed_width{100};
     int   fixed_height{100};
-    float relative_width{2.f};
-    float relative_height{2.f};
+    float relative_width{1.f};
+    float relative_height{0.5f};
     float aspect_ratio = 1.f;
 
     ctx.imgui = [&]() {
@@ -50,6 +52,7 @@ int main()
         ImGui::NewLine();
         ImGui::Text("Window Size: %d %d", ctx.framebuffer_width(), ctx.framebuffer_height());
         ImGui::Text("Canvas Size: %d %d", ctx.canvas_width(), ctx.canvas_height());
+        ImGui::Text("Mouse position: %.2f %.2f", ctx.mouse().x, ctx.mouse().y);
     };
     ctx.start();
 }
