@@ -1,7 +1,4 @@
-#include <exe_path/exe_path.h>
 #include <p6/p6.h>
-#include <filesystem>
-#include <iostream>
 
 /// All the contexts should behave the same
 int main()

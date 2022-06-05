@@ -28,6 +28,7 @@ int main()
     };
 
     ctx.imgui = [&]() {
+        ImGui::Begin("Window");
         ImGui::InputText("Path", &output_path);
         if (ImGui::Button("Save Image from Window"))
         {
@@ -37,6 +38,7 @@ int main()
         {
             p6::save_image(canvas, output_path);
         }
+        ImGui::End();
     };
 
     ctx.start();
