@@ -15,8 +15,8 @@ Query the state of the window and control it.
 
 |                | Name           |
 | -------------- | -------------- |
-| float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio of the window (a.k.a. width / height).  |
-| float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio of the window (a.k.a. height / width).  |
+| float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio (a.k.a.  |
+| float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio (a.k.a.  |
 | ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
 | int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
 | int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
@@ -36,14 +36,20 @@ Query the state of the window and control it.
 > `float` **[aspect_ratio](/reference/window#aspect_ratio)**() const;
 
 
-Returns the aspect ratio of the window (a.k.a. width / height). 
+Returns the aspect ratio (a.k.a. 
+
+width / height) of the current render target. This render target is the window by default, unless you called [render_to_canvas()](/reference/canvas#render_to_canvas) in which case it will be the given canvas. When you call [render_to_screen()](/reference/canvas#render_to_screen) the render target goes back to beeing the window. 
+
 
 ### inverse_aspect_ratio()
 
 > `float` **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const;
 
 
-Returns the inverse aspect ratio of the window (a.k.a. height / width). 
+Returns the inverse aspect ratio (a.k.a. 
+
+height / width) of the current render target. This render target is the window by default, unless you called [render_to_canvas()](/reference/canvas#render_to_canvas) in which case it will be the given canvas. When you call [render_to_screen()](/reference/canvas#render_to_screen) the render target goes back to beeing the window. 
+
 
 ### framebuffer_size()
 
