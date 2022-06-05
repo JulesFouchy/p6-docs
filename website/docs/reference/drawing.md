@@ -35,6 +35,9 @@ Draw shapes and control the look of them.
 | void | **[ellipse](/reference/drawing#ellipse)**(`Center` center, `Radii` radii = {}, `Rotation` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) |
 | void | **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3)<br/>Draws a triangle.  |
+| void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Fit`  = {})<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
+| void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitX` ) |
+| void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitY` ) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Center` center, `RadiusX` radiusX = {}, `Rotation` rotation = {})<br/>Draws an image. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `TopLeftCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `TopRightCorner` corner, `RadiusX` radiusX = {}, `Rotation` rotation = {}) |
@@ -45,8 +48,6 @@ Draw shapes and control the look of them.
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `TopRightCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `BottomLeftCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `BottomRightCorner` corner, `RadiusY` radiusY = {}, `Rotation` rotation = {}) |
-| void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitX` )<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
-| void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitY`  = {}) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FullScreen` )<br/>Draws an image that takes the entire window. :warning: This might distort the image if the window doesn't have the same aspect ratio as the image.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Center` center, `Radii` radii = {}, `Rotation` rotation = {})<br/>Draws an image. :warning: This might distort the image if radii doesn't have the same aspect ratio as the image.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `TopLeftCorner` corner, `Radii` radii = {}, `Rotation` rotation = {}) |
@@ -212,6 +213,25 @@ Draws a triangle.
 
 ### image()
 
+> `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Fit`  ={});
+
+
+Draws an image as big as possible on the screen. This will respect the aspect ratio of the image. 
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitX` );
+
+
+
+### image()
+
+> `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitY` );
+
+
+
+### image()
+
 > `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Center` center, `RadiusX` radiusX ={}, `Rotation` rotation ={});
 
 
@@ -269,19 +289,6 @@ Draws an image. This will respect the aspect ratio of the image.
 ### image()
 
 > `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `BottomRightCorner` corner, `RadiusY` radiusY ={}, `Rotation` rotation ={});
-
-
-
-### image()
-
-> `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitX` );
-
-
-Draws an image as big as possible on the screen. This will respect the aspect ratio of the image. 
-
-### image()
-
-> `void` **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitY`  ={});
 
 
 
