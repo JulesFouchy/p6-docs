@@ -26,7 +26,7 @@ You can set those functions as you wish to react to various events.  [More...](#
 | std::function< void(Key)> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
 | std::function< void(Key)> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
-| std::function< void()> | **[framebuffer_resized](/reference/events#framebuffer_resized)** <br/>This function is called whenever the framebuffer is resized.  |
+| std::function< void()> | **[main_canvas_resized](/reference/events#main_canvas_resized)** <br/>This function is called whenever the main canvas is resized.  |
 
 ## Detailed Description
 
@@ -160,16 +160,16 @@ std::function< void(std::string &&)> on_error = [](std::string&& error_message) 
 
 This function is called whenever an error occurs. 
 
-### framebuffer_resized
+### main_canvas_resized
 
 ```
-std::function< void()> framebuffer_resized = []() {
+std::function< void()> main_canvas_resized = []() {
     };
 ```
 
-This function is called whenever the framebuffer is resized. 
+This function is called whenever the main canvas is resized. 
 
-If you call [framebuffer_size()](/reference/window#framebuffer_size), [framebuffer_width()](/reference/window#framebuffer_width), [framebuffer_height()](/reference/window#framebuffer_height) or [aspect_ratio()](/reference/window#aspect_ratio) inside [framebuffer_resized()](/reference/events#framebuffer_resized) they will already be referring to the new size. 
+If you call [main_canvas_size()](/reference/canvas#main_canvas_size), [main_canvas_width()](/reference/canvas#main_canvas_width), [main_canvas_height()](/reference/canvas#main_canvas_height) or [aspect_ratio()](/reference/canvas#aspect_ratio) inside [main_canvas_resized()](/reference/events#main_canvas_resized) they will already be referring to the new size. 
 
 
 

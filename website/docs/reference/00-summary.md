@@ -5,7 +5,7 @@ slug: /reference
 
 Welcome to the reference! In here you can find all the details about everything that is available in *p6*.
 
-* **Section [Canvas](/reference/canvas)** <br/>You can either draw directly to the screen (the default) or onto a [Canvas](/reference/Types/canvas). 
+* **Section [Canvas](/reference/canvas)** <br/>You can either draw directly in the window (the default) or onto a custom [Canvas](/reference/Types/canvas). 
 * **Section [Drawing](/reference/drawing)** <br/>Draw shapes and control the look of them. 
 * **Section [Events](/reference/events)** <br/>You can set those functions as you wish to react to various events. 
 * **Section [Image](/reference/image)** <br/>Load and query information about images. 

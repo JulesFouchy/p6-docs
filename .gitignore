@@ -5,3 +5,4 @@ bin/
 .vscode/settings.json
 
 docs_generator/Doxygen/
+docs_generator/imgui.ini

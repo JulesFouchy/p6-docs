@@ -79,26 +79,30 @@ sidebar_position: 1
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets the canvas where all the drawing commands will happen on.  |
-| void | **[render_to_screen](/reference/canvas#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
-| void | **[set_canvas_size_mode](/reference/canvas#set_canvas_size_mode)**(`CanvasSizeMode` mode)<br/>Sets how the size of the default canvas will be computed.  |
+| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets a canvas to be the one that all the drawing commands will draw on, until you call [render_to_main_canvas()]().  |
+| void | **[render_to_main_canvas](/reference/canvas#render_to_main_canvas)**()<br/>Reset the [Context](/reference/Types/context) to render to the main canvas. The main canvas is the one that will be displayed in the window.  |
+| [Canvas](/reference/Types/canvas) & | **[main_canvas](/reference/canvas#main_canvas)**() |
+| const [Canvas](/reference/Types/canvas) & | **[main_canvas](/reference/canvas#main_canvas)**() const |
+| [Canvas](/reference/Types/canvas) & | **[current_canvas](/reference/canvas#current_canvas)**() |
+| const [Canvas](/reference/Types/canvas) & | **[current_canvas](/reference/canvas#current_canvas)**() const |
+| float | **[aspect_ratio](/reference/canvas#aspect_ratio)**() const<br/>Returns the aspect ratio (a.k.a.  |
+| float | **[inverse_aspect_ratio](/reference/canvas#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio (a.k.a.  |
+| ImageSize | **[main_canvas_size](/reference/canvas#main_canvas_size)**() const<br/>Returns the size of the main canvas (width and height).  |
+| int | **[main_canvas_width](/reference/canvas#main_canvas_width)**() const<br/>Returns the width of the main canvas.  |
+| int | **[main_canvas_height](/reference/canvas#main_canvas_height)**() const<br/>Returns the height of the main canvas.  |
+| ImageSize | **[current_canvas_size](/reference/canvas#current_canvas_size)**() const<br/>Returns the size of the current canvas (width and height).  |
+| int | **[current_canvas_width](/reference/canvas#current_canvas_width)**() const<br/>Returns the width of the current canvas.  |
+| int | **[current_canvas_height](/reference/canvas#current_canvas_height)**() const<br/>Returns the height of the current canvas.  |
+| void | **[main_canvas_mode](/reference/canvas#main_canvas_mode)**(`CanvasSizeMode` mode)<br/>Sets how the size of the main canvas will be computed.  |
 | float | **[canvas_ratio](/reference/canvas#canvas_ratio)**(`const [Canvas](/reference/Types/canvas) &` canvas) const<br/>Returns the ratio that you need to multiply with in order to match the position and size of the `canvas` when it is fitted in the window.  |
-| void | **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const<br/>Saves the content of the window as an image file.  |
+| void | **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const<br/>Saves the content of the window's main canvas as an image file.  |
+| [Color](/reference/Types/color) | **[read_pixel](/reference/canvas#read_pixel)**(`glm::vec2` position) const<br/>Returns the color of the pixel at the given position in the main canvas.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
 | glm::vec2 | **[mouse_delta](/reference/input#mouse_delta)**() const<br/>Returns the movement of the mouse since last [update()](/reference/events#update).  |
 | bool | **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const<br/>Returns true iff the window is focused and the coordinates returned by [mouse()](/reference/input#mouse) correspond to a position inside the window.  |
 | bool | **[ctrl](/reference/input#ctrl)**() const<br/>Returns true iff the CTRL key is pressed (or CMD on Mac)  |
 | bool | **[shift](/reference/input#shift)**() const<br/>Returns true iff the SHIFT key is pressed.  |
 | bool | **[alt](/reference/input#alt)**() const<br/>Returns true iff the ALT key is pressed.  |
-| float | **[aspect_ratio](/reference/window#aspect_ratio)**() const<br/>Returns the aspect ratio (a.k.a.  |
-| float | **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const<br/>Returns the inverse aspect ratio (a.k.a.  |
-| ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
-| int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
-| int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
-| ImageSize | **[canvas_size](/reference/window#canvas_size)**() const<br/>Returns the size of the canvas (width and height).  |
-| int | **[canvas_width](/reference/window#canvas_width)**() const<br/>Returns the width of the canvas.  |
-| int | **[canvas_height](/reference/window#canvas_height)**() const<br/>Returns the height of the canvas.  |
-| [Color](/reference/Types/color) | **[read_pixel](/reference/window#read_pixel)**(`glm::vec2` position) const<br/>Returns the color of the pixel at the given position.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
 | void | **[maximize_window](/reference/window#maximize_window)**()<br/>Maximizes the window.  |
@@ -132,7 +136,7 @@ sidebar_position: 1
 | std::function< void([Key](/reference/Types/key))> | **[key_released](/reference/events#key_released)** <br/>This function is called whenever a keyboard key is released.  |
 | std::function< void([Key](/reference/Types/key))> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
-| std::function< void()> | **[framebuffer_resized](/reference/events#framebuffer_resized)** <br/>This function is called whenever the framebuffer is resized.  |
+| std::function< void()> | **[main_canvas_resized](/reference/events#main_canvas_resized)** <br/>This function is called whenever the main canvas is resized.  |
 | [Color](/reference/Types/color) | **[fill](/reference/drawing#fill)** <br/>The color that is used for the interior of the shapes.  |
 | bool | **[use_fill](/reference/drawing#use_fill)** <br/>Whether the shapes will have an interior.  |
 | [Color](/reference/Types/color) | **[stroke](/reference/drawing#stroke)** <br/>The color that is used for the boundary of the shapes.  |
@@ -546,21 +550,107 @@ It uses the `stroke` color, and `stroke_weight` as its thickness.
 > `void` **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas);
 
 
-Sets the canvas where all the drawing commands will happen on. 
+Sets a canvas to be the one that all the drawing commands will draw on, until you call [render_to_main_canvas()](). 
 
-### render_to_screen()
+### render_to_main_canvas()
 
-> `void` **[render_to_screen](/reference/canvas#render_to_screen)**();
-
-
-Reset the [Context](/reference/Types/context) to render to the screen. 
-
-### set_canvas_size_mode()
-
-> `void` **[set_canvas_size_mode](/reference/canvas#set_canvas_size_mode)**(`CanvasSizeMode` mode);
+> `void` **[render_to_main_canvas](/reference/canvas#render_to_main_canvas)**();
 
 
-Sets how the size of the default canvas will be computed. 
+Reset the [Context](/reference/Types/context) to render to the main canvas. The main canvas is the one that will be displayed in the window. 
+
+### main_canvas()
+
+> `[Canvas](/reference/Types/canvas) &` **[main_canvas](/reference/canvas#main_canvas)**();
+
+
+
+### main_canvas()
+
+> `const [Canvas](/reference/Types/canvas) &` **[main_canvas](/reference/canvas#main_canvas)**() const;
+
+
+
+### current_canvas()
+
+> `[Canvas](/reference/Types/canvas) &` **[current_canvas](/reference/canvas#current_canvas)**();
+
+
+
+### current_canvas()
+
+> `const [Canvas](/reference/Types/canvas) &` **[current_canvas](/reference/canvas#current_canvas)**() const;
+
+
+
+### aspect_ratio()
+
+> `float` **[aspect_ratio](/reference/canvas#aspect_ratio)**() const;
+
+
+Returns the aspect ratio (a.k.a. 
+
+width / height) of the current canvas. This canvas is the window's main canvas by default, unless you called [render_to_canvas()](/reference/canvas#render_to_canvas) in which case it will be the given canvas. When you call [render_to_main_canvas()](/reference/canvas#render_to_main_canvas) the current canvas goes back to beeing the window's main canvas. 
+
+
+### inverse_aspect_ratio()
+
+> `float` **[inverse_aspect_ratio](/reference/canvas#inverse_aspect_ratio)**() const;
+
+
+Returns the inverse aspect ratio (a.k.a. 
+
+height / width) of the current canvas. This canvas is the window's main canvas by default, unless you called [render_to_canvas()](/reference/canvas#render_to_canvas) in which case it will be the given canvas. When you call [render_to_main_canvas()](/reference/canvas#render_to_main_canvas) the current canvas goes back to beeing the window's main canvas. 
+
+
+### main_canvas_size()
+
+> `ImageSize` **[main_canvas_size](/reference/canvas#main_canvas_size)**() const;
+
+
+Returns the size of the main canvas (width and height). 
+
+### main_canvas_width()
+
+> `int` **[main_canvas_width](/reference/canvas#main_canvas_width)**() const;
+
+
+Returns the width of the main canvas. 
+
+### main_canvas_height()
+
+> `int` **[main_canvas_height](/reference/canvas#main_canvas_height)**() const;
+
+
+Returns the height of the main canvas. 
+
+### current_canvas_size()
+
+> `ImageSize` **[current_canvas_size](/reference/canvas#current_canvas_size)**() const;
+
+
+Returns the size of the current canvas (width and height). 
+
+### current_canvas_width()
+
+> `int` **[current_canvas_width](/reference/canvas#current_canvas_width)**() const;
+
+
+Returns the width of the current canvas. 
+
+### current_canvas_height()
+
+> `int` **[current_canvas_height](/reference/canvas#current_canvas_height)**() const;
+
+
+Returns the height of the current canvas. 
+
+### main_canvas_mode()
+
+> `void` **[main_canvas_mode](/reference/canvas#main_canvas_mode)**(`CanvasSizeMode` mode);
+
+
+Sets how the size of the main canvas will be computed. 
 
 The default mode is [CanvasSizeMode_SameAsWindow](/reference/Types/canvas_size_mode___same_as_window). 
 
@@ -577,9 +667,19 @@ Returns the ratio that you need to multiply with in order to match the position 
 > `void` **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const;
 
 
-Saves the content of the window as an image file. 
+Saves the content of the window's main canvas as an image file. 
 
 Supported file types are .png and .jpeg/.jpg Simply use the corresponding extension to save in the desired format. If the path is relative, it will be relative to the directory containing your executable. If some directories in the path don't exist yet, they will be created automatically. 
+
+
+### read_pixel()
+
+> `[Color](/reference/Types/color)` **[read_pixel](/reference/canvas#read_pixel)**(`glm::vec2` position) const;
+
+
+Returns the color of the pixel at the given position in the main canvas. 
+
+The coordinates are expressed in the usual p6 coordinate system. 
 
 
 ### mouse()
@@ -623,78 +723,6 @@ Returns true iff the SHIFT key is pressed.
 
 
 Returns true iff the ALT key is pressed. 
-
-### aspect_ratio()
-
-> `float` **[aspect_ratio](/reference/window#aspect_ratio)**() const;
-
-
-Returns the aspect ratio (a.k.a. 
-
-width / height) of the current render target. This render target is the window by default, unless you called [render_to_canvas()](/reference/canvas#render_to_canvas) in which case it will be the given canvas. When you call [render_to_screen()](/reference/canvas#render_to_screen) the render target goes back to beeing the window. 
-
-
-### inverse_aspect_ratio()
-
-> `float` **[inverse_aspect_ratio](/reference/window#inverse_aspect_ratio)**() const;
-
-
-Returns the inverse aspect ratio (a.k.a. 
-
-height / width) of the current render target. This render target is the window by default, unless you called [render_to_canvas()](/reference/canvas#render_to_canvas) in which case it will be the given canvas. When you call [render_to_screen()](/reference/canvas#render_to_screen) the render target goes back to beeing the window. 
-
-
-### framebuffer_size()
-
-> `ImageSize` **[framebuffer_size](/reference/window#framebuffer_size)**() const;
-
-
-Returns the size of the framebuffer (width and height). 
-
-### framebuffer_width()
-
-> `int` **[framebuffer_width](/reference/window#framebuffer_width)**() const;
-
-
-Returns the width of the framebuffer. 
-
-### framebuffer_height()
-
-> `int` **[framebuffer_height](/reference/window#framebuffer_height)**() const;
-
-
-Returns the height of the framebuffer. 
-
-### canvas_size()
-
-> `ImageSize` **[canvas_size](/reference/window#canvas_size)**() const;
-
-
-Returns the size of the canvas (width and height). 
-
-### canvas_width()
-
-> `int` **[canvas_width](/reference/window#canvas_width)**() const;
-
-
-Returns the width of the canvas. 
-
-### canvas_height()
-
-> `int` **[canvas_height](/reference/window#canvas_height)**() const;
-
-
-Returns the height of the canvas. 
-
-### read_pixel()
-
-> `[Color](/reference/Types/color)` **[read_pixel](/reference/window#read_pixel)**(`glm::vec2` position) const;
-
-
-Returns the color of the pixel at the given position. 
-
-The coordinates are expressed in the usual p6 coordinate system. The pixel is read from the current render target (which will be the screen in most cases, unless you used [render_to_canvas()](/reference/canvas#render_to_canvas)) 
-
 
 ### window_is_focused()
 
@@ -992,16 +1020,16 @@ std::function< void(std::string &&)> on_error = [](std::string&& error_message) 
 
 This function is called whenever an error occurs. 
 
-### framebuffer_resized
+### main_canvas_resized
 
 ```cpp
-std::function< void()> framebuffer_resized = []() {
+std::function< void()> main_canvas_resized = []() {
     };
 ```
 
-This function is called whenever the framebuffer is resized. 
+This function is called whenever the main canvas is resized. 
 
-If you call [framebuffer_size()](/reference/window#framebuffer_size), [framebuffer_width()](/reference/window#framebuffer_width), [framebuffer_height()](/reference/window#framebuffer_height) or [aspect_ratio()](/reference/window#aspect_ratio) inside [framebuffer_resized()](/reference/events#framebuffer_resized) they will already be referring to the new size. 
+If you call [main_canvas_size()](/reference/canvas#main_canvas_size), [main_canvas_width()](/reference/canvas#main_canvas_width), [main_canvas_height()](/reference/canvas#main_canvas_height) or [aspect_ratio()](/reference/canvas#aspect_ratio) inside [main_canvas_resized()](/reference/events#main_canvas_resized) they will already be referring to the new size. 
 
 
 ### fill
