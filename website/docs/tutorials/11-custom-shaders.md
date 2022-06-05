@@ -93,3 +93,10 @@ ctx.update = [&]() {
     // . . .
 };
 ```
+
+:::tip
+To send a `Canvas` or an `Image`, declare it in the shader as `uniform sampler2D _my_image;`.<br/>
+And to read from it use `texture2D(_my_image, _raw_uv)`.
+
+**Check out a full example: [_p6 code_](https://github.com/JulesFouchy/p6-docs/blob/main/tests/passing_images_to_shaders.cpp) and [_shader_](https://github.com/JulesFouchy/p6-docs/blob/main/tests/res/shader_applied_to_image.frag).**
+:::
