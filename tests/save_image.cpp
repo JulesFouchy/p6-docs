@@ -3,12 +3,12 @@
 int main()
 {
     auto ctx    = p6::Context{{1280, 720, "Save Image"}};
-    auto canvas = p6::Canvas({2 * ctx.framebuffer_height(),
-                              2 * ctx.framebuffer_height()});
+    auto canvas = p6::Canvas({2 * ctx.main_canvas_height(),
+                              2 * ctx.main_canvas_height()});
 
-    ctx.framebuffer_resized = [&]() {
-        canvas.resize({2 * ctx.framebuffer_height(),
-                       2 * ctx.framebuffer_height()});
+    ctx.main_canvas_resized = [&]() {
+        canvas.resize({2 * ctx.main_canvas_height(),
+                       2 * ctx.main_canvas_height()});
     };
 
     ctx.background({0.f, 0.f, 0.f, 0.f});
@@ -21,7 +21,7 @@ int main()
         {
             ctx.render_to_canvas(canvas);
             ctx.circle(ctx.mouse() * ctx.canvas_ratio(canvas), p6::Radius{0.3f});
-            ctx.render_to_screen();
+            ctx.render_to_main_canvas();
         }
         ctx.background(p6::NamedColor::LightBlue);
         ctx.image(canvas);

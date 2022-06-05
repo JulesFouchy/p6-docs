@@ -19,18 +19,18 @@ int main()
     ctx.imgui = [&]() {
         if (ImGui::Button("Same as Window"))
         {
-            ctx.set_canvas_size_mode(p6::CanvasSizeMode_SameAsWindow{});
+            ctx.main_canvas_mode(p6::CanvasSizeMode_SameAsWindow{});
         }
         if (ImGui::Button("Fixed Aspect Ratio"))
         {
-            ctx.set_canvas_size_mode(p6::CanvasSizeMode_FixedAspectRatio{aspect_ratio});
+            ctx.main_canvas_mode(p6::CanvasSizeMode_FixedAspectRatio{aspect_ratio});
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(100.f);
         ImGui::DragFloat("ratio", &aspect_ratio);
         if (ImGui::Button("Fixed Size"))
         {
-            ctx.set_canvas_size_mode(p6::CanvasSizeMode_FixedSize{{fixed_width, fixed_height}});
+            ctx.main_canvas_mode(p6::CanvasSizeMode_FixedSize{{fixed_width, fixed_height}});
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(100.f);
@@ -40,7 +40,7 @@ int main()
         ImGui::DragInt("h", &fixed_height);
         if (ImGui::Button("Relative to Window"))
         {
-            ctx.set_canvas_size_mode(p6::CanvasSizeMode_RelativeToWindow{relative_width, relative_height});
+            ctx.main_canvas_mode(p6::CanvasSizeMode_RelativeToWindow{relative_width, relative_height});
         }
         ImGui::SameLine();
         ImGui::SetNextItemWidth(100.f);
@@ -50,8 +50,8 @@ int main()
         ImGui::DragFloat("sh", &relative_height);
 
         ImGui::NewLine();
-        ImGui::Text("Window Size: %d %d", ctx.framebuffer_width(), ctx.framebuffer_height());
-        ImGui::Text("Canvas Size: %d %d", ctx.canvas_width(), ctx.canvas_height());
+        // ImGui::Text("Window Size: %d %d", ctx.framebuffer_width(), ctx.framebuffer_height());
+        ImGui::Text("Main Canvas Size: %d %d", ctx.main_canvas_width(), ctx.main_canvas_height());
         ImGui::Text("Mouse position: %.2f %.2f", ctx.mouse().x, ctx.mouse().y);
     };
     ctx.start();

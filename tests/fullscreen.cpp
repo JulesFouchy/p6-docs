@@ -26,7 +26,7 @@ int main()
         }
         ImGui::NewLine();
         ImGui::Text("Framerate: %.1f fps", 1.f / ctx.delta_time());
-        ImGui::Text("Size: %d %d", ctx.framebuffer_width(), ctx.framebuffer_height());
+        ImGui::Text("Size: %d %d", ctx.main_canvas_width(), ctx.main_canvas_height());
         ImGui::End();
     };
     ctx.start();

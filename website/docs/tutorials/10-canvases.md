@@ -4,7 +4,7 @@ title: Canvases
 
 ## Changing the aspect ratio or size of the main canvas
 
-The drawing area of p6, known as the *main canvas*, doesn't have to take up the whole window, nor does it have to be limited to the current resolution of the window. You can control how its size behaves with `ctx.set_main_canvas_mode(...)`.
+The drawing area of p6, known as the *main canvas*, doesn't have to take up the whole window, nor does it have to be limited to the current resolution of the window. You can control how its size behaves with `ctx.main_canvas_mode(...)`.
 
 ### SameAsWindow
 
@@ -12,7 +12,7 @@ This is the default mode. The main canvas will have the same size as the window.
 It is great when you don't care about the aspect ratio or the number of pixels.
 
 ```cpp
-ctx.set_main_canvas_mode(p6::CanvasSizeMode_SameAsWindow{});
+ctx.main_canvas_mode(p6::CanvasSizeMode_SameAsWindow{});
 ```
 
 ### FixedAspectRatio
@@ -21,7 +21,7 @@ The main canvas will have the given aspect ratio, and a size just big enough to 
 It is great when you want your artwork to have a specific aspect ratio, like a 16/9 or a square canvas for example, but you don't care about the exact number of pixels because you are not saving it as an image but instead viewing it live as a running program that needs to adapt to whatever the size of the window is.
 
 ```cpp
-ctx.set_main_canvas_mode(p6::CanvasSizeMode_FixedAspectRatio{16.f / 9.f});
+ctx.main_canvas_mode(p6::CanvasSizeMode_FixedAspectRatio{16.f / 9.f});
 ```
 
 ### FixedSize
@@ -32,7 +32,7 @@ It is great when you want your artwork to have a specific size because you are g
 Note that you will still see the main canvas fit in the window because it is scaled down for display. But fear not, all the drawings are done at the size you requested. If you save the main canvas as an image (using `ctx.save_image()`) it will have the desired size.
 
 ```cpp
-ctx.set_main_canvas_mode(p6::CanvasSizeMode_FixedSize{{3840, 2160}});
+ctx.main_canvas_mode(p6::CanvasSizeMode_FixedSize{{3840, 2160}});
 ```
 
 ### RelativeToWindow
@@ -41,7 +41,7 @@ The main canvas will have a size that is a multiple of the window's size.<br/>
 It can be useful if you want to reduce aliasing or noise by rendering at a bigger resolution.
 
 ```cpp
-ctx.set_main_canvas_mode(p6::CanvasSizeMode_RelativeToWindow{2.f, 2.f});
+ctx.main_canvas_mode(p6::CanvasSizeMode_RelativeToWindow{2.f, 2.f});
 ```
 
 ## Drawing on a custom Canvas
