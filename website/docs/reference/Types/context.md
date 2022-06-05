@@ -81,6 +81,8 @@ sidebar_position: 1
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets the canvas where all the drawing commands will happen on.  |
 | void | **[render_to_screen](/reference/canvas#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
+| void | **[set_canvas_size_mode](/reference/canvas#set_canvas_size_mode)**(`CanvasSizeMode` mode)<br/>Sets how the size of the default canvas will be computed.  |
+| float | **[canvas_ratio](/reference/canvas#canvas_ratio)**(`const [Canvas](/reference/Types/canvas) &` canvas) const<br/>Returns the ratio that you need to multiply with in order to match the position and size of the `canvas` when it is fitted in the window.  |
 | void | **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const<br/>Saves the content of the window as an image file.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
 | glm::vec2 | **[mouse_delta](/reference/input#mouse_delta)**() const<br/>Returns the movement of the mouse since last [update()](/reference/events#update).  |
@@ -93,6 +95,9 @@ sidebar_position: 1
 | ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
 | int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
 | int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
+| ImageSize | **[canvas_size](/reference/window#canvas_size)**() const<br/>Returns the size of the canvas (width and height).  |
+| int | **[canvas_width](/reference/window#canvas_width)**() const<br/>Returns the width of the canvas.  |
+| int | **[canvas_height](/reference/window#canvas_height)**() const<br/>Returns the height of the canvas.  |
 | [Color](/reference/Types/color) | **[read_pixel](/reference/window#read_pixel)**(`glm::vec2` position) const<br/>Returns the color of the pixel at the given position.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
@@ -550,6 +555,23 @@ Sets the canvas where all the drawing commands will happen on.
 
 Reset the [Context](/reference/Types/context) to render to the screen. 
 
+### set_canvas_size_mode()
+
+> `void` **[set_canvas_size_mode](/reference/canvas#set_canvas_size_mode)**(`CanvasSizeMode` mode);
+
+
+Sets how the size of the default canvas will be computed. 
+
+The default mode is [CanvasSizeMode_SameAsWindow](/reference/Types/canvas_size_mode___same_as_window). 
+
+
+### canvas_ratio()
+
+> `float` **[canvas_ratio](/reference/canvas#canvas_ratio)**(`const [Canvas](/reference/Types/canvas) &` canvas) const;
+
+
+Returns the ratio that you need to multiply with in order to match the position and size of the `canvas` when it is fitted in the window. 
+
 ### save_image()
 
 > `void` **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const;
@@ -642,6 +664,27 @@ Returns the width of the framebuffer.
 
 
 Returns the height of the framebuffer. 
+
+### canvas_size()
+
+> `ImageSize` **[canvas_size](/reference/window#canvas_size)**() const;
+
+
+Returns the size of the canvas (width and height). 
+
+### canvas_width()
+
+> `int` **[canvas_width](/reference/window#canvas_width)**() const;
+
+
+Returns the width of the canvas. 
+
+### canvas_height()
+
+> `int` **[canvas_height](/reference/window#canvas_height)**() const;
+
+
+Returns the height of the canvas. 
 
 ### read_pixel()
 

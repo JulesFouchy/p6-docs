@@ -20,6 +20,9 @@ Query the state of the window and control it.
 | ImageSize | **[framebuffer_size](/reference/window#framebuffer_size)**() const<br/>Returns the size of the framebuffer (width and height).  |
 | int | **[framebuffer_width](/reference/window#framebuffer_width)**() const<br/>Returns the width of the framebuffer.  |
 | int | **[framebuffer_height](/reference/window#framebuffer_height)**() const<br/>Returns the height of the framebuffer.  |
+| ImageSize | **[canvas_size](/reference/window#canvas_size)**() const<br/>Returns the size of the canvas (width and height).  |
+| int | **[canvas_width](/reference/window#canvas_width)**() const<br/>Returns the width of the canvas.  |
+| int | **[canvas_height](/reference/window#canvas_height)**() const<br/>Returns the height of the canvas.  |
 | Color | **[read_pixel](/reference/window#read_pixel)**(`glm::vec2` position) const<br/>Returns the color of the pixel at the given position.  |
 | bool | **[window_is_focused](/reference/window#window_is_focused)**() const<br/>Returns true iff the window is currently focused.  |
 | void | **[focus_window](/reference/window#focus_window)**() const<br/>Focuses the window, making it pop to the foreground.  |
@@ -75,6 +78,27 @@ Returns the width of the framebuffer.
 
 
 Returns the height of the framebuffer. 
+
+### canvas_size()
+
+> `ImageSize` **[canvas_size](/reference/window#canvas_size)**() const;
+
+
+Returns the size of the canvas (width and height). 
+
+### canvas_width()
+
+> `int` **[canvas_width](/reference/window#canvas_width)**() const;
+
+
+Returns the width of the canvas. 
+
+### canvas_height()
+
+> `int` **[canvas_height](/reference/window#canvas_height)**() const;
+
+
+Returns the height of the canvas. 
 
 ### read_pixel()
 
