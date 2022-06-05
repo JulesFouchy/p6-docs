@@ -22,7 +22,7 @@ You can either draw directly in the window (the default) or onto a custom [Canva
 |                | Name           |
 | -------------- | -------------- |
 | void | **[save_image](/reference/canvas#save_image)**(`const Canvas &` canvas, `std::filesystem::path` path)<br/>Saves the content of the canvas as an image file.  |
-| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`Canvas &` canvas)<br/>Sets a canvas to be the one that all the drawing commands will draw on, until you call [render_to_main_canvas()](/reference/canvas#render_to_main_canvas).  |
+| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`Canvas &` canvas)<br/>Sets a canvas to be the one that all the drawing commands will draw on, until you call render_to_main_canvas.  |
 | void | **[render_to_main_canvas](/reference/canvas#render_to_main_canvas)**()<br/>Reset the [Context](/reference/Types/context) to render to the main canvas. The main canvas is the one that will be displayed in the window.  |
 | Canvas & | **[main_canvas](/reference/canvas#main_canvas)**() |
 | const Canvas & | **[main_canvas](/reference/canvas#main_canvas)**() const |
@@ -59,7 +59,7 @@ Supported file types are .png and .jpeg/.jpg Simply use the corresponding extens
 > `void` **[render_to_canvas](/reference/canvas#render_to_canvas)**(`Canvas &` canvas);
 
 
-Sets a canvas to be the one that all the drawing commands will draw on, until you call [render_to_main_canvas()](/reference/canvas#render_to_main_canvas). 
+Sets a canvas to be the one that all the drawing commands will draw on, until you call render_to_main_canvas. 
 
 ### render_to_main_canvas()
 

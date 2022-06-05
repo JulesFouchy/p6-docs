@@ -79,7 +79,7 @@ sidebar_position: 1
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[TopRightCorner](/reference/Types/top_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomLeftCorner](/reference/Types/bottom_left_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
-| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets a canvas to be the one that all the drawing commands will draw on, until you call [render_to_main_canvas()]().  |
+| void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets a canvas to be the one that all the drawing commands will draw on, until you call render_to_main_canvas.  |
 | void | **[render_to_main_canvas](/reference/canvas#render_to_main_canvas)**()<br/>Reset the [Context](/reference/Types/context) to render to the main canvas. The main canvas is the one that will be displayed in the window.  |
 | [Canvas](/reference/Types/canvas) & | **[main_canvas](/reference/canvas#main_canvas)**() |
 | const [Canvas](/reference/Types/canvas) & | **[main_canvas](/reference/canvas#main_canvas)**() const |
@@ -550,7 +550,7 @@ It uses the `stroke` color, and `stroke_weight` as its thickness.
 > `void` **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas);
 
 
-Sets a canvas to be the one that all the drawing commands will draw on, until you call [render_to_main_canvas()](). 
+Sets a canvas to be the one that all the drawing commands will draw on, until you call render_to_main_canvas. 
 
 ### render_to_main_canvas()
 
