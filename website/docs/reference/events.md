@@ -177,4 +177,4 @@ If you call [main_canvas_size()](/reference/canvas#main_canvas_size), [main_canv
 
 -------------------------------
 
-Updated on 2022 June 05
+Updated on 2022 June 06

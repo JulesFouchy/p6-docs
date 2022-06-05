@@ -17,6 +17,7 @@ p6::save_image(my_custom_canvas, "my_path/my_image.png");
 We can save either as *.png* or *.jpeg*.
 
 :::tip
+If the path already exists, a number will be appended to the name and the previous file won't be overwritten.<br/>
 If the path is relative, it will be relative to the directory containing your executable.<br/>
 If some directories in the path don't exist yet, they will be created automatically.
 :::

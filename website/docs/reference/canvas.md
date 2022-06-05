@@ -51,7 +51,7 @@ You can either draw directly in the window (the default) or onto a custom [Canva
 
 Saves the content of the canvas as an image file. 
 
-Supported file types are .png and .jpeg/.jpg Simply use the corresponding extension to save in the desired format. If the path is relative, it will be relative to the directory containing your executable. If some directories in the path don't exist yet, they will be created automatically. 
+Supported file types are .png and .jpeg/.jpg Simply use the corresponding extension to save in the desired format. If the path already exists, a number will be appended to the name and the previous file won't be overwritten. If the path is relative, it will be relative to the directory containing your executable. If some directories in the path don't exist yet, they will be created automatically. 
 
 
 ### render_to_canvas()
@@ -178,7 +178,7 @@ Returns the ratio that you need to multiply with in order to match the position 
 
 Saves the content of the window's main canvas as an image file. 
 
-Supported file types are .png and .jpeg/.jpg Simply use the corresponding extension to save in the desired format. If the path is relative, it will be relative to the directory containing your executable. If some directories in the path don't exist yet, they will be created automatically. 
+Supported file types are .png and .jpeg/.jpg Simply use the corresponding extension to save in the desired format. If the path already exists, a number will be appended to the name and the previous file won't be overwritten. If the path is relative, it will be relative to the directory containing your executable. If some directories in the path don't exist yet, they will be created automatically. 
 
 
 ### read_pixel()
@@ -197,4 +197,4 @@ The coordinates are expressed in the usual p6 coordinate system.
 
 -------------------------------
 
-Updated on 2022 June 05
+Updated on 2022 June 06
