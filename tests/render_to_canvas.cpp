@@ -22,7 +22,7 @@ int main()
     };
     ctx.update = [&]() {
         ctx.background({1, ctx.ctrl() ? 1.f : 0.f, 0});
-        ctx.image(canvas);
+        ctx.image(canvas, p6::FitY{});
         if (ctx.shift())
         {
             ctx.render_to_canvas(canvas);
