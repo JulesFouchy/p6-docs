@@ -20,11 +20,11 @@ int main()
         if (ctx.shift() || ctx.ctrl() || ctx.alt())
         {
             ctx.render_to_canvas(canvas);
-            ctx.circle(ctx.mouse(), p6::Radius{0.3f});
+            ctx.circle(ctx.mouse() * ctx.canvas_ratio(canvas), p6::Radius{0.3f});
             ctx.render_to_screen();
         }
         ctx.background(p6::NamedColor::LightBlue);
-        ctx.image(canvas, p6::FitY{});
+        ctx.image(canvas);
     };
 
     ctx.imgui = [&]() {
