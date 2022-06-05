@@ -80,6 +80,7 @@ sidebar_position: 1
 | void | **[text](/reference/text#text)**(`const std::u16string &` str, `[BottomRightCorner](/reference/Types/bottom_right_corner)` corner, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[render_to_canvas](/reference/canvas#render_to_canvas)**(`[Canvas](/reference/Types/canvas) &` canvas)<br/>Sets the canvas where all the drawing commands will happen on.  |
 | void | **[render_to_screen](/reference/canvas#render_to_screen)**()<br/>Reset the [Context](/reference/Types/context) to render to the screen.  |
+| void | **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const<br/>Saves the content of the window as an image file.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
 | glm::vec2 | **[mouse_delta](/reference/input#mouse_delta)**() const<br/>Returns the movement of the mouse since last [update()](/reference/events#update).  |
 | bool | **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const<br/>Returns true iff the window is focused and the coordinates returned by [mouse()](/reference/input#mouse) correspond to a position inside the window.  |
@@ -538,6 +539,16 @@ Sets the canvas where all the drawing commands will happen on.
 
 Reset the [Context](/reference/Types/context) to render to the screen. 
 
+### save_image()
+
+> `void` **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const;
+
+
+Saves the content of the window as an image file. 
+
+Supported file types are .png and .jpeg/.jpg Simply use the corresponding extension to save in the desired format. If the path is relative, it will be relative to the directory containing your executable. If some directories in the path don't exist yet, they will be created automatically. 
+
+
 ### mouse()
 
 > `glm::vec2` **[mouse](/reference/input#mouse)**() const;
@@ -957,4 +968,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2022 May 18
+Updated on 2022 June 05

@@ -48,14 +48,16 @@ git submodule update --init --recursive
 ```
 (To learn about Git submodules, check out [this lesson](https://julesfouchy.github.io/Learn--Clean-Code-With-Cpp/lessons/git-submodules/)).
 
+## Conclusion
+
 :::tip
 You can always compare with [the basic example](https://github.com/JulesFouchy/p6-docs/tree/main/examples/basic) if something is not quite working for you.
 :::
-
-## Conclusion
 
 If everything went well you should be able to run your project and see this window:
 
 ![](./img/first-window.png)
 
-Congrats :tada: You can now start using *p6* to build amazing artworks, interactive experiences and games!
+:::info Congrats :tada:
+You can now start using *p6* to build amazing artworks, interactive experiences and games!
+:::
