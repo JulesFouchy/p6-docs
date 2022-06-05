@@ -27,6 +27,10 @@ Query the state of the window and control it.
 | void | **[minimize_window](/reference/window#minimize_window)**()<br/>Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen.  |
 | void | **[restore_window](/reference/window#restore_window)**()<br/>Restores the window if it is currently maximized. Does nothing otherwise.  |
 | bool | **[window_is_maximized](/reference/window#window_is_maximized)**() const<br/>Returns true iff the window is currently maximized.  |
+| void | **[go_fullscreen](/reference/window#go_fullscreen)**()<br/>Makes the window fullscreen.  |
+| void | **[escape_fullscreen](/reference/window#escape_fullscreen)**()<br/>Exits the fullscreen mode.  |
+| void | **[toggle_fullscreen](/reference/window#toggle_fullscreen)**()<br/>Goes fullscreen if it wasn't, escapes fullscreen if it was.  |
+| bool | **[window_is_fullscreen](/reference/window#window_is_fullscreen)**() const<br/>Returns true iff the window is currently fullscreen.  |
 
 
 ## Functions
@@ -123,6 +127,40 @@ Restores the window if it is currently maximized. Does nothing otherwise.
 
 
 Returns true iff the window is currently maximized. 
+
+### go_fullscreen()
+
+> `void` **[go_fullscreen](/reference/window#go_fullscreen)**();
+
+
+Makes the window fullscreen. 
+
+Does nothing if it was already fullscreen. 
+
+
+### escape_fullscreen()
+
+> `void` **[escape_fullscreen](/reference/window#escape_fullscreen)**();
+
+
+Exits the fullscreen mode. 
+
+Does nothing if the window wasn't fullscreen. 
+
+
+### toggle_fullscreen()
+
+> `void` **[toggle_fullscreen](/reference/window#toggle_fullscreen)**();
+
+
+Goes fullscreen if it wasn't, escapes fullscreen if it was. 
+
+### window_is_fullscreen()
+
+> `bool` **[window_is_fullscreen](/reference/window#window_is_fullscreen)**() const;
+
+
+Returns true iff the window is currently fullscreen. 
 
 
 

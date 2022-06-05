@@ -100,6 +100,10 @@ sidebar_position: 1
 | void | **[minimize_window](/reference/window#minimize_window)**()<br/>Minimizes the window. Note that while your window is minimized everything will be frozen and no update, event or anything will happen.  |
 | void | **[restore_window](/reference/window#restore_window)**()<br/>Restores the window if it is currently maximized. Does nothing otherwise.  |
 | bool | **[window_is_maximized](/reference/window#window_is_maximized)**() const<br/>Returns true iff the window is currently maximized.  |
+| void | **[go_fullscreen](/reference/window#go_fullscreen)**()<br/>Makes the window fullscreen.  |
+| void | **[escape_fullscreen](/reference/window#escape_fullscreen)**()<br/>Exits the fullscreen mode.  |
+| void | **[toggle_fullscreen](/reference/window#toggle_fullscreen)**()<br/>Goes fullscreen if it wasn't, escapes fullscreen if it was.  |
+| bool | **[window_is_fullscreen](/reference/window#window_is_fullscreen)**() const<br/>Returns true iff the window is currently fullscreen.  |
 | float | **[time](/reference/time#time)**() const<br/>Returns the time in seconds since the creation of the [Context](/reference/Types/context).  |
 | float | **[delta_time](/reference/time#delta_time)**() const<br/>Returns an estimate of the time that elapses between two [update()](/reference/events#update) calls.  |
 | void | **[time_perceived_as_realtime](/reference/time#time_perceived_as_realtime)**()<br/>Sets the time mode as _realtime_.  |
@@ -690,6 +694,40 @@ Restores the window if it is currently maximized. Does nothing otherwise.
 
 
 Returns true iff the window is currently maximized. 
+
+### go_fullscreen()
+
+> `void` **[go_fullscreen](/reference/window#go_fullscreen)**();
+
+
+Makes the window fullscreen. 
+
+Does nothing if it was already fullscreen. 
+
+
+### escape_fullscreen()
+
+> `void` **[escape_fullscreen](/reference/window#escape_fullscreen)**();
+
+
+Exits the fullscreen mode. 
+
+Does nothing if the window wasn't fullscreen. 
+
+
+### toggle_fullscreen()
+
+> `void` **[toggle_fullscreen](/reference/window#toggle_fullscreen)**();
+
+
+Goes fullscreen if it wasn't, escapes fullscreen if it was. 
+
+### window_is_fullscreen()
+
+> `bool` **[window_is_fullscreen](/reference/window#window_is_fullscreen)**() const;
+
+
+Returns true iff the window is currently fullscreen. 
 
 ### time()
 
