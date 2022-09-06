@@ -1,4 +1,4 @@
-#version 330
+#version 410
 
 in vec2       _raw_uv;
 in vec2       _uniform_uv;
