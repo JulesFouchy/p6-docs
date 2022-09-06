@@ -5,7 +5,7 @@
 
 int main()
 {
-    auto ctx  = p6::Context{{1280, 720, "Text"}};
+    auto ctx  = p6::Context{{1280, 720, "Triangle"}};
     ctx.imgui = [&]() {
         ImGui::Begin("Window");
         ImGui::SliderFloat("Stroke Weight", &ctx.stroke_weight, 0.f, 0.5f);
