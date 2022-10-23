@@ -65,7 +65,7 @@ std::function< void()> imgui = []() {
 
 In this function you can call all the ImGui code you want. 
 
-Note that you can also do it during the other event functions ([update()](/reference/events#update), [mouse_moved()](/reference/events#mouse_moved), etc.). This [imgui()](/reference/events#imgui) function is just here to help you organize your code if you want to. 
+Note that you can also do it during the `[update()](/reference/events#update)` function. This `[imgui()](/reference/events#imgui)` function is just here to help you organize your code if you want to. 
 
 
 ### mouse_moved
