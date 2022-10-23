@@ -21,6 +21,10 @@ sidebar_position: 1
 | float | **[g](/reference/Types/color#g)**() const |
 | float | **[b](/reference/Types/color#b)**() const |
 | float | **[a](/reference/Types/color#a)**() const |
+| float & | **[r](/reference/Types/color#r)**() |
+| float & | **[g](/reference/Types/color#g)**() |
+| float & | **[b](/reference/Types/color#b)**() |
+| float & | **[a](/reference/Types/color#a)**() |
 | glm::vec3 | **[as_premultiplied_vec3](/reference/Types/color#as_premultiplied_vec3)**() const |
 | glm::vec3 | **[as_straight_vec3](/reference/Types/color#as_straight_vec3)**() const |
 | glm::vec4 | **[as_premultiplied_vec4](/reference/Types/color#as_premultiplied_vec4)**() const |
@@ -58,6 +62,30 @@ sidebar_position: 1
 
 
 
+### r()
+
+> `float &` **[r](/reference/Types/color#r)**();
+
+
+
+### g()
+
+> `float &` **[g](/reference/Types/color#g)**();
+
+
+
+### b()
+
+> `float &` **[b](/reference/Types/color#b)**();
+
+
+
+### a()
+
+> `float &` **[a](/reference/Types/color#a)**();
+
+
+
 ### as_premultiplied_vec3()
 
 > `glm::vec3` **[as_premultiplied_vec3](/reference/Types/color#as_premultiplied_vec3)**() const;
@@ -84,4 +112,4 @@ sidebar_position: 1
 
 -------------------------------
 
-Updated on 2022 June 06
+Updated on 2022 October 23

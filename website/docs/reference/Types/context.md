@@ -126,7 +126,7 @@ sidebar_position: 1
 | void | **[resume](/reference/update-flow#resume)**()<br/>Resumes the [update()](/reference/events#update) loop if it was paused with [pause()](/reference/update-flow#pause).  |
 | bool | **[is_paused](/reference/update-flow#is_paused)**() const<br/>Returns true iff the [update()](/reference/events#update) loop is currently paused.  |
 | std::function< void()> | **[update](/reference/events#update)** <br/>This function is called repeatedly. The framerate is controlled by the framerate_xxx() functions.  |
-| std::function< void()> | **[imgui](/reference/events#imgui)** <br/>In this function you can render all the ImGui windows you want.  |
+| std::function< void()> | **[imgui](/reference/events#imgui)** <br/>In this function you can call all the ImGui code you want.  |
 | std::function< void([MouseMove](/reference/Types/mouse_move))> | **[mouse_moved](/reference/events#mouse_moved)** <br/>This function is called whenever the mouse is moved.  |
 | std::function< void([MouseDrag](/reference/Types/mouse_drag))> | **[mouse_dragged](/reference/events#mouse_dragged)** <br/>This function is called whenever the mouse is dragged.  |
 | std::function< void([MouseButton](/reference/Types/mouse_button))> | **[mouse_pressed](/reference/events#mouse_pressed)** <br/>This function is called whenever a mouse button is pressed.  |
@@ -923,7 +923,10 @@ std::function< void()> imgui = []() {
     };
 ```
 
-In this function you can render all the ImGui windows you want. 
+In this function you can call all the ImGui code you want. 
+
+Note that you can also do it during the other event functions ([update()](/reference/events#update), [mouse_moved()](/reference/events#mouse_moved), etc.). This [imgui()](/reference/events#imgui) function is just here to help you organize your code if you want to. 
+
 
 ### mouse_moved
 
@@ -1090,4 +1093,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2022 June 06
+Updated on 2022 October 23

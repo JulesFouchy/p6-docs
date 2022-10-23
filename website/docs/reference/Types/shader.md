@@ -107,4 +107,4 @@ Throws std::runtime_error if there is an error while compiling the shader source
 
 -------------------------------
 
-Updated on 2022 June 06
+Updated on 2022 October 23

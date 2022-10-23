@@ -15,7 +15,7 @@ Mathematical functions and numerical constants.
 
 |                | Name           |
 | -------------- | -------------- |
-| template <typename T \> <br/>T | **[map](/reference/math#map)**(`T` x, `T` from_min, `T` from_max, `T` to_min, `T` to_max)<br/>Maps x, which is in the range `[from_mix, from_max]` to the range `[to_min, to_max]`.  |
+| template <typename T \> <br/>T | **[map](/reference/math#map)**(`T` x, `T` from_min, `T` from_max, `T` to_min, `T` to_max)<br/>Maps x, which is in the range `[from_min, from_max]` to the range `[to_min, to_max]`.  |
 | glm::vec2 | **[rotated_by](/reference/math#rotated_by)**(`Angle` angle, `glm::vec2` vector)<br/>Returns a new vector equal to `vector` rotated by `angle` |
 
 ### Attributes
@@ -33,7 +33,7 @@ Mathematical functions and numerical constants.
 > `T` **[map](/reference/math#map)**(`T` x, `T` from_min, `T` from_max, `T` to_min, `T` to_max);
 
 
-Maps x, which is in the range `[from_mix, from_max]` to the range `[to_min, to_max]`. 
+Maps x, which is in the range `[from_min, from_max]` to the range `[to_min, to_max]`. 
 
 For example if `x == from_min` then the function returns `to_min`.
 
@@ -71,4 +71,4 @@ static constexpr float PI = TAU / 2.f;
 
 -------------------------------
 
-Updated on 2022 June 06
+Updated on 2022 October 23
