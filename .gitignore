@@ -6,3 +6,4 @@ bin/
 
 docs_generator/Doxygen/
 docs_generator/imgui.ini
+.cache
