@@ -12,6 +12,7 @@ int main()
     glm::vec2 point_min{-1.f, 3.f};
     glm::vec2 point_max{2.f, 4.f};
     float     aspect_ratio{2.f};
+    int       number_of_random_points_on_canvas{3};
 
     float number{};
     float number_max{};
@@ -23,6 +24,7 @@ int main()
     glm::vec2 point_aspect_ratio{};
     glm::vec2 direction{};
     p6::Angle angle{};
+    std::vector<glm::vec2> random_points_on_canvas{};
 
     const auto reroll = [&]() {
         number         = p6::random::number();
@@ -37,6 +39,12 @@ int main()
 
         direction = p6::random::direction();
         angle     = p6::random::angle();
+
+        random_points_on_canvas.clear();
+        for (int _ = 0; _ < number_of_random_points_on_canvas; ++_)
+        {
+            random_points_on_canvas.push_back(p6::random::point(ctx));
+        }
     };
 
     reroll();
@@ -52,6 +60,7 @@ int main()
         ImGui::DragFloat2("point_min", glm::value_ptr(point_min));
         ImGui::DragFloat2("point_max", glm::value_ptr(point_max));
         ImGui::DragFloat("aspect_ratio", &aspect_ratio);
+        ImGui::DragInt("number_of_random_points_on_canvas", &number_of_random_points_on_canvas);
 
         ImGui::NewLine();
 
@@ -67,6 +76,14 @@ int main()
         ImGui::Text("p6::random::angle(): %.3f radians, %.3f turns", angle.as_radians(), angle.as_turns());
 
         ImGui::End();
+    };
+
+    ctx.update = [&]() {
+        ctx.background(p6::NamedColor::Black);
+        for (glm::vec2 point : random_points_on_canvas)
+        {
+            ctx.circle(p6::Center{point}, p6::Radius{0.1f});
+        }
     };
 
     ctx.start();
