@@ -20,6 +20,7 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 | -------------- | -------------- |
 | constexpr | **[Angle](/reference/Types/angle#angle)**() =default |
 | constexpr | **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value) |
+| constexpr | **[Angle](/reference/Types/angle#angle)**(`glm::vec2` direction)<br/>Constructs the angle that `direction` makes with the positive x axis.  |
 | float | **[as_turns](/reference/Types/angle#as_turns)**() const |
 | float | **[as_radians](/reference/Types/angle#as_radians)**() const |
 | float | **[as_degrees](/reference/Types/angle#as_degrees)**() const |
@@ -38,6 +39,16 @@ Inherits from op::Addable< Angle >, op::Subtractable< Angle >, op::Negatable< An
 
 > `constexpr` **[Angle](/reference/Types/angle#angle)**(`[Radians](/reference/Types/radians)` value);
 
+
+
+### Angle()
+
+> `constexpr` **[Angle](/reference/Types/angle#angle)**(`glm::vec2` direction);
+
+
+Constructs the angle that `direction` makes with the positive x axis. 
+
+`direction` does not need to be normalized. 
 
 
 ### as_turns()
@@ -69,4 +80,4 @@ Radians value {};
 
 -------------------------------
 
-Updated on 2022 October 23
+Updated on 2023 January 07

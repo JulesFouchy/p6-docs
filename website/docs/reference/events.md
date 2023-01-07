@@ -180,4 +180,4 @@ If you call [main_canvas_size()](/reference/canvas#main_canvas_size), [main_canv
 
 -------------------------------
 
-Updated on 2022 October 23
+Updated on 2023 January 07
