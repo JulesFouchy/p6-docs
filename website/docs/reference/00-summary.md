@@ -11,6 +11,7 @@ Welcome to the reference! In here you can find all the details about everything 
 * **Section [Image](/reference/image)** <br/>Load and query information about images. 
 * **Section [Input](/reference/input)** <br/>Query the state of the mouse and keyboard. 
 * **Section [Math](/reference/math)** <br/>Mathematical functions and numerical constants. 
+* **Section [Random](/reference/random)** <br/>Pick random numbers, points, directions, etc. 
 * **Section [Text](/reference/text)** <br/>Write text to the screen. 
 * **Section [Time](/reference/time)** <br/>Query time information and control how it elapses. 
 * **Section [Update Flow](/reference/update-flow)** <br/>Control the [update()](/reference/events#update) loop and query information about it. 
