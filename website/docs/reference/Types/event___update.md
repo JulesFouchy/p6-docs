@@ -1,10 +1,10 @@
 ---
-title: p6::Fit
+title: p6::Event_Update
 
 sidebar_position: 1
 ---
 
-# p6::Fit
+# p6::Event_Update
 
 
 

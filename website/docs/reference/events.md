@@ -27,6 +27,7 @@ You can set those functions as you wish to react to various events.  [More...](#
 | std::function< void(Key)> | **[key_repeated](/reference/events#key_repeated)** <br/>This function is called repeatedly whenever a keyboard key is held.  |
 | std::function< void(std::string &&)> | **[on_error](/reference/events#on_error)** <br/>This function is called whenever an error occurs.  |
 | std::function< void()> | **[main_canvas_resized](/reference/events#main_canvas_resized)** <br/>This function is called whenever the main canvas is resized.  |
+| std::function< void(Event)> | **[on_event](/reference/events#on_event)** <br/>This function is called whenever any event occurs (key pressed, mouse moved, etc.).  |
 
 ## Detailed Description
 
@@ -140,15 +141,15 @@ std::function< void(Key)> key_repeated = [](Key) {
 
 This function is called repeatedly whenever a keyboard key is held. 
 
-(NB: this only starts after holding the key for a little while. The axact behaviour is OS-specific)
+(NB: this only starts after holding the key for a little while. The exact behaviour is OS-specific)
 
 :warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your update function:
 
 
 
 ```cpp
-if (p6.is_held(PhysicalKey::W)) { // TODO implement is_held and PhysicalKey and LogicalKey
-    character.move_forward(p6.delta_time());
+if (ctx.key_is_held(GLFW_KEY_W)) {
+    character.move_forward(ctx.delta_time());
 }
 ```
 
@@ -175,9 +176,21 @@ This function is called whenever the main canvas is resized.
 If you call [main_canvas_size()](/reference/canvas#main_canvas_size), [main_canvas_width()](/reference/canvas#main_canvas_width), [main_canvas_height()](/reference/canvas#main_canvas_height) or [aspect_ratio()](/reference/canvas#aspect_ratio) inside [main_canvas_resized()](/reference/events#main_canvas_resized) they will already be referring to the new size. 
 
 
+### on_event
+
+```
+std::function< void(Event)> on_event = [](Event const&) {
+    };
+```
+
+This function is called whenever any event occurs (key pressed, mouse moved, etc.). 
+
+It can be useful to use this function instead of the more specific ones (key_pressed, mouse_moved, etc.) if for example you want to forward several events to a function that will handle them. For example in order to control a camera you might need to forward the key, mouse and update events to it. Instead of having to put the code inside those three event functions, you can just put it in `on_event` and let the camera handle each event as it so pleases. 
+
+
 
 
 
 -------------------------------
 
-Updated on 2023 January 07
+Updated on 2023 February 06

@@ -21,6 +21,7 @@ Query the state of the mouse and keyboard.
 | bool | **[ctrl](/reference/input#ctrl)**() const<br/>Returns true iff the CTRL key is pressed (or CMD on Mac)  |
 | bool | **[shift](/reference/input#shift)**() const<br/>Returns true iff the SHIFT key is pressed.  |
 | bool | **[alt](/reference/input#alt)**() const<br/>Returns true iff the ALT key is pressed.  |
+| bool | **[key_is_held](/reference/input#key_is_held)**(`int` key) const<br/>Returns true iff the given `key` is currently pressed.  |
 
 
 ## Functions
@@ -67,10 +68,20 @@ Returns true iff the SHIFT key is pressed.
 
 Returns true iff the ALT key is pressed. 
 
+### key_is_held()
+
+> `bool` **[key_is_held](/reference/input#key_is_held)**(`int` key) const;
+
+
+Returns true iff the given `key` is currently pressed. 
+
+`key` should be a GLFW_KEY_ value. See [https://www.glfw.org/docs/3.3/keys.html](https://www.glfw.org/docs/3.3/keys.html) for the complete list. e.g. `ctx.key_is_pressed(GLFW_KEY_Q)`
+
+
 
 
 
 
 -------------------------------
 
-Updated on 2023 January 07
+Updated on 2023 February 06
