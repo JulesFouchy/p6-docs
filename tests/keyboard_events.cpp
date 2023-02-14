@@ -6,7 +6,7 @@ int main()
     auto ctx  = p6::Context{};
     ctx.imgui = [&]() {
         ImGui::Begin("Window");
-        ImGui::Text("GLFW_KEY_Q is%s held", ctx.key_is_held(GLFW_KEY_Q) ? "" : " NOT");
+        ImGui::Text("GLFW_KEY_Q is%s held", ctx.key_is_pressed(GLFW_KEY_Q) ? "" : " NOT");
         ImGui::End();
     };
 
