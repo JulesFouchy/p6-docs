@@ -158,6 +158,7 @@ if (ctx.key_is_held(GLFW_KEY_W)) {
 
 ```
 std::function< void(std::string &&)> on_error = [](std::string&& error_message) {
+        std::cerr << error_message << '\n';
         throw std::runtime_error{error_message};
     };
 ```
@@ -193,4 +194,4 @@ It can be useful to use this function instead of the more specific ones (key_pre
 
 -------------------------------
 
-Updated on 2023 February 06
+Updated on 2023 February 14

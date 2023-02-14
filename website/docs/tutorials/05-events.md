@@ -1,6 +1,8 @@
 ---
-title: Mouse and Keyboard Events
+title: Mouse and Keyboard
 ---
+
+## Events
 
 `update()` is only one of the several functions you can define on the `Context`.<br/>
 There are also a few available that allow you to react to all the mouse and keyboard events: `mouse_pressed`, `mouse_moved`, `key_released`, and more!
@@ -24,3 +26,15 @@ int main()
 ```
 
 You can find the complete list [in the Reference](/reference/events).
+
+## Queries
+
+You can also directly query at any moment to know if a given key or mouse button is pressed:
+```cpp
+if (ctx.key_is_pressed(GLFW_KEY_Q))
+    // ...
+```
+```cpp
+if (ctx.mouse_button_is_pressed(p6::Button::Left))
+    // ...
+```
