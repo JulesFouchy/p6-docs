@@ -18,6 +18,11 @@ Pick random numbers, points, directions, etc.
 | float | **[number](/reference/random#number)**()<br/>Returns a random number between 0 and 1.  |
 | float | **[number](/reference/random#number)**(`float` max)<br/>Returns a random number between 0 and `max`.  |
 | float | **[number](/reference/random#number)**(`float` min, `float` max)<br/>Returns a random number between `min` and `max`.  |
+| int | **[integer](/reference/random#integer)**(`int` max)<br/>Returns a random integer between 0 (included) and `max` (excluded).  |
+| int | **[integer](/reference/random#integer)**(`int` min, `int` max)<br/>Returns a random integer between `min` (included) and `max` (excluded).  |
+| size_t | **[size_type](/reference/random#size_type)**(`size_t` max)<br/>Returns a random size_t between 0 (included) and `max` (excluded).  |
+| size_t | **[size_type](/reference/random#size_type)**(`size_t` min, `size_t` max)<br/>Returns a random size_t between `min` (included) and `max` (excluded).  |
+| template <typename T \> <br/>const T & | **[among](/reference/random#among)**(`const std::vector< T > &` collection)<br/>Randomly returns one of the elements of the `collection`.  |
 | glm::vec2 | **[point](/reference/random#point)**(`const [p6::Context](/reference/Types/context) &` ctx)<br/>Returns a point inside the main canvas of the context.  |
 | glm::vec2 | **[point](/reference/random#point)**(`const [p6::Canvas](/reference/Types/canvas) &` canvas)<br/>Returns a point inside the given canvas.  |
 | glm::vec2 | **[point](/reference/random#point)**()<br/>Returns a random point in a square between (-1, -1) and (1, 1).  |
@@ -54,6 +59,53 @@ Throws a `std::invalid_argument` exception if `max < 0`.
 Returns a random number between `min` and `max`. 
 
 Throws a `std::invalid_argument` exception if `min > max`. 
+
+
+### integer()
+
+> `int` **[integer](/reference/random#integer)**(`int` max);
+
+
+Returns a random integer between 0 (included) and `max` (excluded). 
+
+Throws a `std::invalid_argument` exception if `max <= 0`. 
+
+
+### integer()
+
+> `int` **[integer](/reference/random#integer)**(`int` min, `int` max);
+
+
+Returns a random integer between `min` (included) and `max` (excluded). 
+
+Throws a `std::invalid_argument` exception if `min >= max`. 
+
+
+### size_type()
+
+> `size_t` **[size_type](/reference/random#size_type)**(`size_t` max);
+
+
+Returns a random size_t between 0 (included) and `max` (excluded). 
+
+### size_type()
+
+> `size_t` **[size_type](/reference/random#size_type)**(`size_t` min, `size_t` max);
+
+
+Returns a random size_t between `min` (included) and `max` (excluded). 
+
+Throws a `std::invalid_argument` exception if `min >= max`. 
+
+
+### among()
+
+> `const T &` **[among](/reference/random#among)**(`const std::vector< T > &` collection);
+
+
+Randomly returns one of the elements of the `collection`. 
+
+Throws a `std::invalid_argument` exception if the `collection` is empty. 
 
 
 ### point()
@@ -114,4 +166,4 @@ Returns a random angle.
 
 -------------------------------
 
-Updated on 2023 February 14
+Updated on 2023 February 15

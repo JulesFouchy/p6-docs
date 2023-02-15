@@ -40,7 +40,7 @@ sidebar_position: 1
 | void | **[ellipse](/reference/drawing#ellipse)**(`[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws an ellipse.  |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform) |
-| void | **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3)<br/>Draws a triangle.  |
+| void | **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Transform2D](/reference/Types/transform2_d)` transform = {})<br/>Draws a triangle.  |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Fit](/reference/Types/fit)`  = {})<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitX](/reference/Types/fit_x)` ) |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitY](/reference/Types/fit_y)` ) |
@@ -305,7 +305,7 @@ Draws an ellipse.
 
 ### triangle()
 
-> `void` **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3);
+> `void` **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Transform2D](/reference/Types/transform2_d)` transform ={});
 
 
 Draws a triangle. 
@@ -1126,4 +1126,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2023 February 14
+Updated on 2023 February 15
