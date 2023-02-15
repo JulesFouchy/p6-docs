@@ -36,7 +36,7 @@ Draw shapes and control the look of them.
 | void | **[ellipse](/reference/drawing#ellipse)**(`Transform2D` transform) |
 | void | **[equilateral_triangle](/reference/drawing#equilateral_triangle)**(`Center` center, `Radius` radius = {}, `Rotation` rotation = {})<br/>Draws an equilateral triangle. `[Radius](/reference/Types/radius)` is the distance between the `[Center](/reference/Types/center)` and one of the tips of the triangle.  |
 | void | **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3, `Center` center = {}, `Rotation` rotation = {})<br/>Draws a triangle between the three points, translated by `[Center](/reference/Types/center)` and rotated by `Rotation`.  |
-| void | **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3, `Transform2D` transform)<br/>Draws a triangle between the three points, and applies the [Transform2D](/reference/Types/transform2_d) to the triangle.  |
+| void | **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3, `Transform2D` transform)<br/>Draws a triangle between the three points, and applies the transform to the triangle.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `Fit`  = {})<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitX` ) |
 | void | **[image](/reference/drawing#image)**(`const ImageOrCanvas &` img, `FitY` ) |
@@ -225,7 +225,7 @@ Draws a triangle between the three points, translated by `[Center](/reference/Ty
 > `void` **[triangle](/reference/drawing#triangle)**(`Point2D` p1, `Point2D` p2, `Point2D` p3, `Transform2D` transform);
 
 
-Draws a triangle between the three points, and applies the [Transform2D](/reference/Types/transform2_d) to the triangle. 
+Draws a triangle between the three points, and applies the transform to the triangle. 
 
 ### image()
 
