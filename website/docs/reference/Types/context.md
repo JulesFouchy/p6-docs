@@ -40,7 +40,9 @@ sidebar_position: 1
 | void | **[ellipse](/reference/drawing#ellipse)**(`[FullScreen](/reference/Types/full_screen)`  = {})<br/>Draws an ellipse.  |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Center](/reference/Types/center)` center, `[Radii](/reference/Types/radii)` radii = {}, `[Rotation](/reference/Types/angle)` rotation = {}) |
 | void | **[ellipse](/reference/drawing#ellipse)**(`[Transform2D](/reference/Types/transform2_d)` transform) |
-| void | **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Transform2D](/reference/Types/transform2_d)` transform = {})<br/>Draws a triangle.  |
+| void | **[equilateral_triangle](/reference/drawing#equilateral_triangle)**(`[Center](/reference/Types/center)` center, `[Radius](/reference/Types/radius)` radius = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws an equilateral triangle. `[Radius]()` is the distance between the `[Center](/reference/Types/center)` and one of the tips of the triangle.  |
+| void | **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Center](/reference/Types/center)` center = {}, `[Rotation](/reference/Types/angle)` rotation = {})<br/>Draws a triangle between the three points, translated by `[Center](/reference/Types/center)` and rotated by `Rotation`.  |
+| void | **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Transform2D](/reference/Types/transform2_d)` transform)<br/>Draws a triangle between the three points, and applies the [Transform2D]() to the triangle.  |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[Fit](/reference/Types/fit)`  = {})<br/>Draws an image as big as possible on the screen. This will respect the aspect ratio of the image.  |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitX](/reference/Types/fit_x)` ) |
 | void | **[image](/reference/drawing#image)**(`const [ImageOrCanvas](/reference/Types/image_or_canvas) &` img, `[FitY](/reference/Types/fit_y)` ) |
@@ -303,12 +305,26 @@ Draws an ellipse.
 
 
 
+### equilateral_triangle()
+
+> `void` **[equilateral_triangle](/reference/drawing#equilateral_triangle)**(`[Center](/reference/Types/center)` center, `[Radius](/reference/Types/radius)` radius ={}, `[Rotation](/reference/Types/angle)` rotation ={});
+
+
+Draws an equilateral triangle. `[Radius]()` is the distance between the `[Center](/reference/Types/center)` and one of the tips of the triangle. 
+
 ### triangle()
 
-> `void` **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Transform2D](/reference/Types/transform2_d)` transform ={});
+> `void` **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Center](/reference/Types/center)` center ={}, `[Rotation](/reference/Types/angle)` rotation ={});
 
 
-Draws a triangle. 
+Draws a triangle between the three points, translated by `[Center](/reference/Types/center)` and rotated by `Rotation`. 
+
+### triangle()
+
+> `void` **[triangle](/reference/drawing#triangle)**(`[Point2D](/reference/Types/point2_d)` p1, `[Point2D](/reference/Types/point2_d)` p2, `[Point2D](/reference/Types/point2_d)` p3, `[Transform2D](/reference/Types/transform2_d)` transform);
+
+
+Draws a triangle between the three points, and applies the [Transform2D]() to the triangle. 
 
 ### image()
 
