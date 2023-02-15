@@ -9,6 +9,8 @@ int main()
 
     float min{-1.f};
     float max{2.f};
+    int       min_int{0};
+    int       max_int{3};
     glm::vec2 point_min{-1.f, 3.f};
     glm::vec2 point_max{2.f, 4.f};
     float     aspect_ratio{2.f};
@@ -17,6 +19,10 @@ int main()
     float number{};
     float number_max{};
     float number_min_max{};
+    int   integer_max{};
+    int   integer_min_max{};
+    int   among{};
+
     glm::vec2 point_context{};
     glm::vec2 point_canvas{};
     glm::vec2 point{};
@@ -30,6 +36,11 @@ int main()
         number         = p6::random::number();
         number_max     = p6::random::number(max);
         number_min_max = p6::random::number(min, max);
+
+        integer_max     = p6::random::integer(max_int);
+        integer_min_max = p6::random::integer(min_int, max_int);
+
+        among = p6::random::among<int>({1, 3, 7});
 
         point_context      = p6::random::point(ctx);
         point_canvas       = p6::random::point(canvas);
@@ -57,6 +68,8 @@ int main()
 
         ImGui::DragFloat("min", &min);
         ImGui::DragFloat("max", &max);
+        ImGui::DragInt("min_int", &min_int);
+        ImGui::DragInt("max_int", &max_int);
         ImGui::DragFloat2("point_min", glm::value_ptr(point_min));
         ImGui::DragFloat2("point_max", glm::value_ptr(point_max));
         ImGui::DragFloat("aspect_ratio", &aspect_ratio);
@@ -67,6 +80,9 @@ int main()
         ImGui::Text("p6::random::number(): %.3f", number);
         ImGui::Text("p6::random::number(max): %.3f", number_max);
         ImGui::Text("p6::random::number(min, max): %.3f", number_min_max);
+        ImGui::Text("p6::random::integer(max): %d", integer_max);
+        ImGui::Text("p6::random::integer(min, max): %d", integer_min_max);
+        ImGui::Text("p6::random::among({1, 3, 7}): %d", among);
         ImGui::Text("p6::random::point(ctx): %.3f %.3f", point_context.x, point_context.y);
         ImGui::Text("p6::random::point(p6::Canvas{100, 200}): %.3f %.3f", point_canvas.x, point_canvas.y);
         ImGui::Text("p6::random::point(): %.3f %.3f", point.x, point.y);

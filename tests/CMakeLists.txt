@@ -9,7 +9,7 @@ function(register_test filename)
     add_executable(${TARGET} ${filename})
     target_link_libraries(${TARGET} p6::p6)
 
-    target_compile_features(${TARGET} PRIVATE cxx_std_17)
+    target_compile_features(${TARGET} PRIVATE cxx_std_20)
     if (MSVC)
         target_compile_options(${TARGET} PRIVATE /WX /W4)
     else()
