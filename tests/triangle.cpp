@@ -38,6 +38,9 @@ int main()
         ctx.triangle({-0.1f, -0.1f}, {-0.1f, -0.9f}, {-0.9f, -0.1f});
         ctx.use_stroke = true;
         ctx.triangle({0.1f, -0.1f}, {0.1f, -0.9f}, {0.9f, -0.1f});
+        ctx.use_fill = true;
+
+        ctx.equilateral_triangle(p6::Center{ctx.mouse()}, p6::Radius{0.3f}, p6::Rotation{p6::Radians{angle_in_radians}});
     };
     ctx.start();
 }
