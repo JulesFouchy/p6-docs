@@ -1,63 +1,98 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: 'p6',
   tagline: 'Making 🎨 with 👩‍💻',
   url: 'https://julesfouchy.github.io/',
   baseUrl: '/p6-docs/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon.ico',
   organizationName: 'julesfouchy',
   projectName: 'p6-docs',
+  favicon: 'img/favicon.ico',
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+  
   plugins: [[require.resolve('docusaurus-lunr-search'), {excludeRoutes: []}]],
-  themeConfig: {
-    navbar: {
-      title: '',
-      logo: {
-        alt: 'Site Logo',
-        src: 'img/favicon-32x32.png',
+
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+            path: 'docs',
+            routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
+  ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      // Replace with your project's social card
+      image: 'img/docusaurus-social-card.jpg',
+      navbar: {
+        title: '',
+        logo: {
+          alt: 'Site Logo',
+          src: 'img/favicon-32x32.png',
+        },
+        items: [
+          {
+            type: 'doc',
+            docId: 'tutorials/creating-a-project',
+            position: 'left',
+            label: 'Tutorials',
+          },
+          {
+            type: 'doc',
+            docId: 'examples/introduction',
+            position: 'left',
+            label: 'Examples',
+          },
+          {
+            type: 'doc',
+            docId: 'reference/summary',
+            position: 'left',
+            label: 'Reference',
+          },
+          {
+            to: '/about',
+            label: 'About',
+          },
+          {
+            href: 'https://github.com/JulesFouchy/p6-docs/issues',
+            position: 'right',
+            className: 'header-issues-link',
+            'aria-label': 'GitHub issues',
+          },
+          {
+            href: 'https://github.com/JulesFouchy/p6',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
+        ],
       },
-      items: [
-        {
-          type: 'doc',
-          docId: 'tutorials/creating-a-project',
-          position: 'left',
-          label: 'Tutorials',
-        },
-        {
-          type: 'doc',
-          docId: 'examples/introduction',
-          position: 'left',
-          label: 'Examples',
-        },
-        {
-          type: 'doc',
-          docId: 'reference/summary',
-          position: 'left',
-          label: 'Reference',
-        },
-        {
-          to: '/about',
-          label: 'About',
-        },
-        {
-          href: 'https://github.com/JulesFouchy/p6-docs/issues',
-          position: 'right',
-          className: 'header-issues-link',
-          'aria-label': 'GitHub issues',
-        },
-        {
-          href: 'https://github.com/JulesFouchy/p6',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
-        },
-      ],
-    },
-    footer: {
+      footer: {
       style: 'dark',
       links: [
         {
@@ -101,25 +136,12 @@ module.exports = {
               <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
               `,
     },
-    prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-      additionalLanguages: ['cmake', 'glsl'],
-    },
-  },
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      {
-        docs: {
-          path: 'docs',
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        additionalLanguages: ['cmake', 'glsl'],
       },
-    ],
-  ],
+    }),
 };
+
+module.exports = config;

@@ -54,6 +54,6 @@ If everything went well you should be able to run your project and see this wind
 
 ![](./img/first-window.png)
 
-:::info Congrats :tada:
+:::info Congrats 🎉
 You can now start using *p6* to build amazing artworks, interactive experiences and games!
 :::
