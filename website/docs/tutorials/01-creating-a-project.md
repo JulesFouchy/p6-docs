@@ -50,10 +50,6 @@ git submodule update --init --recursive
 
 ## Conclusion
 
-:::tip
-You can always compare with [the basic example](https://github.com/JulesFouchy/p6-docs/tree/main/examples/basic) if something is not quite working for you.
-:::
-
 If everything went well you should be able to run your project and see this window:
 
 ![](./img/first-window.png)

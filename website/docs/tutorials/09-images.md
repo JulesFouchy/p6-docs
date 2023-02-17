@@ -15,7 +15,7 @@ In order for this to work you must have an *img* folder **at the root of your pr
 **AND you must declare your *img* folder in CMake: `p6_copy_folder(${PROJECT_NAME} img)`**.
 :::
 
-For a complete example of this, check out [this example](https://github.com/JulesFouchy/p6-docs/tree/main/examples/complete).
+For a complete example of this, check out [this example](https://github.com/JulesFouchy/p6-docs/tree/main/tests/drawing.cpp).
 
 ## Displaying an image
 
