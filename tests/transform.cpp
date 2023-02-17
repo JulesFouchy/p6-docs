@@ -33,10 +33,16 @@ int main()
 
     ctx.imgui = [&]() {
         ImGui::Begin("Window");
+
         ImGui::SliderFloat2("Translation", glm::value_ptr(translation), -1.f, 1.f);
         ImGui::SliderAngle("Rotation", &rotation);
         ImGui::Checkbox("Translation First", &translation_first);
-        ImGui::SliderFloat2("Scale", glm::value_ptr(scale), 0.5f, 2.f);
+        ImGui::SliderFloat2("Scale", glm::value_ptr(scale), 0.f, 2.f);
+
+        ImGui::NewLine();
+        if (ImGui::Button("pop() with no matching push()"))
+            ctx.pop_transform();
+
         ImGui::End();
     };
 
