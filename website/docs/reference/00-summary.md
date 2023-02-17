@@ -14,6 +14,7 @@ Welcome to the reference! In here you can find all the details about everything 
 * **Section [Random](/reference/random)** <br/>Pick random numbers, points, directions, etc. 
 * **Section [Text](/reference/text)** <br/>Write text to the screen. 
 * **Section [Time](/reference/time)** <br/>Query time information and control how it elapses. 
+* **Section [Transform](/reference/transform)** <br/>Allows you to translate / rotate / scale all your drawings at once. 
 * **Section [Update Flow](/reference/update-flow)** <br/>Control the [update()](/reference/events#update) loop and query information about it. 
 * **Section [Window](/reference/window)** <br/>Query the state of the window and control it. 
 
