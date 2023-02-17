@@ -12,8 +12,8 @@ int main()
     glm::vec2 scale{1.f};
 
     ctx.update = [&]() {
+        auto const transform_sg = ctx.transform_scope_guard();
         ctx.background(p6::NamedColor::BlueGray);
-        ctx.push_transform();
         if (translation_first)
         {
             ctx.translate(translation);
@@ -28,7 +28,6 @@ int main()
         ctx.square(p6::Center{0.f, 0.f}, p6::Radius{0.3f});
         ctx.equilateral_triangle(p6::Center{0.f, 0.f}, p6::Radius{0.3f});
         ctx.text(u"Hello", p6::Center{0.f, 0.f});
-        ctx.pop_transform();
     };
 
     ctx.imgui = [&]() {
