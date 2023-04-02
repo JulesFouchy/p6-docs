@@ -53,4 +53,4 @@ Loads an image from a file and returns the buffer of pixels and the size. If the
 
 -------------------------------
 
-Updated on 2023 March 15
+Updated on 2023 April 02

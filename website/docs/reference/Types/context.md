@@ -110,7 +110,7 @@ sidebar_position: 1
 | void | **[save_image](/reference/canvas#save_image)**(`std::filesystem::path` path) const<br/>Saves the content of the window's main canvas as an image file.  |
 | [Color](/reference/Types/color) | **[read_pixel](/reference/canvas#read_pixel)**(`glm::vec2` position) const<br/>Returns the color of the pixel at the given position in the main canvas.  |
 | glm::vec2 | **[mouse](/reference/input#mouse)**() const<br/>Returns the current mouse position.  |
-| glm::vec2 | **[mouse_delta](/reference/input#mouse_delta)**() const<br/>Returns the movement of the mouse since last [update()](/reference/events#update).  |
+| glm::vec2 | **[mouse_delta](/reference/input#mouse_delta)**() const<br/>Returns the movement of the mouse since the last [update()](/reference/events#update).  |
 | bool | **[mouse_is_in_window](/reference/input#mouse_is_in_window)**() const<br/>Returns true iff the window is focused and the coordinates returned by [mouse()](/reference/input#mouse) correspond to a position inside the window.  |
 | bool | **[mouse_button_is_pressed](/reference/input#mouse_button_is_pressed)**(`Button` button) const<br/>Returns true iff the given mouse button is currently pressed.  |
 | bool | **[ctrl](/reference/input#ctrl)**() const<br/>Returns true iff the CTRL key is pressed (or CMD on Mac)  |
@@ -796,7 +796,7 @@ Returns the current mouse position.
 > `glm::vec2` **[mouse_delta](/reference/input#mouse_delta)**() const;
 
 
-Returns the movement of the mouse since last [update()](/reference/events#update). 
+Returns the movement of the mouse since the last [update()](/reference/events#update). 
 
 ### mouse_is_in_window()
 
@@ -840,7 +840,7 @@ Returns true iff the ALT key is pressed.
 
 Returns true iff the given `key` is currently pressed. 
 
-`key` should be a GLFW_KEY_ value. See [https://www.glfw.org/docs/3.3/keys.html](https://www.glfw.org/docs/3.3/keys.html) for the complete list. e.g. `ctx.key_is_pressed(GLFW_KEY_Q)` /!\ Please note that these are physical keys that don't depend on the current layout. This means that GLFW_KEY_Q will refer to the first key on your keyboard, no matter if you are using QWERTY or AZERTY. 
+`key` should be a GLFW_KEY value. See [https://www.glfw.org/docs/3.3/keys.html](https://www.glfw.org/docs/3.3/keys.html) for the complete list. e.g. `ctx.key_is_pressed(GLFW_KEY_Q)` /!\ Please note that these are physical keys that don't depend on the current layout. This means that GLFW_KEY_Q will refer to the first key on your keyboard, no matter if you are using QWERTY or AZERTY. 
 
 
 ### window_is_focused()
@@ -1121,12 +1121,12 @@ This function is called repeatedly whenever a keyboard key is held.
 
 (NB: this only starts after holding the key for a little while. The exact behaviour is OS-specific)
 
-:warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your update function:
+:warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your [update()](/reference/events#update) function:
 
 
 
 ```cpp
-if (ctx.key_is_held(GLFW_KEY_W)) {
+if (ctx.key_is_pressed(GLFW_KEY_W)) {
     character.move_forward(ctx.delta_time());
 }
 ```
@@ -1225,4 +1225,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2023 March 15
+Updated on 2023 April 02

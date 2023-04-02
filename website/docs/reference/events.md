@@ -143,12 +143,12 @@ This function is called repeatedly whenever a keyboard key is held.
 
 (NB: this only starts after holding the key for a little while. The exact behaviour is OS-specific)
 
-:warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your update function:
+:warning: This is less than ideal to do things like handling the movement of a character. You should rather do, in your [update()](/reference/events#update) function:
 
 
 
 ```cpp
-if (ctx.key_is_held(GLFW_KEY_W)) {
+if (ctx.key_is_pressed(GLFW_KEY_W)) {
     character.move_forward(ctx.delta_time());
 }
 ```
@@ -194,4 +194,4 @@ It can be useful to use this function instead of the more specific ones (key_pre
 
 -------------------------------
 
-Updated on 2023 March 15
+Updated on 2023 April 02
