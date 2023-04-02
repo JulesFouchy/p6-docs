@@ -127,6 +127,7 @@ sidebar_position: 1
 | void | **[escape_fullscreen](/reference/window#escape_fullscreen)**()<br/>Exits the fullscreen mode.  |
 | void | **[toggle_fullscreen](/reference/window#toggle_fullscreen)**()<br/>Goes fullscreen if it wasn't, escapes fullscreen if it was.  |
 | bool | **[window_is_fullscreen](/reference/window#window_is_fullscreen)**() const<br/>Returns true iff the window is currently fullscreen.  |
+| GLFWwindow * | **[underlying_glfw_window](/reference/window#underlying_glfw_window)**() const<br/>Advanced function that returns the glfw window pointer.  |
 | float | **[time](/reference/time#time)**() const<br/>Returns the time in seconds since the creation of the [Context](/reference/Types/context).  |
 | float | **[delta_time](/reference/time#delta_time)**() const<br/>Returns an estimate of the time that elapses between two [update()](/reference/events#update) calls.  |
 | void | **[time_perceived_as_realtime](/reference/time#time_perceived_as_realtime)**()<br/>Sets the time mode as _realtime_.  |
@@ -918,6 +919,16 @@ Goes fullscreen if it wasn't, escapes fullscreen if it was.
 
 
 Returns true iff the window is currently fullscreen. 
+
+### underlying_glfw_window()
+
+> `GLFWwindow *` **[underlying_glfw_window](/reference/window#underlying_glfw_window)**() const;
+
+
+Advanced function that returns the glfw window pointer. 
+
+It allows you to call all the glfw functions that are not directly exposed by p6. Note that you might also want to [raise an issue](https://github.com/JulesFouchy/p6/issues/new) to ask us to add that functionality directly into p6 to simplify future uses. We would be very thankful for that. 
+
 
 ### time()
 
