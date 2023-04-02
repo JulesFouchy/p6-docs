@@ -17,8 +17,13 @@ project(my-p6-project)
 add_executable(${PROJECT_NAME} main.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
-# ---Add p6---
-add_subdirectory(p6)
+# ---Download and link p6---
+FetchContent_Declare(
+    p6
+    GIT_REPOSITORY https://github.com/julesfouchy/p6
+    GIT_TAG 3aaf93db52ca18034c268bd9643f40f983268745
+)
+FetchContent_MakeAvailable(p6)
 target_link_libraries(${PROJECT_NAME} p6::p6)
 ```
 
@@ -33,20 +38,6 @@ int main()
     ctx.start();                                          // Start the p6 application
 }
 ```
-
-## p6
-
-To get the p6 folder, open a terminal at the root of your project and run:
-```
-git clone --recursive https://github.com/JulesFouchy/p6
-```
-
-Or, if you have already setup a *git* repository for your project, you can add p6 as a submodule instead:
-```
-git submodule add https://github.com/JulesFouchy/p6
-git submodule update --init --recursive
-```
-(To learn about Git submodules, check out [this lesson](https://julesfouchy.github.io/Learn--Clean-Code-With-Cpp/lessons/git-submodules/)).
 
 ## Conclusion
 
