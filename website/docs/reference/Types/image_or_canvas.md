@@ -43,4 +43,4 @@ Inherited by [p6::Canvas](/reference/Types/canvas), [p6::Image](/reference/Types
 
 -------------------------------
 
-Updated on 2023 April 02
+Updated on 2023 April 03
