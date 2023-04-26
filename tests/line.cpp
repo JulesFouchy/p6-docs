@@ -1,8 +1,11 @@
+#include <imgui.h>
 #include <p6/p6.h>
 
 int main()
 {
-    auto ctx   = p6::Context{{1280, 720, "Line"}};
+    auto  ctx              = p6::Context{{1280, 720, "Line"}};
+    float angle_in_radians = 0.f;
+
     ctx.update = [&]() {
         ctx.background(p6::NamedColor::BlueGray);
         {
@@ -16,6 +19,9 @@ int main()
             ctx.line(glm::vec2{0.f}, ctx.mouse());
         }
         { // Should make one single connected line out of all these small lines:
+            const auto transform_sg = ctx.transform_scope_guard();
+            ctx.rotate(p6::Radians{angle_in_radians});
+
             ctx.stroke_weight = 0.01f;
             ctx.stroke        = p6::Color{1.f, 1.f, 1.f};
             glm::vec2 start{0.f};
@@ -23,10 +29,17 @@ int main()
             for (int i = 0; i < 10; i++)
             {
                 start = end;
-                end   = glm::vec2(0.1f * static_cast<float>(i));
+                end   = glm::vec2{0.f, 0.1f * static_cast<float>(i)};
                 ctx.line(start, end);
             }
         }
     };
+
+    ctx.imgui = [&]() {
+        ImGui::Begin("Test");
+        ImGui::SliderAngle("Rotate line", &angle_in_radians);
+        ImGui::End();
+    };
+
     ctx.start();
 }
