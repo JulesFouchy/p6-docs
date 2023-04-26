@@ -2,6 +2,7 @@
 
 int main()
 {
+#if !P6_RAW_OPENGL_MODE
     auto ctx    = p6::Context{{500, 720, "Render to Canvas"}};
     auto canvas = p6::Canvas{{2 * ctx.main_canvas_height(), // Create a canvas with a size relative to the the window's main canvas size
                               2 * ctx.main_canvas_height()}};
@@ -44,4 +45,5 @@ int main()
         brush(false); // While still being able to draw temporary things on the screen
     };
     ctx.start();
+#endif
 }

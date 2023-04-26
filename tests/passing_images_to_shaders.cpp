@@ -2,6 +2,7 @@
 
 int main()
 {
+#if !P6_RAW_OPENGL_MODE
     auto ctx                = p6::Context{{1280, 720, "Passing Images to Shaders"}};
     auto canvas1            = p6::Canvas{ctx.main_canvas_size()};
     auto canvas2            = p6::Canvas{ctx.main_canvas_size()};
@@ -51,4 +52,5 @@ int main()
         }
     };
     ctx.start();
+#endif
 }

@@ -4,6 +4,7 @@
 
 int main()
 {
+#if !P6_RAW_OPENGL_MODE
     auto ctx = p6::Context{{1280, 720, "Read Pixel"}};
     ctx.main_canvas_mode(p6::CanvasSizeMode_FixedAspectRatio{1.f});
 
@@ -20,4 +21,5 @@ int main()
         ImGui::End();
     };
     ctx.start();
+#endif
 }

@@ -2,6 +2,7 @@
 
 int main()
 {
+#if !P6_RAW_OPENGL_MODE
     auto ctx   = p6::Context{{1280, 720, "Canvas Size Mode"}};
     ctx.update = [&]() {
         ctx.background({0.7f, 0.3f, 0.5f, 0.f});
@@ -55,4 +56,5 @@ int main()
         ImGui::Text("Mouse position: %.2f %.2f", ctx.mouse().x, ctx.mouse().y);
     };
     ctx.start();
+#endif
 }

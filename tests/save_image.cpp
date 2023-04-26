@@ -2,6 +2,7 @@
 
 int main()
 {
+#if !P6_RAW_OPENGL_MODE
     auto ctx    = p6::Context{{1280, 720, "Save Image"}};
     auto canvas = p6::Canvas({2 * ctx.main_canvas_height(),
                               2 * ctx.main_canvas_height()});
@@ -42,4 +43,5 @@ int main()
     };
 
     ctx.start();
+#endif
 }
