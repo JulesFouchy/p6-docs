@@ -35,7 +35,7 @@ Inherits from [p6::ImageOrCanvas](/reference/Types/image_or_canvas)
 
 Creates an [Image](/reference/Types/image) filled with data. 
 
-This is for advanded uses; prefer using [p6::load_image()](/reference/image#load_image). data must be an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row. texture_layout is an advanced setting; it controls how the pixels are gonna be stored on the GPU. 
+This is for advanced uses; prefer using [p6::load_image()](/reference/image#load_image). data must be an array of size `size.width() * size.height() * 4`, with R, G, B and A channels, starting with the bottom left pixel, and going row by row. texture_layout is an advanced setting; it controls how the pixels are gonna be stored on the GPU. 
 
 
 ### size()
@@ -73,4 +73,4 @@ Returns the inverse aspect ratio (`height / width`)
 
 -------------------------------
 
-Updated on 2023 April 03
+Updated on 2023 May 10

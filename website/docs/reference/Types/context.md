@@ -17,6 +17,7 @@ sidebar_position: 1
 |                | Name           |
 | -------------- | -------------- |
 | | **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params = {}) |
+| | **[~Context](/reference/Types/context#~context)**() |
 | | **[Context](/reference/Types/context#context)**(`[Context](/reference/Types/context) &&` ) =default |
 | [Context](/reference/Types/context) & | **[operator=](/reference/Types/context#operator=)**(`[Context](/reference/Types/context) &&` ) =default |
 | | **[Context](/reference/Types/context#context)**(`const [Context](/reference/Types/context) &` ) =delete |
@@ -167,6 +168,12 @@ sidebar_position: 1
 ### Context()
 
 > **[Context](/reference/Types/context#context)**(`WindowCreationParams` window_creation_params ={});
+
+
+
+### ~Context()
+
+> **[~Context](/reference/Types/context#~context)**();
 
 
 
@@ -1236,4 +1243,4 @@ Gives some "boldness" to the text.
 
 -------------------------------
 
-Updated on 2023 April 03
+Updated on 2023 May 10

@@ -21,30 +21,30 @@ Load and query information about images.
 
 |                | Name           |
 | -------------- | -------------- |
-| Image | **[load_image](/reference/image#load_image)**(`std::filesystem::path` file_path)<br/>Loads an image from a file.  |
-| img::Image | **[load_image_buffer](/reference/image#load_image_buffer)**(`std::filesystem::path` file_path)<br/>For advanced uses only.  |
+| Image | **[load_image](/reference/image#load_image)**(`std::filesystem::path` file_path, `bool` flip_vertically = true)<br/>Loads an image from a file.  |
+| img::Image | **[load_image_buffer](/reference/image#load_image_buffer)**(`std::filesystem::path` file_path, `bool` flip_vertically = true)<br/>For advanced uses only.  |
 
 
 ## Functions
 
 ### load_image()
 
-> `Image` **[load_image](/reference/image#load_image)**(`std::filesystem::path` file_path);
+> `Image` **[load_image](/reference/image#load_image)**(`std::filesystem::path` file_path, `bool` flip_vertically =true);
 
 
 Loads an image from a file. 
 
-If the path is relative, it will be relative to the directory containing your executable. Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image file. 
+If the path is relative, it will be relative to the directory containing your executable. Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image file. Set `flip_vertically` to false if your image appears upside-down. 
 
 
 ### load_image_buffer()
 
-> `img::Image` **[load_image_buffer](/reference/image#load_image_buffer)**(`std::filesystem::path` file_path);
+> `img::Image` **[load_image_buffer](/reference/image#load_image_buffer)**(`std::filesystem::path` file_path, `bool` flip_vertically =true);
 
 
 For advanced uses only. 
 
-Loads an image from a file and returns the buffer of pixels and the size. If the path is relative, it will be relative to the directory containing your executable. Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image file. 
+Loads an image from a file and returns the buffer of pixels and the size. If the path is relative, it will be relative to the directory containing your executable. Throws a `std::runtime_error` if the file doesn't exist or isn't a valid image file. Set `flip_vertically` to false if your image appears upside-down. 
 
 
 
@@ -53,4 +53,4 @@ Loads an image from a file and returns the buffer of pixels and the size. If the
 
 -------------------------------
 
-Updated on 2023 April 03
+Updated on 2023 May 10
