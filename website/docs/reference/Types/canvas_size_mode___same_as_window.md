@@ -14,4 +14,4 @@ The canvas will have the same size as the window's framebuffer.
 ## Details
 -------------------------------
 
-Updated on 2023 May 10
+Updated on 2023 September 03
