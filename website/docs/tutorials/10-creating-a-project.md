@@ -21,7 +21,7 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 FetchContent_Declare(
     p6
     GIT_REPOSITORY https://github.com/julesfouchy/p6
-    GIT_TAG 350bf29ec49f43c8600c7e0dbc6099091367c752
+    GIT_TAG eb000cbfc912ca0e7286cfd3f961c21f7669aa5e
 )
 FetchContent_MakeAvailable(p6)
 target_link_libraries(${PROJECT_NAME} p6::p6)
