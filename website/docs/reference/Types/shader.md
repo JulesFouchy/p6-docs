@@ -150,4 +150,4 @@ You can call this just before a draw call (e.g. `glDrawArrays`) to check if your
 
 -------------------------------
 
-Updated on 2023 September 03
+Updated on 2024 January 17
