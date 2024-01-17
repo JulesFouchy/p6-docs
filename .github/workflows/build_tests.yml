@@ -9,7 +9,7 @@ on:
 env:
   cmake_configure_args: ""
   cmakelists_folder: tests
-  cmake_target: color.cpp
+  cmake_target: all
 
 jobs:
   build-tests:
