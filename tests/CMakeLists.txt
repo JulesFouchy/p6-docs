@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(p6-tests)
 
-set(P6_RAW_OPENGL_MODE OFF CACHE BOOL "") # You need to "CMake: Delete Cache and R*econfigure" when changing this option.
-set(p6_ENABLE_WARNINGS_AS_ERRORS true)
+set(P6_RAW_OPENGL_MODE OFF CACHE BOOL "") # You need to "CMake: Delete Cache and Reconfigure" when changing this option.
+set(p6_ENABLE_WARNINGS_AS_ERRORS ON)
 add_subdirectory(p6)
 
 function(register_test filename)

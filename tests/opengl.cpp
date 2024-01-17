@@ -84,7 +84,7 @@ int main()
         GLint logLength;
         glGetShaderiv(vertexShader, GL_INFO_LOG_LENGTH, &logLength);
 
-        char* log = new char[logLength];
+        char* log = new char[static_cast<size_t>(logLength)];
 
         glGetShaderInfoLog(vertexShader, logLength, 0, log);
         std::cerr << "Vertex Shader error:" << log << std::endl;
@@ -106,7 +106,7 @@ int main()
         GLint logLength;
         glGetShaderiv(fragmentShader, GL_INFO_LOG_LENGTH, &logLength);
 
-        char* log = new char[logLength];
+        char* log = new char[static_cast<size_t>(logLength)];
 
         glGetShaderInfoLog(fragmentShader, logLength, 0, log);
         std::cerr << "Fragment Shader error:" << log << std::endl;
@@ -135,7 +135,7 @@ int main()
         GLint logLength;
         glGetProgramiv(program, GL_INFO_LOG_LENGTH, &logLength);
 
-        char* log = new char[logLength];
+        char* log = new char[static_cast<size_t>(logLength)];
 
         glGetProgramInfoLog(program, logLength, 0, log);
         std::cerr << "Program link error:" << log << std::endl;
@@ -148,9 +148,7 @@ int main()
 
     ctx.update = [&]() {
         glBindVertexArray(vao);
-
         glDrawArrays(GL_TRIANGLES, 0 /* Pas d'offset au début du VBO */, 3);
-
         glBindVertexArray(0);
     };
 
