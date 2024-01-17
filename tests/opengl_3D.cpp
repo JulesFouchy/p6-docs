@@ -88,7 +88,7 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
     // Stockage des données du tableau vertices dans le vbo placé sur GL_ARRAY_BUFFER (c'est à dire "vbo" ici) :
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * 8 * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(vertices.size() * 8 * sizeof(GLfloat)), vertices.data(), GL_STATIC_DRAW);
 
     // Plus de VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
