@@ -10,7 +10,7 @@ You can easily apply custom shaders in p6. A shader is a program that runs on th
 For this example to work you must have a *res* folder **at the root of your project**.<br/>
 **And you must declare your *res* folder in CMake: `p6_copy_folder(${PROJECT_NAME} res)`**
 :::
-[**Here is an example of a _CMakeLists.txt_**](https://github.com/JulesFouchy/p6-docs/blob/main/examples/complete/CMakeLists.txt).
+[**Here is an example of a _CMakeLists.txt_**](https://github.com/JulesFouchy/p6-docs/blob/main/tests/CMakeLists.txt).
 
 ```cpp
 #include <p6/p6.h>
