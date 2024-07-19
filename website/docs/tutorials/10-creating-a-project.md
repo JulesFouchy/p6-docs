@@ -17,6 +17,8 @@ project(my-p6-project)
 add_executable(${PROJECT_NAME} main.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
+include(FetchContent)
+
 # ---Download and link p6---
 FetchContent_Declare(
     p6
