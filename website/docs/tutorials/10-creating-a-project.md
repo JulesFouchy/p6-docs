@@ -17,9 +17,8 @@ project(my-p6-project)
 add_executable(${PROJECT_NAME} main.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
-include(FetchContent)
-
 # ---Download and link p6---
+include(FetchContent)
 FetchContent_Declare(
     p6
     GIT_REPOSITORY https://github.com/julesfouchy/p6
