@@ -19,6 +19,7 @@ sidebar_position: 1
 | glm::vec2 | **[position](/reference/Types/mouse_drag#position)**  |
 | glm::vec2 | **[delta](/reference/Types/mouse_drag#delta)**  |
 | glm::vec2 | **[start_position](/reference/Types/mouse_drag#start_position)**  |
+| Button | **[button](/reference/Types/mouse_drag#button)**  |
 
 ## Details
 
@@ -44,6 +45,13 @@ glm::vec2 start_position;
 ```
 
 
+### button
+
+```cpp
+Button button;
+```
+
+
 -------------------------------
 
-Updated on 2024 January 17
+Updated on 2024 August 01
