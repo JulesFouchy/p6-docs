@@ -22,7 +22,7 @@ include(FetchContent)
 FetchContent_Declare(
     p6
     GIT_REPOSITORY https://github.com/julesfouchy/p6
-    GIT_TAG eb000cbfc912ca0e7286cfd3f961c21f7669aa5e
+    GIT_TAG bec1ef40b497106a4a2539d9b10a199500bdc96c
 )
 FetchContent_MakeAvailable(p6)
 target_link_libraries(${PROJECT_NAME} p6::p6)
